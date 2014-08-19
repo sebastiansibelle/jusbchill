@@ -1,0 +1,22 @@
+<section class="artist-details">
+  <p>
+    <strong>Name:</strong>
+    <%= @artist.name %>
+  </p>
+   
+  <p>
+    <strong>Biography:</strong>
+    <%= @artist.biography %>
+  </p>
+</section>
+
+<section class="releases">
+  <h2>Releases</h2>
+  <%= render @artist.releases %>
+</section>
+
+<h2>Add a release:</h2>
+<%= render "releases/form" %>
+
+<%= link_to 'Back', artists_path %>
+| <%= link_to 'Edit', edit_artist_path(@artist) %>

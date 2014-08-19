@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  devise_for :users, :path_names => {:sign_in => "login", :sign_out => "logout"}
+
+  namespace :admin do
+    get '/' => 'users#index'
+    resources :users
+    resources :releases
+    resources :artists
+  end
+
+  resources :users
 
   resources :artists do
     resources :releases
   end
 
+  resources :releases
+  
   # You can have the root of your site routed with "root"
   root 'home#index'
 

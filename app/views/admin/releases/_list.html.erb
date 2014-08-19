@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @releases.each do |release| %>
+    <tr>
+      <td><%= release.title %></td>
+      <td><%= release.description %></td>
+    </tr>  
+  <% end %>
+</table>
