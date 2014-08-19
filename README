@@ -1,0 +1,47 @@
+# Jus B Chill Readme
+
+Jus B Chill is an online based record label. We release music, throw parties and other stuff.
+
+## Plans
+
+The plan is to use the Jus B Chill web app as the ditribution source for all our channels. 
+
+## Website
+
+The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices. 
+
+It has been tested in the folllowing browsers:
+
+none
+
+### Website Structure
+
+- Releases
+	- Release JBC001
+	- Release JBC002
+- Artists
+	- Artist 001
+	- Artist 002
+- Mixes
+	- Mix 001
+	- Mix 002
+- About
+- Privacy Policy
+- Contact
+- Home
+
+#### Release
+
+- Release Name
+- Artist
+- Description
+- Image
+- Soundcloud Link
+- Buy link
+
+#### Artist
+
+- Name
+- Image
+- Description
+- 
