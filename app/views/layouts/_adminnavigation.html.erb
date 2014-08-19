@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <%= link_to 'Home', controller: '/home' %>
+    <%= link_to 'Home', controller: 'admin/dashboard' %>
     <%= link_to 'Artists', controller: 'admin/artists' %>
     <%= link_to 'Releases', controller: 'admin/releases' %>
     <% if user_signed_in? %>

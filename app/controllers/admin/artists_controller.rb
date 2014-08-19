@@ -1,6 +1,4 @@
 class Admin::ArtistsController < Admin::AdminController
-  before_action :authenticate_user!
-  
   def new
     @artist = Artist.new
   end
