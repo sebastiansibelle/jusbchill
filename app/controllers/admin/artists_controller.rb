@@ -8,15 +8,15 @@ class Admin::ArtistsController < Admin::AdminController
   end
 
   def show
-    @artist = Artist.find(params[:id])
+    @artist = Artist.friendly.find(params[:id])
   end
 
   def edit
-    @artist = Artist.find(params[:id])
+    @artist = Artist.friendly.find(params[:id])
   end
 
   def update
-    @artist = Artist.find(params[:id])
+    @artist = Artist.friendly.find(params[:id])
     
     if @artist.update(artist_params)
       redirect_to @artist
@@ -36,7 +36,7 @@ class Admin::ArtistsController < Admin::AdminController
   end
 
   def destroy
-    @artist = Artist.find(params[:id])
+    @artist = Artist.friendly.find(params[:id])
     @artist.destroy
 
     redirect_to artists_path
