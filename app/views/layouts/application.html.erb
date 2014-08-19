@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <%= link_to 'Home', controller: 'home' %>
+      <%= link_to 'Artists', controller: 'artists' %>
+    </nav>
+  </header>
 
 <%= yield %>
 

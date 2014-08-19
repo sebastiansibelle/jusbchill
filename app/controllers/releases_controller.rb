@@ -1,4 +1,10 @@
 class ReleasesController < ApplicationController
+  http_basic_authenticate_with name: "ssibelle", password: "hawker05", only: [:create, :destroy]
+
+  def index
+    @releases = Release.all
+  end
+
   def create
     @artist = Artist.find(params[:artist_id])
     @release = @artist.releases.create(release_params)

@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  http_basic_authenticate_with name: "ssibelle", password: "hawker05", except: [:index, :show]
+
   def new
     @artist = Artist.new
   end
@@ -8,6 +10,10 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @artist = Artist.find(params[:id])
+  end
+
+  def edit
     @artist = Artist.find(params[:id])
   end
 
