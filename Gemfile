@@ -31,6 +31,9 @@ gem 'devise'
 # Use friendly_id to make friendly slugged urls
 gem 'friendly_id', '~> 5.0.0'
 
+# Use bootstrap sass gem for bootstrap includes
+gem 'bootstrap-sass', '~> 3.2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
