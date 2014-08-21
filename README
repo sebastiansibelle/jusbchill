@@ -63,10 +63,14 @@ none
 
 1. Sort the releases by release number and not ID.
 2. Home page design.
-3. Choose a font set. 
-4. Create controller for static pages.
+	- Choose a font set.
+	- Create a logo.
+  - Create logo treatments 
+	- Choose a basic colour scheme
+  - Write up language guidelines
+  - Collate into brand guidelines document
 
-- Write Release process manifesto (how we decide tracks are ready to release).
+3. Write Release process manifesto (how we decide tracks are ready to release).
   - Track development
   - Posting tracks for review
   - Leaving feedback

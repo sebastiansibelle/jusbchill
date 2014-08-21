@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   # Static pages
   get 'contact' => 'contact#index'
+  get 'privacy' => 'home#privacy'
+  get 'legal' => 'home#legal'
   get 'about' => 'home#about'
 
   # You can have the root of your site routed with "root"
