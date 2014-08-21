@@ -2,7 +2,7 @@
   <% @artists.each do |artist| %>
     <div class="artist col-md-12">
       <div class="artist-image col-md-3">
-        <%= link_to(edit_admin_artist_path(artist), {}) do %>
+        <%= link_to(artist_path(artist), {}) do %>
           <%= image_tag(artist.avatar.url) %>
         <% end %>
       </div>
