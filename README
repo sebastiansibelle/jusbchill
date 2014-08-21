@@ -61,7 +61,12 @@ none
 
 ## Todo
 
-- Admin - Release process manifesto (how we decide tracks are ready to release)
+1. Sort the releases by release number and not ID.
+2. Home page design.
+3. Choose a font set. 
+4. Create controller for static pages.
+
+- Write Release process manifesto (how we decide tracks are ready to release).
   - Track development
   - Posting tracks for review
   - Leaving feedback
@@ -71,7 +76,7 @@ none
   - Mastering
   - Publishing
   - Proofing copy
-- Home page design
+
 - About page
   - Label purpose, mission, goals
   - Label history
