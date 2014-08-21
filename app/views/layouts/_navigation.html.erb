@@ -1,11 +1,25 @@
 <header>
-  <nav>
-    <%= link_to 'Home', controller: '/home' %>
-    <%= link_to 'Artists', controller: '/artists' %>
-    <%= link_to 'Releases', controller: '/releases' %>
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% end %>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to '"jus b chill"', {controller: '/home'}, action: 'index', class: 'navbar-brand' %>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Artists', artists_path %></li>
+          <li><%= link_to 'Releases', releases_path %></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
+
+

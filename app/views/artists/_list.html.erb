@@ -1,14 +1,17 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Biography</th>
-    <th colspan="2">Actions</th>
-  </tr>
- 
+<section class="artists row">
   <% @artists.each do |artist| %>
-    <tr>
-      <td><%= link_to artist.name, artist_path(artist) %></td>
-      <td><%= artist.biography %></td>
-    </tr>  
+    <div class="artist col-md-12">
+      <div class="artist-image col-md-3">
+        <%= link_to(edit_admin_artist_path(artist), {}) do %>
+          <%= image_tag(artist.avatar.url) %>
+        <% end %>
+      </div>
+      <div class="artist-details col-md-9">
+        <h2><%= artist.name %></h2>
+        <blockquote class="hidden-xs">
+          <%= artist.biography %>
+        </blockquote>
+      </div>
+    </div>
   <% end %>
-</table>
+</section>
