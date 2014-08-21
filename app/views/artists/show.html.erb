@@ -1,18 +1,27 @@
-<section class="artist-details">
-  <p>
-    <strong>Name:</strong>
-    <%= @artist.name %>
-  </p>
-   
-  <p>
-    <strong>Biography:</strong>
-    <%= @artist.biography %>
-  </p>
+<section class="artist row">
+  <div class="col-md-12"> 
+    <div class="artist-image col-md-3">
+      <%= image_tag(@artist.avatar.url) %>
+    </div>
+    <div class="artist-details col-md-9">
+      <h2><%= @artist.name %></h2>
+      <blockquote class="hidden-xs">
+        <%= @artist.biography %>
+      </blockquote>
+    </div>
+  </div>
 </section>
 
-<section class="releases">
-  <h2>Releases</h2>
-  <%= render @artist.releases %>
+<% if @artist.releases.count > 0 %>
+  <section class="releases row">
+    <h2>Releases</h2>
+    <%= render @artist.releases %>
+  </section>
+<% end %>
+
+<!-- <section class="mixes row">
+  <h2>Mixes</h2>
 </section>
+ -->
 
 <%= link_to 'Back', artists_path %>

@@ -1,11 +1,11 @@
-<div class="release">
-  <p>
-    <strong>Title:</strong>
-    <%= release.title %>
-  </p>
-
-  <p>
-    <strong>Description: </strong>
-    <%= release.description %>
-  </p>
+<div class="release col-md-3">
+  <div class="release-image">
+    <%= link_to(release_path(release), {}) do %>
+      <%= image_tag(release.avatar.url) %>
+    <% end %>
+  </div>
+  <div class="release-details">
+    <h4><%= release.release_no %></h4>
+    <h4><%= release.title %> - <%= release.artist.name %></h4>
+  </div>
 </div>
