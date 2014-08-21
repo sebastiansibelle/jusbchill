@@ -1,4 +1,5 @@
-<%= form_for @artist do |f| %>
+<%= form_for(@artist, url: admin_artist_path, html: { role: "form" } ) do |f| %>
+<div class="form-group">
   <% if @artist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@artist.errors.count, "error") %> prohibited
@@ -11,17 +12,23 @@
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
  
-  <p>
-    <%= f.label :biography %><br>
-    <%= f.text_area :biography %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-group">
+    <%= f.label :biography %>
+    <%= f.text_area :biography, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    Save
+  <% end %>
 <% end %>

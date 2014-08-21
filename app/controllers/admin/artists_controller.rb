@@ -7,10 +7,6 @@ class Admin::ArtistsController < Admin::AdminController
     @artists = Artist.all
   end
 
-  def show
-    @artist = Artist.friendly.find(params[:id])
-  end
-
   def edit
     @artist = Artist.friendly.find(params[:id])
   end
@@ -19,7 +15,7 @@ class Admin::ArtistsController < Admin::AdminController
     @artist = Artist.friendly.find(params[:id])
     
     if @artist.update(artist_params)
-      redirect_to @artist
+      redirect_to edit_admin_artist_path
     else
       render 'edit'
     end

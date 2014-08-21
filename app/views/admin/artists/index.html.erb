@@ -1,5 +1,7 @@
-<h1>Listing artists</h1>
- 
-<%= link_to 'New artist', new_admin_artist_path %>
+
+<h1>Artists</h1>
+<%= link_to 'New artist', new_admin_artist_path, class: "btn btn-primary" %>
+
+<hr>
 
 <%= render 'list' %>
