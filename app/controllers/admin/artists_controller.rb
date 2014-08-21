@@ -35,11 +35,11 @@ class Admin::ArtistsController < Admin::AdminController
     @artist = Artist.friendly.find(params[:id])
     @artist.destroy
 
-    redirect_to artists_path
+    redirect_to admin_artists_path
   end
 
   private
     def artist_params
-      params.require(:artist).permit(:name, :biography)
+      params.require(:artist).permit(:name, :biography, :avatar)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819140847) do
+ActiveRecord::Schema.define(version: 20140821012145) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140819140847) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "avatar"
   end
 
   add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true

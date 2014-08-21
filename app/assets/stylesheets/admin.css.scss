@@ -1,3 +1,48 @@
+
+.navbar{
+  margin-bottom: 0px;
+}
+
 body {
   background: #fff;
 }
+
+.btn-new-artist{
+  margin-top: 5px;
+}
+
+form{
+  .form-artist-image{
+    float: clear;
+
+    img{
+      height: 300px;
+      width: 312px;
+    }
+  }
+}
+
+.artist{
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding:  10px;
+  margin-bottom: 20px;
+
+  .artist-image{
+    float: clear;
+
+    img{
+      height: 300px;
+      width: 312px;
+    }
+  }
+
+  .artist-details{
+    h2{
+      margin-top: 0px;
+    }
+    background-color: #fff;
+    padding: 15px;
+  }
+}
+

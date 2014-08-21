@@ -1,34 +1,41 @@
 <%= form_for(@artist, url: admin_artist_path, html: { role: "form" } ) do |f| %>
-<div class="form-group">
-  <% if @artist.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited
-        this artist from being saved:</h2>
-      <ul>
-      <% @artist.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div class="form-group">
+    <% if @artist.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@artist.errors.count, "error") %> prohibited
+          this artist from being saved:</h2>
+        <ul>
+        <% @artist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :avatar %>
+
+      <div class="form-artist-image">
+        <%= image_tag(@artist.avatar.url) %>
+      </div>
+      
+       <%= f.file_field :avatar %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
- 
-  <div class="form-group">
-    <%= f.label :biography %>
-    <%= f.text_area :biography, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+   
+    <div class="form-group">
+      <%= f.label :biography %>
+      <%= f.text_area :biography, cols: 10, rows: 10, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
+    <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
+      Save
+    <% end %>
   </div>
-
-  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-    Save
-  <% end %>
 <% end %>

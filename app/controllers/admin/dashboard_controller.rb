@@ -1,5 +1,5 @@
 class Admin::DashboardController < Admin::AdminController
   def index
-    @artists = Artist.all
+    @releases = Release.all
   end
 end
