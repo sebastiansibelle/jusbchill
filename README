@@ -8,7 +8,7 @@ The plan is to use the Jus B Chill web app as the ditribution source for all our
 
 ## Website
 
-The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices. 
+The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices.
 
 It has been tested in the folllowing browsers:
 
@@ -26,22 +26,56 @@ none
 	- Mix 001
 	- Mix 002
 - About
-- Privacy Policy
+- Privacy Policy 
 - Contact
 - Home
 
 #### Release
 
-- Release Name
+- Release No
+- Title
 - Artist
 - Description
 - Image
-- Soundcloud Link
-- Buy link
+- Soundcloud Url
+- Buy link - Bandcamp or Beatport
+- Mp3 upload / download
 
 #### Artist
 
 - Name
 - Image
+- Biography
+- Soundcloud
+- Facebook
+- Twitter
+
+#### Mix
+
+- Mix no
+- Title
 - Description
-- 
+- Image
+- Artist
+- Soundcloud Url
+
+## Todo
+
+- Admin - Release process manifesto (how we decide tracks are ready to release)
+  - Track development
+  - Posting tracks for review
+  - Leaving feedback
+  - Reviewing tracks
+  - Requirements for next step
+  - Final mixing
+  - Mastering
+  - Publishing
+  - Proofing copy
+- Home page design
+- About page
+  - Label purpose, mission, goals
+  - Label history
+- Privacy policy
+- Contact details
+- Advanced user model for multiple user types (super user (seb - delete privledges) , admin/mod user (andrew/jacob/aaron - all other privledges), regular user (artist - no privledges except posting new tracks))
+- Admin home page design / thoughts
