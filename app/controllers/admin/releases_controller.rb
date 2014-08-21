@@ -1,23 +1,45 @@
 class Admin::ReleasesController < Admin::AdminController
+  def new
+    @release = Release.new
+  end
+
   def index
     @releases = Release.all
   end
 
+  def edit
+    @release = Release.friendly.find(params[:id])
+  end
+
+  def update
+    @release = Release.friendly.find(params[:id])
+    
+    if @release.update(release_params)
+      redirect_to edit_admin_release_path
+    else
+      render 'edit'
+    end
+  end
+
   def create
-    @artist = Artist.find(params[:artist_id])
-    @release = @artist.releases.create(release_params)
-    redirect_to artist_path(@artist)
+    @release = Release.new(release_params)
+
+    if @release.save
+      redirect_to edit_admin_release_path(@release)
+    else
+      render 'new'
+    end
   end
  
  def destroy
-    @artist = Artist.find(params[:artist_id])
-    @release = @artist.releases.find(params[:id])
+    @release = Release.friendly.find(params[:id])
     @release.destroy
-    redirect_to artist_path(@artist)
+
+    redirect_to admin_releases_path
   end
 
   private
     def release_params
-      params.require(:release).permit(:title, :description)
+      params.require(:release).permit(:title, :description, :artist_id, :release_no, :avatar)
     end
 end

@@ -25,7 +25,7 @@ class Admin::ArtistsController < Admin::AdminController
     @artist = Artist.new(artist_params)
     
     if @artist.save
-      redirect_to @artist
+      redirect_to edit_admin_artist_path(@artist)
     else
       render 'new'
     end

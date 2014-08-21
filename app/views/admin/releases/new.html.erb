@@ -1,4 +1,6 @@
-<%= form_for(@release, url: admin_release_path, html: { role: "form" } ) do |f| %>
+<h1>New Release</h1>
+
+<%= form_for(@release, url: admin_releases_path, html: { role: "form" } ) do |f| %>
   <div class="form-group">
     <% if @release.errors.any? %>
       <div id="error_explanation">
@@ -26,7 +28,7 @@
     <div class="form-group">
       <%= f.label :avatar %>
 
-      <div class="form-image">
+      <div class="form-release-image">
         <%= image_tag(@release.avatar.url) %>
       </div>
       
@@ -42,13 +44,13 @@
    
     <div class="form-group">
       <%= f.label :description %>
-      <%= f.text_area :description, cols: 5, rows: 3, class: "form-control" %>
+      <%= f.text_area :description, cols: 10, rows: 10, class: "form-control" %>
     </div>
 
     <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
       Save
     <% end %>
-    <%= link_to 'Delete', admin_release_path(@release),
-        method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
   </div>
 <% end %>
+
+<%= link_to 'Back', admin_releases_path %>
