@@ -18,7 +18,11 @@ Rails.application.routes.draw do
   end
 
   resources :releases
-  
+
+  # Static pages
+  get 'contact' => 'contact#index'
+  get 'about' => 'home#about'
+
   # You can have the root of your site routed with "root"
   root 'home#index'
 
