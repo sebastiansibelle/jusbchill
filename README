@@ -10,7 +10,7 @@ The plan is to use the Jus B Chill web app as the ditribution source for all our
 
 The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices.
 
-It has been tested in the folllowing browsers:
+It has been tested in the following browsers:
 
 none
 
@@ -59,32 +59,53 @@ none
 - Artist
 - Soundcloud Url
 
+artist has many mixs
+
+rails g mix mix_no:string, title:string, description:text, avatar:string, artist_id:integer, soundcloud:string
+
+belongs to artist
+
+Spectral analysis gradients
+
 ## Todo
 
 1. Sort the releases by release number and not ID.
-2. Home page design.
-	- Choose a font set.
-	- Create a logo.
-  - Create logo treatments 
+
+2. Do branding guideline document
+	- Brand identity and purpose
+	- Choose a font set
+	- Create a logo
 	- Choose a basic colour scheme
-  - Write up language guidelines
-  - Collate into brand guidelines document
+	- Language set and guidelines
+	- Release image guidelines
+	- Mix image guidelines
 
-3. Write Release process manifesto (how we decide tracks are ready to release).
-  - Track development
-  - Posting tracks for review
-  - Leaving feedback
-  - Reviewing tracks
-  - Requirements for next step
-  - Final mixing
-  - Mastering
-  - Publishing
-  - Proofing copy
+3. Write release process manifesto (how we decide tracks are ready to release).
+	- Track development
+	- Posting tracks for review
+	- Leaving feedback
+	- Reviewing tracks
+	- Requirements for next step
+	- Final mixing
+	- Mastering
+	- Publishing
+	- Proofing copy
 
-- About page
+4. Do integration with soundcloud player
+	- Set up soundcloud account
+
+5. Create controller for static pages.
+
+5. Design about page
   - Label purpose, mission, goals
   - Label history
-- Privacy policy
-- Contact details
-- Advanced user model for multiple user types (super user (seb - delete privledges) , admin/mod user (andrew/jacob/aaron - all other privledges), regular user (artist - no privledges except posting new tracks))
-- Admin home page design / thoughts
+
+6. Write and design privacy policy
+7.  Contact details
+
+8. Create advanced user model for multiple user types:
+	- super user (seb - delete privledges), 
+	- admin/mod user (andrew/jacob/aaron - all other privledges),
+	- regular user (artist - no privledges except posting new tracks))
+
+9. Admin home page design / thoughts
