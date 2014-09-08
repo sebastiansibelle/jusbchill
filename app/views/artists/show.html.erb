@@ -1,16 +1,22 @@
-<section class="artist row">
-  <div class="col-md-12"> 
-    <div class="artist-image col-md-3">
-      <%= image_tag(@artist.avatar.url) %>
-    </div>
-    <div class="artist-details col-md-9">
-      <h2><%= @artist.name %></h2>
-      <blockquote class="hidden-xs">
-        <%= @artist.biography %>
-      </blockquote>
-    </div>
+<section class="artist-bio row">
+  <div class="artist-image col-md-4">
+    <%= image_tag(@artist.avatar.url) %>
+  </div>
+  <div class="artist-details col-md-8">
+    <h2><%= @artist.name %></h2>
+    <p class="hidden-xs">
+      <%= @artist.biography %>
+    </p>
   </div>
 </section>
+
+<section class="soundcloud row">
+  <div class="col-md-12"> 
+    <iframe width="100%" height="350" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/58219245&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+  </div>
+</section>
+
+
 
 <% if @artist.releases.count > 0 %>
   <section class="releases row">
@@ -23,5 +29,3 @@
   <h2>Mixes</h2>
 </section>
  -->
-
-<%= link_to 'Back', artists_path %>
