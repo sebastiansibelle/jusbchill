@@ -38,7 +38,12 @@
   </section>
 <% end %>
 
-<!-- <section class="mixes row">
-  <h2>Mixes</h2>
-</section>
- -->
+<% if @artist.mixes.published.count > 0 %>
+  <section class="mixes row">
+    <div class="col-md-12"> 
+      <h2>Mixes</h2>
+      <%= render @artist.mixes.published %>
+    </div>
+  </section>
+<% end %>
+

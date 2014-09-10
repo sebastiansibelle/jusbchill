@@ -3,6 +3,8 @@ class Artist < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_many :releases
+  has_many :mixes
+
   validates :name, presence: true
   validates :biography, presence: true, length: { minimum: 25 }
   validates :avatar, presence: true
