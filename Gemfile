@@ -34,6 +34,9 @@ gem 'friendly_id', '~> 5.0.0'
 # Use bootstrap sass gem for bootstrap includes
 gem 'bootstrap-sass', '~> 3.2.0'
 
+# Require rmagick for image manipulation
+gem 'rmagick', :require => 'RMagick'  ## Specify appropriate version, if needed
+
 # Use CarrierWave for Image Uploads
 gem 'carrierwave'
 

@@ -3,7 +3,7 @@
 class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -19,6 +19,17 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
+  ## If ONLY "thumb" version is to be cropped
+  version :jumbo do
+    resize_to_limit(600,600)
+  end
+
+  version :thumb do
+    process crop: :avatar  ## Crops this version based on original image
+    resize_to_limit(100,100)
+  end
+
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
