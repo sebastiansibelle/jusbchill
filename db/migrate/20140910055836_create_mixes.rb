@@ -13,6 +13,6 @@ class CreateMixes < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :artists, :slug, unique: true
+    add_index :mixes, :slug, unique: true
   end
 end
