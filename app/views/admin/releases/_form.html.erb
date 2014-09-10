@@ -50,6 +50,12 @@
       <%= f.text_area :description, cols: 5, rows: 3, class: "form-control" %>
     </div>
 
+    <div class="form-group">
+      <%= f.label :published %>
+      <%= f.check_box :published, class: "form-control" %>
+    </div>
+
+
     <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
       Save
     <% end %>

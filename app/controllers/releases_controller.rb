@@ -1,7 +1,7 @@
 class ReleasesController < ApplicationController
 
   def index
-    @releases = Release.all
+    @releases = Release.published
   end
 
   def show

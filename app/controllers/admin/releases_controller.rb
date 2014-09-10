@@ -61,6 +61,6 @@ class Admin::ReleasesController < Admin::AdminController
 
   private
     def release_params
-      params.require(:release).permit(:title, :description, :artist_id, :release_no, :avatar, :soundcloud_embed, :avatar_crop_x, :avatar_crop_y, :avatar_crop_w, :avatar_crop_h)
+      params.require(:release).permit(:title, :description, :artist_id, :release_no, :avatar, :soundcloud_embed, :avatar_crop_x, :avatar_crop_y, :avatar_crop_w, :avatar_crop_h, :published)
     end
 end
