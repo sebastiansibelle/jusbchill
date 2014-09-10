@@ -16,12 +16,21 @@
     </div>
 
     <div class="col-md-3">
-      <h2>Get a copy</h2>
-      <h4>Digital</h4>
-      <ul class="list-unstyled">
-        <li><a href="<%= @release.buy_link %>" class="btn btn-default"><i class="glyphicon glyphicon-download"></i> Buy lossless</a></li>
-        <li><a href="<%= @release.download_link %>" class="btn btn-default"><i class="glyphicon glyphicon-download"></i> Download mp3 (320 kbps)</a></li>
-      </ul>
+      <% unless @release.buy_link.blank? && @release.download_link.blank? %>
+        <h2>Get a copy</h2>
+        <h4>Digital</h4>
+        <ul class="list-unstyled">
+          <% if !@release.buy_link.blank? %>
+            <li><a href="<%= @release.buy_link %>" class="btn btn-default" target="_blank"><i class="glyphicon glyphicon-shopping-cart"></i> Buy lossless</a></li>
+          <% end %>
+          
+          <% if !@release.download_link.blank? %>
+            <li><a href="<%= @release.download_link %>" class="btn btn-default" target="_blank"><i class="glyphicon glyphicon-download"></i> Download mp3 (320 kbps)</a></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <h2>Share</h2>
+      <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
     </div>
   </div>
 

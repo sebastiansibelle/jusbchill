@@ -43,6 +43,10 @@ gem 'carrierwave'
 # Use CarrierWave Crop gem for fancy cropping
 gem 'carrierwave-crop'
 
+# Use shareable for social media links
+gem 'shareable'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
