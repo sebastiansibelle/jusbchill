@@ -12,7 +12,7 @@ class Artist < ActiveRecord::Base
   validates :twitter, url: true
 
   mount_uploader :avatar, AvatarUploader
-
+  crop_uploaded :avatar
   def name_with_initial
     "#{name}.1"
   end

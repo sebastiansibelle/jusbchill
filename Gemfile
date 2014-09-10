@@ -37,6 +37,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # Use CarrierWave for Image Uploads
 gem 'carrierwave'
 
+# Use CarrierWave Crop gem for fancy cropping
+gem 'carrierwave-crop'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
