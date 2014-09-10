@@ -6,6 +6,7 @@ class CarrierWaveCropper
     $('#release_avatar_cropbox').Jcrop
       aspectRatio: 1
       setSelect: [0, 0, 200, 200]
+      minSize: [300,300]
       onSelect: @update
       onChange: @update
 
