@@ -6,15 +6,54 @@ Jus B Chill is an online based record label. We release music, throw parties and
 
 The plan is to use the Jus B Chill web app as the ditribution source for all our channels. 
 
-## Website
+### Todo
+
+1. Do branding guideline document
+	- Brand identity and purpose
+	- Choose a font set
+	- Create a logo
+	- Choose a basic colour scheme
+	- Language set and guidelines
+	- Release image guidelines
+	- Mix image guidelines
+
+2. Do direct integration with soundcloud player
+
+3. Copy for the about page
+  - Label purpose, mission, goals
+  - Label history
+
+4. Create advanced user model for multiple user types:
+	- super user (seb - delete privledges), 
+	- admin/mod user (andrew/jacob/aaron - all other privledges),
+	- regular user (artist - no privledges except posting new tracks))
+
+5. Admin home page design / thoughts
+
+6. Events
+
+7. Releases featured in this mix.
+
+8. Images to choose from for releases / mixes
+
+
+
+
+## Testing
+
+No testing yet.
+
+### Unit Test
+
+### Brower Testing
 
 The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices.
 
 It has been tested in the following browsers:
 
-none
+None yet.
 
-### Website Structure
+## Website Structure
 
 - Releases
 	- Release JBC001
@@ -58,43 +97,3 @@ none
 - Image
 - Artist
 - Soundcloud Url
-
-artist has many mixs
-
-rails g mix mix_no:string, title:string, description:text, avatar:string, artist_id:integer, soundcloud:string
-
-belongs to artist
-
-Spectral analysis gradients
-
-## Todo
-
-1. Sort the releases by release number and not ID.
-
-2. Do branding guideline document
-	- Brand identity and purpose
-	- Choose a font set
-	- Create a logo
-	- Choose a basic colour scheme
-	- Language set and guidelines
-	- Release image guidelines
-	- Mix image guidelines
-
-4. Do integration with soundcloud player
-	- Set up soundcloud account
-
-5. Create controller for static pages.
-
-5. Design about page
-  - Label purpose, mission, goals
-  - Label history
-
-6. Write and design privacy policy
-7.  Contact details
-
-8. Create advanced user model for multiple user types:
-	- super user (seb - delete privledges), 
-	- admin/mod user (andrew/jacob/aaron - all other privledges),
-	- regular user (artist - no privledges except posting new tracks))
-
-9. Admin home page design / thoughts
