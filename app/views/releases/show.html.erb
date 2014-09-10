@@ -1,16 +1,23 @@
 <section class="release-main">
   <div class="release-details row">
+
     <div class="col-md-4">
       <h2><%= link_to(@release.artist.name, artists_path(@release.artist)) %></h2>
       <h2><%= @release.title %></h2>
     </div>
-    <div class="col-md-6">
-      <h4>Release: <%= @release.release_no %></h4>
-      <h4>Release Date: 20/04/2014</h4>
+
+    <div class="col-md-5">
+      <h4>Details</h4>
+      <p>Release: <%= @release.release_no %></p>
+      <p>Release Date: 20/04/2014</p>
     </div>
-    <div class="col-md-2">
-      <a href="#" class="btn btn-lg btn-primary">Buy lossless</a>
-      <a href="#" class="btn btn-lg btn-primary">Download mp3</a>
+
+    <div class="col-md-3">
+      <h4>Get a copy</h4>
+      <ul class="list-unstyled">
+        <li><a href="<%= @release.buy_link %>" class="btn btn-default"><i class="glyphicon glyphicon-download"></i> Buy lossless</a></li>
+        <li><a href="<%= @release.download_link %>" class="btn btn-default"><i class="glyphicon glyphicon-download"></i> Download mp3 (320 kbps)</a></li>
+      </ul>
     </div>
   </div>
 
@@ -20,15 +27,23 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="release-image-large col-md-5">
-      <%= image_tag(@release.avatar.url) %>
+  <% if !@release.description.blank? %>
+    <div class="row">
+      <div class="release-image-large col-md-5">
+        <%= image_tag(@release.avatar.jumbo.url) %>
+      </div>
+      <div class="col-md-7">
+        <blockquote>
+          <%= @release.description %>
+        </blockquote>
+      </div>
     </div>
-    <div class="col-md-7">
-      <blockquote>
-        <%= @release.description %>
-      </blockquote>
+  <% else %>
+    <div class="row">
+      <div class="release-image-large col-md-5 col-md-offset-3">
+        <%= image_tag(@release.avatar.jumbo.url) %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
 </section>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910040215) do
+ActiveRecord::Schema.define(version: 20140910042218) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20140910040215) do
     t.string   "avatar"
     t.text     "soundcloud_embed"
     t.boolean  "published",        default: false
+    t.string   "buy_link"
+    t.string   "download_link"
   end
 
   add_index "releases", ["artist_id"], name: "index_releases_on_artist_id"
