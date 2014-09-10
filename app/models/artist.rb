@@ -13,7 +13,12 @@ class Artist < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
   crop_uploaded :avatar
+
   def name_with_initial
     "#{name}.1"
+  end
+
+  def should_generate_new_friendly_id?
+    name_changed?
   end
 end

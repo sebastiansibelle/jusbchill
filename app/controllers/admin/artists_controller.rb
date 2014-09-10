@@ -14,10 +14,20 @@ class Admin::ArtistsController < Admin::AdminController
   def update
     @artist = Artist.friendly.find(params[:id])
     
-    if @artist.update(artist_params)
-      redirect_to edit_admin_artist_path
-    else
-      render 'edit'
+    respond_to do |format|
+      if @artist.update(artist_params)
+        format.html {
+          if params[:artist][:avatar].present?
+            render "crop"
+          else
+            redirect_to edit_admin_artist_path(@artist), notice: 'The artist was successfully updated.'
+          end
+        }
+        format.json { render action: 'show', status: :created, location: @artist }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @artist.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -28,9 +38,9 @@ class Admin::ArtistsController < Admin::AdminController
       if @artist.save
         format.html {
           if params[:artist][:avatar].present?
-            render :crop  ## Render the view for cropping
+            render "crop"
           else
-            redirect_to edit_admin_artist_path(@artist), notice: 'artist was successfully created.'
+            redirect_to edit_admin_artist_path(@artist), notice: 'The artist was successfully created.'
           end
         }
         format.json { render action: 'show', status: :created, location: @artist }
