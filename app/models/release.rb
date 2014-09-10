@@ -11,7 +11,8 @@ class Release < ActiveRecord::Base
 
   # To have published and unpublished releases
   # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user
-  scope :published, -> { where(published: true) }
+
+  scope :published, -> { where(published: true)  }
   scope :un_published, -> { where(published: false) }
 
 

@@ -50,6 +50,18 @@
       <%= f.text_area :description, cols: 5, rows: 3, class: "form-control" %>
     </div>
 
+     <div class="form-group">
+      <%= f.label :buy_link %>
+      <%= f.text_field :buy_link, class: "form-control" %>
+       <p class="help-block">From beatport/bandcamp</p>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :download_link %>
+      <%= f.text_field :download_link, class: "form-control" %>
+       <p class="help-block">From soundcloud</p>
+    </div>
+
     <div class="form-group">
       <%= f.label :published %>
       <%= f.check_box :published, class: "form-control" %>
