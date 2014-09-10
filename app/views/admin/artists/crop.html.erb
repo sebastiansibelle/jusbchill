@@ -1,6 +1,6 @@
 <h1>Crop That Image</h1>
 
-<%= form_for(@artist, url: admin_artist_path, html: { role: "form" } ) do |f| %>
+<%= form_for(@artist, url: admin_artist_path(@artist), html: { role: "form" } ) do |f| %>
   <div class="form-group">
     <div class="form-group">
       <%= f.cropbox :avatar %>

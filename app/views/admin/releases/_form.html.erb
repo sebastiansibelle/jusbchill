@@ -1,4 +1,4 @@
-<%= form_for(@release, url: admin_release_path, html: { role: "form" } ) do |f| %>
+<%= form_for(@release, url: url, html: { role: "form" } ) do |f| %>
   <div class="form-group">
     <% if @release.errors.any? %>
       <div id="error_explanation">
@@ -71,7 +71,7 @@
     <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
       Save
     <% end %>
-    <%= link_to 'Delete', admin_release_path(@release),
+    <%= link_to 'Delete', url,
         method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
   </div>
 <% end %>
