@@ -5,9 +5,17 @@
   <div class="artist-details col-md-8">
     <h2><%= @artist.name %></h2>
     <p>
-      <span class="label label-default"><a href="<%= @artist.twitter %>">Twitter</a></span>
-      <span class="label label-default"><a href="<%= @artist.facebook %>">Facebook</a></span>
-      <span class="label label-default"><a href="<%= @artist.soundcloud %>">Soundcloud</a></span>
+      <% if !@artist.twitter.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.twitter %>">Twitter</a></button>
+      <% end %>
+
+      <% if !@artist.facebook.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.facebook %>">Facebook</a></button>
+      <% end %>
+
+      <% if !@artist.soundcloud.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.soundcloud %>">Soundcloud</a></button>
+      <% end %>
     </p>
     <p class="hidden-xs">
       <%= @artist.biography %>
@@ -23,8 +31,10 @@
 
 <% if @artist.releases.count > 0 %>
   <section class="releases row">
-    <h2>Releases</h2>
-    <%= render @artist.releases %>
+    <div class="col-md-12"> 
+      <h2>Releases</h2>
+      <%= render @artist.releases %>
+    </div>
   </section>
 <% end %>
 
