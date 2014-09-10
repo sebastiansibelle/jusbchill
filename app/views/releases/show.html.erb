@@ -16,7 +16,7 @@
 
   <div class="row soundcloud-player">
     <div class="col-md-12">
-      <iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/152497496&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+      <%= raw(@release.soundcloud_embed) %>
     </div>
   </div>
 
@@ -26,9 +26,6 @@
     </div>
     <div class="col-md-7">
       <blockquote>
-        No Regular Play's debut album, as Tony Naylor put it, struggled to stay on the right side of the "fine line between restraint, good taste and banality." But if the loose, hip-hop infused deep house of Endangered Species lacked bite, its slippery vocals offer remixers parts on which to drape more anthemic dressing. Navid Izadi's take on "Won't Quit," a meandering synth jam in its original form, beefs up the bass and gives the voice more clout, with a light breakbeat injecting some Wolf + Lamb-style funk. Soul Clap, too, take something that was aimless, if not unpretty, and march it inside the club. The changes between the remix and its original are largely cosmetic—a boost in pace, a thumping kick, less Café del Mar saxophone—but they deftly draw out its early hours atmosphere.
-
-"Kickback" featured the jazzy chops of Minneapolis drummer JT Bates, flickering over lethargic pads and A Real Live Show's charmingly earnest spit. But when Frank & Tony strip out the haze, the vocal falls flat, leaving a groove-driven house cut that's in sharper focus but immediately forgettable. The EP's strongest moment is its furthest divergence from the source material. Slow Hands' guitar-and-synth take on "Won't Quit" unfurls like mist, before the fog burns off in the second half under the rising heat of whirling riffs.
         <%= @release.description %>
       </blockquote>
     </div>

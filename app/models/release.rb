@@ -5,6 +5,7 @@ class Release < ActiveRecord::Base
   validates :avatar, presence: true
   validates :release_no, presence: true, uniqueness: true
   validates :title, presence: true
-
+  validates :soundcloud_embed, presence: true
+  
   mount_uploader :avatar, AvatarUploader
 end

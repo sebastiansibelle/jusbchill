@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821070926) do
+ActiveRecord::Schema.define(version: 20140910005705) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140821070926) do
     t.string   "facebook"
     t.string   "soundcloud"
     t.string   "twitter"
+    t.text     "soundcloud_embed"
   end
 
   add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140821070926) do
     t.string   "slug"
     t.string   "release_no"
     t.string   "avatar"
+    t.text     "soundcloud_embed"
   end
 
   add_index "releases", ["artist_id"], name: "index_releases_on_artist_id"

@@ -6,6 +6,7 @@ class Artist < ActiveRecord::Base
   validates :name, presence: true
   validates :biography, presence: true, length: { minimum: 25 }
   validates :avatar, presence: true
+  validates :soundcloud_embed, presence: true
   validates :soundcloud, url: true
   validates :facebook, url: true
   validates :twitter, url: true
