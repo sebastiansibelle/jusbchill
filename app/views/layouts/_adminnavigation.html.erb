@@ -16,6 +16,7 @@
         <ul class="nav navbar-nav">
           <li><%= link_to 'Artists', admin_artists_path %></li>
           <li><%= link_to 'Releases', admin_releases_path %></li>
+          <li><%= link_to 'Mixes', admin_mixes_path %></li>
           <li class="dropdown pull-right">
             <% if user_signed_in? %>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logged in as <strong><%= current_user.email %></strong><span class="caret"></span>

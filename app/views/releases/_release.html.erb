@@ -6,6 +6,6 @@
   </div>
   <div class="release-details">
     <h4><%= release.release_no %></h4>
-    <h4><%= release.title %> - <%= release.artist.name %></h4>
+    <h4><%= release.title %> - <%= link_to(release.artist.name, artist_path(release.artist)) %></h4>
   </div>
 </div>

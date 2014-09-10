@@ -7,7 +7,4 @@ class ReleasesController < ApplicationController
   def show
     @release = Release.friendly.find(params[:id])
   end
-
-  def mixes
-  end
 end

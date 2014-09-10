@@ -1,0 +1,11 @@
+<h1>Editing mix</h1>
+
+<%= form_for(@mix, url: admin_mix_path, html: { role: "form" } ) do |f| %>
+  <%= render partial: 'form', locals: {f: f} %>
+<% end %>
+
+<%= link_to 'Delete', admin_mix_path(@mix),
+      method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+
+<%= link_to 'Show', @mix %> |
+<%= link_to 'Back', mixes_path %>

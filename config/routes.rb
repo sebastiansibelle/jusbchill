@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users
     resources :releases
     resources :artists
+    resources :mixes
   end
 
   resources :users
@@ -18,13 +19,13 @@ Rails.application.routes.draw do
   end
 
   resources :releases
+  resources :mixes
 
   # Static pages
   get 'contact' => 'contact#index'
   get 'privacy' => 'home#privacy'
   get 'legal' => 'home#legal'
   get 'about' => 'home#about'
-  get 'mixes' => 'releases#mixes'
 
   # You can have the root of your site routed with "root"
   root 'home#index'

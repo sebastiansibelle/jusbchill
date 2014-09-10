@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mix_no: 
+  title: 
+  description: 
+  avatar: 
+  artist_id: 
+  soundcloud: MyString
+
+two:
+  mix_no: 
+  title: 
+  description: 
+  avatar: 
+  artist_id: 
+  soundcloud: MyString
