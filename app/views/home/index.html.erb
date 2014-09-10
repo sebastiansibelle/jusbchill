@@ -4,4 +4,6 @@
   </div>
 </section>
 
-<%= render 'releases/list' %>
+<% unless @releases.blank? %>
+  <%= render 'releases/list' %>
+<% end %>
