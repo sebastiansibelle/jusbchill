@@ -6,7 +6,7 @@ class Release < ActiveRecord::Base
   validates :release_no, presence: true, uniqueness: true
   validates :title, presence: true
   validates :soundcloud_embed, presence: true
-  
+
   default_scope { order('release_no') }
 
   mount_uploader :avatar, AvatarUploader

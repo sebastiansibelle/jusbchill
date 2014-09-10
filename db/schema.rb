@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910005705) do
+ActiveRecord::Schema.define(version: 20140910024744) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140910005705) do
     t.string   "soundcloud"
     t.string   "twitter"
     t.text     "soundcloud_embed"
+    t.boolean  "published",        default: false
   end
 
   add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true
