@@ -28,45 +28,6 @@ body {
   margin-top: 5px;
 }
 
-
-
-
-
-.release{
-  border-radius: 5px;
-  padding:  10px;
-  margin-bottom: 20px;
-
-  .release-image{
-    float: clear;
-
-    img{
-      width: 263px;
-    }
-  }
-
-  .release-image-large{
-    float: clear;
-
-    img{
-      width: 450px;
-    }
-  }
-
-
-  .release-details{
-    
-    h3{
-      margin-top: 0px;
-    }
-
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 15px;
-  }
-}
-
 footer{
   padding: 60px 0;
   text-align: center;

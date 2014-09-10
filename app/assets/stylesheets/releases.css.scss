@@ -1,3 +1,72 @@
 // Place all the styles related to the Releases controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.release{
+  border-radius: 5px;
+  padding:  10px;
+  margin-bottom: 20px;
+
+  .release-image{
+    float: clear;
+
+    img{
+      width: 263px;
+    }
+  }
+
+  .release-image-large{
+    float: clear;
+
+    img{
+      width: 450px;
+    }
+  }
+
+
+  .release-details{
+    
+    h3{
+      margin-top: 0px;
+    }
+
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+  }
+}
+
+.release-main{
+  margin-bottom: 20px;
+
+  .soundcloud-player{
+    margin-bottom: 40px;
+  }
+
+  .release-image{
+    float: clear;
+
+    img{
+      width: 263px;
+    }
+  }
+
+  .release-image-large{
+    float: clear;
+
+    img{
+      width: 450px;
+    }
+  }
+
+
+  .release-details{
+    
+    h3{
+      margin-top: 0px;
+    }
+
+    margin-bottom: 40px;
+    background-color: #fff;
+  }
+}

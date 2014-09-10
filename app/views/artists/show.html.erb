@@ -4,6 +4,11 @@
   </div>
   <div class="artist-details col-md-8">
     <h2><%= @artist.name %></h2>
+    <p>
+      <span class="label label-default"><a href="<%= @artist.twitter %>">Twitter</a></span>
+      <span class="label label-default"><a href="<%= @artist.facebook %>">Facebook</a></span>
+      <span class="label label-default"><a href="<%= @artist.soundcloud %>">Soundcloud</a></span>
+    </p>
     <p class="hidden-xs">
       <%= @artist.biography %>
     </p>
@@ -15,8 +20,6 @@
     <iframe width="100%" height="350" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/58219245&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
   </div>
 </section>
-
-
 
 <% if @artist.releases.count > 0 %>
   <section class="releases row">

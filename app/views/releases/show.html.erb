@@ -1,23 +1,28 @@
-<section class="release">
-  <h2><%= link_to(@release.artist.name, artists_path(@release.artist)) %></h2>
-  <h2><%= @release.title %></h2>
+<section class="release-main">
+  <div class="release-details row">
+    <div class="col-md-4">
+      <h2><%= link_to(@release.artist.name, artists_path(@release.artist)) %></h2>
+      <h2><%= @release.title %></h2>
+    </div>
+    <div class="col-md-6">
+      <h4>Release: <%= @release.release_no %></h4>
+      <h4>Release Date: 20/04/2014</h4>
+    </div>
+    <div class="col-md-2">
+      <a href="#" class="btn btn-lg btn-primary">Buy lossless</a>
+      <a href="#" class="btn btn-lg btn-primary">Download mp3</a>
+    </div>
+  </div>
 
-  <div class="row">
+  <div class="row soundcloud-player">
     <div class="col-md-12">
       <iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/152497496&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
     </div>
   </div>
 
-
   <div class="row">
     <div class="release-image-large col-md-5">
       <%= image_tag(@release.avatar.url) %>
-      <div class="release-details">
-        <h4>Release: <%= @release.release_no %></h4>
-        <h4>Release Date: 20/04/2014</h4>
-        <a href="#" class="btn btn-lg btn-primary">Buy lossless</a>
-        <a href="#" class="btn btn-lg btn-primary">Download mp3</a>
-      </div>
     </div>
     <div class="col-md-7">
       <blockquote>
@@ -30,5 +35,3 @@
   </div>
 
 </section>
-
-<%= link_to 'Back', artists_path %>
