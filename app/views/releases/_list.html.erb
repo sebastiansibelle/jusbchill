@@ -1,0 +1,17 @@
+<h2>Releases</h2>
+
+<section class="releases row">
+  <% @releases.each do |release| %>
+    <div class="release col-md-3">
+      <div class="release-image">
+        <%= link_to(release_path(release), {}) do %>
+          <%= image_tag(release.avatar.jumbo.url) %>
+        <% end %>
+      </div>
+      <div class="release-details">
+        <h4><%= release.release_no %></h4>
+        <h4><%= release.title %> - <%= link_to(release.artist.name, artist_path(release.artist)) %></h4>
+      </div>
+    </div>
+  <% end %>
+</section>
