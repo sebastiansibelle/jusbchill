@@ -38,6 +38,8 @@ The plan is to use the Jus B Chill web app as the ditribution source for all our
 
 9. Tests
 
+10. Capistrano Deployment
+
 ## Testing
 
 No testing yet.
