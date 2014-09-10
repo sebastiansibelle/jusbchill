@@ -8,6 +8,9 @@
       </div>
       <div class="artist-details">
         <h3><%= artist.name %></h3>
+        <% if !artist.published %>
+          <span class="label label-warning pull-right">unpublished</span>
+        <% end %>
       </div>
     </div>
   <% end %>

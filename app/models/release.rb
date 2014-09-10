@@ -9,6 +9,12 @@ class Release < ActiveRecord::Base
 
   default_scope { order('release_no') }
 
+  # To have published and unpublished releases
+  # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user
+  scope :published, -> { where(published: true) }
+  scope :un_published, -> { where(published: false) }
+
+
   mount_uploader :avatar, AvatarUploader
   crop_uploaded :avatar
 end
