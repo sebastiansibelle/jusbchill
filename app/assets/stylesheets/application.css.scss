@@ -13,9 +13,8 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "global.css";
-@import "home.css";
-@import "artists.css";
-@import "releases.css";
+@import "global.css.scss";
+@import "home.css.scss";
+@import "artists.css.scss";
 @import "cards.css.scss";
 @import "jquery.jcrop";
