@@ -1,30 +1,25 @@
 # Jus B Chill Readme
 
-Jus B Chill is an online based record label. We release music, throw parties and other stuff.
+Jus B Chill is an online-based record label. We release music, throw parties and other stuff.
 
 ## Plans
 
-The plan is to use the Jus B Chill web app as the ditribution source for all our channels. 
+The plan is to use the Jus B Chill web app as the distribution source for all our channels. 
 
 ### V1.0.0 end of September
 
-- Logo -> Vector trace original
-- Browser test -> Firefox, Safari, Chrome, IE8-10,  
-- Responsive test -> mobile, tablet, pc
-- Header overflow issue
-- How does it work? Content on the about page.
-- Card design on smaller screens.
-- Link color overwrite.
-- Master JBCM001(RE:record) + JBCM002
+- Decide on design pattern for mix imagery
 - Follow the process
-- Get Jacob to make/neaten/whatever soundcloud account
-- Get Andrew to make/neaten/whatever soundcloud account
+- Master JBCM001 and reupload
+
+- Header overflow issue
+- Logo -> Vector trace original
+- How does it work? Content on the about page.
+- Link color overwrite.
+- Fix card design on smaller screens.
 - Edit and upload Andrews Bio
 - Send me updated embed.
 - Choose imagery for the mixes
-- Decide on design pattern for mix imagery
-- Decide on tracklist vs. no tracklist.
-- Decide on downloads vs no downloads.
 - Remove sign up from the devise options
 - Create accounts for andrew, aaron, jacob and myself.
 - Wipe test content.
@@ -32,12 +27,18 @@ The plan is to use the Jus B Chill web app as the ditribution source for all our
 - Install Google Analytics
 - Set up staging website. 
 - Fix the crop function.
+
+
+- Browser test -> Firefox, Safari, Chrome, IE8-10,  
+- Responsive test -> mobile, tablet, pc
+
+- Tag release as v1.0.0
+- Make a decision log
+
 - Meet with Lorrae and talk about promotion
 - Ask aaron again when we gets back.
 - Talk to Matt Nico, Hug n Kisses.
 - Show to Smart Chat/Jus B Chill/???
-- Tag release as v1.0.0
-- Make a decision log
 
 ### V2.0.0 before Aaron gets back. Mid-november
 
