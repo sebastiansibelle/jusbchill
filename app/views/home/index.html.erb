@@ -10,20 +10,20 @@
   </div>
 </section>
 
-<section class="releases row">
-  <div class="col-md-12">
-    <h2>Releases</h2>
-    <% unless @releases.blank? %>
+<% unless @releases.blank? %>
+  <section class="releases row">
+    <div class="col-md-12">
+      <h2>Releases</h2>
       <%= render 'releases/list' %>
-    <% end %>
-  </div>
-</section>
+    </div>
+  </section>
+<% end %>
 
-<section class="mixes row">
-  <div class="col-md-12">
-    <h2>Mixes</h2>
-    <% unless @mixes.blank? %>
+<% unless @mixes.blank? %>
+  <section class="mixes row">
+    <div class="col-md-12">
+      <h2>Mixes</h2>
       <%= render 'mixes/list' %>
-    <% end %>
-  </div>
-</section>
+    </div>
+  </section>
+<% end %>
