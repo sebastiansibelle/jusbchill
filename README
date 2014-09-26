@@ -8,10 +8,8 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V1.0.0 end of September
 
-- Decide on design pattern for mix imagery
-- Follow the process
-- Master JBCM001 and reupload
-
+- Install Google Analytics
+- Remove sign up from the devise options
 - Header overflow issue
 - Logo -> Vector trace original
 - How does it work? Content on the about page.
@@ -20,20 +18,23 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - Edit and upload Andrews Bio
 - Send me updated embed.
 - Choose imagery for the mixes
-- Remove sign up from the devise options
-- Create accounts for andrew, aaron, jacob and myself.
+
+
 - Wipe test content.
 - Change contact to email.
-- Install Google Analytics
-- Set up staging website. 
-- Fix the crop function.
 
+
+- Set up staging website. 
+- Create accounts for andrew, aaron, jacob and myself.
+
+- Fix the crop function.
 
 - Browser test -> Firefox, Safari, Chrome, IE8-10,  
 - Responsive test -> mobile, tablet, pc
 
 - Tag release as v1.0.0
 - Make a decision log
+- Master JBCM001 and reupload
 
 - Meet with Lorrae and talk about promotion
 - Ask aaron again when we gets back.
@@ -66,6 +67,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - New device/logo.
 - New colour scheme/palette/font stack
 - Decide on design pattern for release imagery
+- Decide on design pattern for mix imagery
 - Design admin home page to reflect release manifesto
 - Finish and master releases
 - Capistrano deployment

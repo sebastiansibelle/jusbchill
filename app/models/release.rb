@@ -15,7 +15,6 @@ class Release < ActiveRecord::Base
   scope :published, -> { where(published: true)  }
   scope :un_published, -> { where(published: false) }
 
-
   mount_uploader :avatar, AvatarUploader
   crop_uploaded :avatar
 end
