@@ -1,20 +1,32 @@
-// Place all the styles related to the Releases controller here.
+// Place all the styles related to the mixs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.release{
+
+.card{
   border-radius: 5px;
   padding:  10px;
   margin-bottom: 20px;
 
-  .release-image{
+  .card-image{
     float: clear;
 
     img{
-      width: 263px;
+      width: 379px;
+      height: 379px;
     }
   }
 
-  .release-image-large{
+  @media (min-width: $screen-sm-min) {
+
+    .card-image{
+      img{
+        width: 263px;
+        height: 263px;
+      }
+    }
+  }
+
+  .card-image-large{
     float: clear;
 
     img{
@@ -23,7 +35,7 @@
   }
 
 
-  .release-details{
+  .card-details{
     
     h3{
       margin-top: 0px;
@@ -36,14 +48,14 @@
   }
 }
 
-.release-main{
+.card-main{
   margin-bottom: 20px;
 
   .soundcloud-player{
     margin-bottom: 40px;
   }
 
-  .release-image{
+  .card-image{
     float: clear;
 
     img{
@@ -51,7 +63,7 @@
     }
   }
 
-  .release-image-large{
+  .card-image-large{
     float: clear;
 
     img{
@@ -60,7 +72,7 @@
   }
 
 
-  .release-details{
+  .card-details{
     
     h3{
       margin-top: 0px;

@@ -1,17 +1,5 @@
 <h2>Mixes</h2>
 
-<section class="mix row">
-  <% @mixes.each do |mix| %>
-    <div class="mix col-md-3">
-      <div class="mix-image">
-        <%= link_to(mix_path(mix), {}) do %>
-          <%= image_tag(mix.avatar.jumbo.url) %>
-        <% end %>
-      </div>
-      <div class="mix-details">
-        <h4><%= mix.mix_no %></h4>
-        <h4><%= mix.title %> - <%= link_to(mix.artist.name, artist_path(mix.artist)) %></h4>
-      </div>
-    </div>
-  <% end %>
+<section class="cards row">
+  <%= render @mixes.published %>
 </section>

@@ -18,9 +18,12 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><%= link_to 'Artists', artists_path %></li>
-          <li><%= link_to 'Releases', releases_path %></li>
-          <li><%= link_to 'Mixes', mixes_path %></li>
-
+          <% if Release.published.count > 1 %>
+            <li><%= link_to 'Releases', releases_path %></li>
+          <% end %>
+          <% if Mix.published.count > 1 %>
+            <li><%= link_to 'Mixes', mixes_path %></li>
+          <% end %>
           <li><%= link_to 'About', about_path %></li>
           <li><%= link_to 'Contact', contact_path %></li>
         </ul>
