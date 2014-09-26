@@ -8,7 +8,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V1.0.0 end of September
 
-- Remove sign up from the devise options
 - Header overflow issue
 - Logo -> Vector trace original
 - How does it work? Content on the about page.
