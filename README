@@ -6,9 +6,47 @@ Jus B Chill is an online based record label. We release music, throw parties and
 
 The plan is to use the Jus B Chill web app as the ditribution source for all our channels. 
 
-### Todo
+### V1.0.0 end of September
 
-1. Do branding guideline document
+- Logo -> Vector trace original
+- Browser test -> Firefox, Safari, Chrome, IE8-10,  
+- Responsive test -> mobile, tablet, pc
+- Header overflow issue
+- How does it work? Content on the about page.
+- Card design on smaller screens.
+- Link color overwrite.
+- Master JBCM001(RE:record) + JBCM002
+- Follow the process
+- Get Jacob to make/neaten/whatever soundcloud account
+- Get Andrew to make/neaten/whatever soundcloud account
+- Edit and upload Andrews Bio
+- Send me updated embed.
+- Choose imagery for the mixes
+- Decide on design pattern for mix imagery
+- Decide on tracklist vs. no tracklist.
+- Decide on downloads vs no downloads.
+- Remove sign up from the devise options
+- Create accounts for andrew, aaron, jacob and myself.
+- Wipe test content.
+- Change contact to email.
+- Install Google Analytics
+- Set up staging website. 
+- Fix the crop function.
+- Meet with Lorrae and talk about promotion
+- Ask aaron again when we gets back.
+- Talk to Matt Nico, Hug n Kisses.
+- Show to Smart Chat/Jus B Chill/???
+- Tag release as v1.0.0
+- Make a decision log
+
+### V2.0.0 before Aaron gets back. Mid-november
+
+- Unit tests, models
+- Integration tests, tasks
+- Atomic CSS/Pattern lab/style guidelines
+- BEM
+- TDD
+- Do branding guideline document
 	- Brand identity and purpose
 	- Choose a font set
 	- Create a logo
@@ -16,29 +54,47 @@ The plan is to use the Jus B Chill web app as the ditribution source for all our
 	- Language set and guidelines
 	- Release image guidelines
 	- Mix image guidelines
-
-2. Do direct integration with soundcloud player
-
-3. Copy for the about page
-  - Label purpose, mission, goals
-  - Label history
-
-4. Create advanced user model for multiple user types:
+- Release Manifesto Approval process
+- Release schedule
+- Multiple user roles using cancan as per manifesto approval process:
 	- super user (seb - delete privledges), 
 	- admin/mod user (andrew/jacob/aaron - all other privledges),
 	- regular user (artist - no privledges except posting new tracks))
+- Direct integration with soundcloud player
+- Refine the language set with Bec / Whoever
+- New device/logo.
+- New colour scheme/palette/font stack
+- Decide on design pattern for release imagery
+- Design admin home page to reflect release manifesto
+- Finish and master releases
+- Capistrano deployment
+- Organise Party
+- Tag 2.0.0
+- Copy for the about page
+  - Label purpose, mission, goals
+  - Label history
 
-5. Admin home page design / thoughts
+### V3.0.0+
 
-6. Events
-
-7. Releases featured in this mix.
-
-8. Images to choose from for releases / mixes
-
-9. Tests
-
-10. Capistrano Deployment
+- Promotion, web and otherwise
+- International involvement
+- Events
+- Releases featured in this mix.
+- Images to choose from for releases / mixes
+- Marketing
+- Analytics analysis
+- "Label Members" a la hugs n kisses
+- Facebook page
+- Twitter
+- Integration with Online collaboration tools e.g. splice, wavestack
+- Integration with landr for mastering
+- Blog
+- Demo processing/etc
+- Tools to help the artists with their work
+- Usability improvements to the release process
+- Open source
+- Licensing the product
+- 
 
 ## Testing
 

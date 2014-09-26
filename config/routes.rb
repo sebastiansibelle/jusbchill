@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  devise_for :users, :path_names => {:sign_in => "login", :sign_out => "logout"}
+  devise_for :users, :path => "", :path_names => {:sign_in => "login", :sign_out => "logout"}
 
   namespace :admin do
     get '/' => 'dashboard#index'
