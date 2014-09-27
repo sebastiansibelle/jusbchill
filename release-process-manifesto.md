@@ -93,3 +93,19 @@ Artist submits soundcloud page, public or private links to urls, a biography, vi
 
 14. A visionary must then send out the press kit to contacts.
 
+## Notes
+
+The modern music label is a multi-faceted business, contains many different type of roles cobbled together. 
+
+- PR
+- Social Media
+- Distribution and Logistics
+- Record Pressings
+- Artist Management
+- Booking/touring Agents
+- Release Management and Scheduling
+- Artists
+
+Jus B Chill is an artist-run online-based independent not-for-profit music label. We sell our management software to other labels on a subscription basis, and this provides funding for our label.
+
+

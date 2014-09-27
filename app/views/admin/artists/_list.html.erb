@@ -1,12 +1,12 @@
-<section class="artists row">
+<section class="cards row">
   <% @artists.each do |artist| %>
-    <div class="artist col-md-3">
-      <div class="artist-image">
+    <div class="card col-md-3">
+      <div class="card-image">
         <%= link_to(edit_admin_artist_path(artist), {}) do %>
           <%= image_tag(artist.avatar.jumbo.url) %>
         <% end %>
       </div>
-      <div class="artist-details">
+      <div class="card-details">
         <h3><%= artist.name %></h3>
         <% if !artist.published %>
           <span class="label label-warning pull-right">unpublished</span>

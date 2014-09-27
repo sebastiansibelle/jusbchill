@@ -2,15 +2,15 @@
   <%= link_to 'New Mix', new_admin_mix_path, class: "btn btn-primary btn-new-release pull-right" %>
 </h1>
 
-<section class="mixes row">
+<section class="card row">
   <% @mixes.each do |mix| %>
-    <div class="mix col-md-3">
-      <div class="mix-image">
+    <div class="card col-md-3">
+      <div class="card-image">
         <%= link_to(edit_admin_mix_path(mix), {}) do %>
           <%= image_tag(mix.avatar.jumbo.url) %>
         <% end %>
       </div>
-      <div class="mix-details">
+      <div class="card-details">
         <h4><%= mix.mix_no %></h4>
         <h4><%= mix.title %> - <%= mix.artist.name %></h4>
       </div>
