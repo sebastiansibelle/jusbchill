@@ -42,8 +42,14 @@ test:
   username: jusbchill
   password:
 
+test:
+  <<: *default
+  database: jusbchill_staging
+  username: jusbchill
+  password: 4MrLrLUbVkUurk
+
 production:
   <<: *default
   database: jusbchill_production
   username: jusbchill
-  password:
+  password: 4MrLrLUbVkUurk
