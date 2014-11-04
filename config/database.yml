@@ -42,7 +42,7 @@ test:
   username: jusbchill
   password:
 
-test:
+staging:
   <<: *default
   database: jusbchill_staging
   username: jusbchill
