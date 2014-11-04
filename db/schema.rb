@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910055836) do
+ActiveRecord::Schema.define(version: 20141104014527) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -35,12 +35,14 @@ ActiveRecord::Schema.define(version: 20140910055836) do
     t.text     "description"
     t.string   "avatar"
     t.integer  "artist_id"
-    t.string   "soundcloud_embed"
-    t.boolean  "published",        default: false
+    t.text     "soundcloud_embed", limit: 255
+    t.boolean  "published",                    default: false
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "mixes", ["slug"], name: "index_mixes_on_slug", unique: true
 
   create_table "releases", force: true do |t|
     t.string   "title"
