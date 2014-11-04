@@ -9,23 +9,20 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 ### V1.0.0 end of September
 
 - Create accounts for andrew, aaron, jacob and myself.
-- Master JBCM001 and reupload
-- Browser test -> Firefox, Safari, Chrome, IE8-10,  
+- Email guys about new accounts.
 - Responsive test -> mobile, tablet, pc
+- Browser test -> Firefox, Safari, Chrome, IE8-10
+
+- Fix HTML + CSS bugs
+- Improve device/logo
+- Choose basic colour scheme/palette/font stack.
 - Tag release as v1.0.0
-- Ask Aaron again when we gets back.
-- Talk to Matt Nico, Hug n Kisses, Pleasure Planet, Dave from Rooftop, Mokubo + Elly Benson, CC:Disco, Vedran, Elle Marsh, Olya 
-- Show to Smart Chat/Jus B Chill
 
-### V2.0.0 before Aaron gets back. Mid-november
+- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet,  CC:Disco, Olya 
 
-- Set up staging website. 
-- Convert to postgres
-- Unit tests, models
-- Integration tests, tasks
-- Atomic CSS/Pattern lab/style guidelines
-- BEM
-- TDD
+- Decide on design pattern for release imagery
+- Decide on design pattern for mix imagery
+
 - Do branding guideline document
 	- Brand identity and purpose
 	- Choose a font set
@@ -34,6 +31,22 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- Language set and guidelines
 	- Release image guidelines
 	- Mix image guidelines
+
+
+### V2.0.0 before Aaron gets back. Mid-november
+
+- Set up staging website. 
+- Convert to postgres
+
+- Unit tests, models
+- Integration tests, tasks
+- TDD
+
+- Atomic CSS/Pattern lab/style guidelines
+- BEM
+
+- Master JBCM001 and reupload
+
 - Release Manifesto Approval process
 - Release schedule
 - Multiple user roles using cancan as per manifesto approval process:
@@ -42,10 +55,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- regular user (artist - no privledges except posting new tracks))
 - Direct integration with soundcloud player
 - Refine the language set with Bec / Whoever
-- New device/logo.
-- New colour scheme/palette/font stack
-- Decide on design pattern for release imagery
-- Decide on design pattern for mix imagery
 - Design admin home page to reflect release manifesto
 - Finish and master releases
 - Capistrano deployment
@@ -57,6 +66,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V3.0.0+
 
+- New device/logo.
 - Promotion, web and otherwise
 - International involvement
 - Events
