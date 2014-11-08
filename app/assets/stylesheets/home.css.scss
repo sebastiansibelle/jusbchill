@@ -3,11 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $background_primary: #fff;
-$background_secondary: #fff;
+$background_secondary: #ededed;
 
 body {
   background: $background_primary;
   text-align: center;
+}
+
+.soundcloud{
+  padding-bottom: 40px;
+}
+
+.mixes{
+  padding: 40px 0px 80px 0px;
+  background-color: $background_secondary;
+
+  h2{
+    padding-bottom: 20px;
+  }
 }
 
 .btn-new-artist{
