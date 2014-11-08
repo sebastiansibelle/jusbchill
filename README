@@ -8,11 +8,9 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V1.0.0 end of September
 
-- Create accounts for andrew, aaron, jacob and myself.
 - Email guys about new accounts.
 - Responsive test -> mobile, tablet, pc
 - Browser test -> Firefox, Safari, Chrome, IE8-10
-
 - Fix HTML + CSS bugs
 - Improve device/logo
 - Choose basic colour scheme/palette/font stack.
