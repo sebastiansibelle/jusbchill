@@ -1,0 +1,17 @@
+<div class="release">
+  <p>
+    <strong>Title:</strong>
+    <%= release.title %>
+  </p>
+
+  <p>
+    <strong>Description: </strong>
+    <%= release.description %>
+  </p>
+
+  <p>
+  <%= link_to 'Destroy Release', [release.artist, release],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>

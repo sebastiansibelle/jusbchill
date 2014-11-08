@@ -1,0 +1,39 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navbar{
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  li a{
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+      margin-right: 50px;
+      img{
+      height: 30px
+    }
+  }
+}
+
+body {
+  background: #fff;
+}
+
+.btn-new-artist{
+  margin-top: 5px;
+}
+
+footer{
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 30px;
+
+  li{
+    font-size: 16px;
+  }
+}

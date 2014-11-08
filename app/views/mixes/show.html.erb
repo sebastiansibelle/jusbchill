@@ -1,0 +1,30 @@
+<section class="card-main">
+  <div class="card-details row">
+
+    <div class="col-md-4">
+      <div class="card-image-large">
+        <%= image_tag(@mix.avatar.jumbo.url) %>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <h2><%= @mix.title %></h2>
+      <h2><%= link_to(@mix.artist.name, artists_path(@mix.artist)) %></h2>
+      <p>Mix Number: <%= @mix.mix_no %></p>
+      <p>Release Date: 20/04/2014</p>
+      <p><%= @mix.description %></p>
+    </div>
+
+    <div class="col-md-3">
+      <h2>Share</h2>
+      <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
+    </div>
+  </div>
+
+  <div class="row soundcloud-player">
+    <div class="col-md-12">
+      <%= raw(@mix.soundcloud_embed) %>
+    </div>
+  </div>
+
+</section>

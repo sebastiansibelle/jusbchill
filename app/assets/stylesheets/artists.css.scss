@@ -1,0 +1,56 @@
+// Place all the styles related to the artists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.artist{
+  border-radius: 5px;
+  padding:  10px;
+  margin-bottom: 20px;
+
+  .artist-image{
+    height: 350px;
+    float: clear;
+
+    img{
+      width: 363px;
+      height: 350px;
+    }
+  }
+
+  .artist-details{
+    
+    h3{
+      margin-top: 0px;
+    }
+
+    border: 2px solid #efefef;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+  }
+}
+
+.artist-bio{
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  .artist-image{
+    height: 350px;
+    float: clear;
+
+    img{
+      width: 363px;
+      height: 350px;
+    }
+  }
+
+  .artist-details{
+    p{
+      font-size: 20px;
+    }
+    h3{
+      margin-top: 0px;
+    }
+
+  }
+}

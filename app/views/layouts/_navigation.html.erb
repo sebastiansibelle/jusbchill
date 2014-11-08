@@ -1,0 +1,35 @@
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <%= link_to({controller: '/home', action: "index"}, {class: 'navbar-brand'}) do %>
+          <%= image_tag('jusbchill.png') %>
+        <% end %>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Artists', artists_path %></li>
+          <% if Release.published.count > 0 %>
+            <li><%= link_to 'Releases', releases_path %></li>
+          <% end %>
+          <% if Mix.published.count > 0 %>
+            <li><%= link_to 'Mixes', mixes_path %></li>
+          <% end %>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+

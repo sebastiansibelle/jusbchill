@@ -1,0 +1,77 @@
+<%= form_for(@release, url: url, html: { role: "form" } ) do |f| %>
+  <div class="form-group">
+    <% if @release.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@release.errors.count, "error") %> prohibited
+          this release from being saved:</h2>
+        <ul>
+        <% @release.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+     <div class="form-group">
+      <%= f.label :release_no %>
+      <%= f.text_field :release_no, class: "form-control" %>
+       <p class="help-block">E.g. JBC003</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :artist_id %>
+      <%= f.collection_select(:artist_id, Artist.all, :id, :name, {}, {class: "form-control"}) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :avatar %>
+
+      <div class="form-image">
+        <%= image_tag(@release.avatar.url) %>
+      </div>
+      
+       <%= f.file_field :avatar %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :soundcloud_embed %>
+      <%= f.text_area :soundcloud_embed, cols: 5, rows: 3, class: "form-control" %>
+    </div>
+   
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, cols: 5, rows: 3, class: "form-control" %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :buy_link %>
+      <%= f.text_field :buy_link, class: "form-control" %>
+       <p class="help-block">From beatport/bandcamp</p>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :download_link %>
+      <%= f.text_field :download_link, class: "form-control" %>
+       <p class="help-block">From soundcloud</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :published %>
+      <%= f.check_box :published, class: "form-control" %>
+    </div>
+
+
+    <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
+      Save
+    <% end %>
+    <%= link_to 'Delete', url,
+        method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+  </div>
+<% end %>

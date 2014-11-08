@@ -1,0 +1,42 @@
+<section class="card-main">
+  <div class="card-details row">
+
+    <div class="col-md-4">
+      <div class="card-image-large">
+        <%= image_tag(@release.avatar.jumbo.url) %>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <h2><%= @release.title %></h2>
+      <h2><%= link_to(@release.artist.name, artist_path(@release.artist)) %></h2>
+      <p>Release: <%= @release.release_no %></p>
+      <p>Release Date: 20/04/2014</p>
+      <p><%= @release.description %></p>
+    </div>
+
+    <div class="col-md-3">
+      <% unless @release.buy_link.blank? && @release.download_link.blank? %>
+        <h2>Get a copy</h2>
+        <h4>Digital</h4>
+        <ul class="list-unstyled">
+          <% if !@release.buy_link.blank? %>
+            <li><a href="<%= @release.buy_link %>" class="btn btn-default" target="_blank"><i class="glyphicon glyphicon-shopping-cart"></i> Buy lossless</a></li>
+          <% end %>
+          
+          <% if !@release.download_link.blank? %>
+            <li><a href="<%= @release.download_link %>" class="btn btn-default" target="_blank"><i class="glyphicon glyphicon-download"></i> Download mp3 (320 kbps)</a></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <h2>Share</h2>
+      <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
+    </div>
+  </div>
+
+  <div class="row soundcloud-player">
+    <div class="col-md-12">
+      <%= raw(@release.soundcloud_embed) %>
+    </div>
+  </div>
+</section>

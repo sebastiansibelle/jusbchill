@@ -1,0 +1,69 @@
+<%= form_for(@artist, url: url, html: { role: "form" } ) do |f| %>
+  <div class="form-group">
+    <% if @artist.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@artist.errors.count, "error") %> prohibited
+          this artist from being saved:</h2>
+        <ul>
+        <% @artist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :avatar %>
+
+      <div class="form-image">
+        <%= image_tag(@artist.avatar.url) %>
+      </div>
+      
+       <%= f.file_field :avatar %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+   
+    <div class="form-group">
+      <%= f.label :biography %>
+      <%= f.text_area :biography, cols: 5, rows: 5, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :soundcloud_embed %>
+      <%= f.text_area :soundcloud_embed, cols: 5, rows: 5, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :facebook %>
+      <%= f.text_field :facebook, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :soundcloud %>
+      <%= f.text_field :soundcloud, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :twitter %>
+      <%= f.text_field :twitter, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :published %>
+      <%= f.check_box :published, class: "form-control" %>
+    </div>
+
+    <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
+      Save
+    <% end %>
+
+     <%= link_to 'Delete', url,
+        method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+  </div>
+<% end %>

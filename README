@@ -1,0 +1,145 @@
+# Jus B Chill Readme
+
+Jus B Chill is an online-based record label. We release music, throw parties and other stuff.
+
+## Plans
+
+The plan is to use the Jus B Chill web app as the distribution source for all our channels. 
+
+### V1.0.0 end of September
+
+- Email guys about new accounts.
+- Responsive test -> mobile, tablet, pc
+- Browser test -> Firefox, Safari, Chrome, IE8-10
+- Fix HTML + CSS bugs
+- Improve device/logo
+- Choose basic colour scheme/palette/font stack.
+- Tag release as v1.0.0
+
+- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet,  CC:Disco, Olya 
+
+- Decide on design pattern for release imagery
+- Decide on design pattern for mix imagery
+
+- Do branding guideline document
+	- Brand identity and purpose
+	- Choose a font set
+	- Create a logo
+	- Choose a basic colour scheme
+	- Language set and guidelines
+	- Release image guidelines
+	- Mix image guidelines
+
+
+### V2.0.0 before Aaron gets back. Mid-november
+
+- Set up staging website. 
+- Convert to postgres
+
+- Unit tests, models
+- Integration tests, tasks
+- TDD
+
+- Atomic CSS/Pattern lab/style guidelines
+- BEM
+
+- Master JBCM001 and reupload
+
+- Release Manifesto Approval process
+- Release schedule
+- Multiple user roles using cancan as per manifesto approval process:
+	- super user (seb - delete privledges), 
+	- admin/mod user (andrew/jacob/aaron - all other privledges),
+	- regular user (artist - no privledges except posting new tracks))
+- Direct integration with soundcloud player
+- Refine the language set with Bec / Whoever
+- Design admin home page to reflect release manifesto
+- Finish and master releases
+- Capistrano deployment
+- Organise Party
+- Tag 2.0.0
+- Copy for the about page
+  - Label purpose, mission, goals
+  - Label history
+
+### V3.0.0+
+
+- New device/logo.
+- Promotion, web and otherwise
+- International involvement
+- Events
+- Releases featured in this mix.
+- Images to choose from for releases / mixes
+- Marketing
+- Analytics analysis
+- "Label Members" a la hugs n kisses
+- Facebook page
+- Twitter
+- Integration with Online collaboration tools e.g. splice, wavestack
+- Integration with landr for mastering
+- Blog
+- Demo processing/etc
+- Tools to help the artists with their work
+- Usability improvements to the release process
+- Open source
+- Licensing the product
+- 
+
+## Testing
+
+No testing yet.
+
+### Unit Test
+
+### Brower Testing
+
+The Jus B Chill website has been designed mobile first and is supposed to be very friendly to portable devices.
+
+It has been tested in the following browsers:
+
+None yet.
+
+## Website Structure
+
+- Releases
+	- Release JBC001
+	- Release JBC002
+- Artists
+	- Artist 001
+	- Artist 002
+- Mixes
+	- Mix 001
+	- Mix 002
+- About
+- Privacy Policy 
+- Contact
+- Home
+
+#### Release
+
+- Release No
+- Title
+- Artist
+- Description
+- Image
+- Soundcloud Url
+- Buy link - Bandcamp or Beatport
+- Mp3 upload / download
+
+#### Artist
+
+- Name
+- Image
+- Biography
+- Soundcloud
+- Facebook
+- Twitter
+
+#### Mix
+
+- Mix no
+- Title
+- Description
+- Image
+- Artist
+- Soundcloud Url

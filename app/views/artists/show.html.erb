@@ -1,0 +1,49 @@
+<section class="artist-bio row">
+  <div class="artist-image col-md-4">
+    <%= image_tag(@artist.avatar.url) %>
+  </div>
+  <div class="artist-details col-md-8">
+    <h2><%= @artist.name %></h2>
+    <p>
+      <% if !@artist.twitter.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.twitter %>">Twitter</a></button>
+      <% end %>
+
+      <% if !@artist.facebook.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.facebook %>">Facebook</a></button>
+      <% end %>
+
+      <% if !@artist.soundcloud.blank? %>
+       <button class="btn btn-default"><a href="<%= @artist.soundcloud %>">Soundcloud</a></button>
+      <% end %>
+    </p>
+    <p class="hidden-xs">
+      <%= @artist.biography %>
+    </p>
+  </div>
+</section>
+
+<section class="soundcloud row">
+  <div class="col-md-12"> 
+    <%= raw(@artist.soundcloud_embed) %>
+  </div>
+</section>
+
+<% if @artist.releases.published.count > 0 %>
+  <section class="releases row">
+    <div class="col-md-12"> 
+      <h2>Releases</h2>
+      <%= render @artist.releases.published %>
+    </div>
+  </section>
+<% end %>
+
+<% if @artist.mixes.published.count > 0 %>
+  <section class="mixes row">
+    <div class="col-md-12"> 
+      <h2>Mixes</h2>
+      <%= render @artist.mixes.published %>
+    </div>
+  </section>
+<% end %>
+
