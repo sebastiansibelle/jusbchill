@@ -1,4 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+p, a, h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+p{
+  font-size: 16px;
+}
+
+
+h1,h2,h3{
+  letter-spacing: 0.9px;
+}
+
+h1{
+  font-size: 48px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3{
+  font-size: 32px;
+}
+
+h4{
+  font-weight: 300;
+  font-size: 24px;
+}
+
+h5,h6{
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
 a{
-  /* fix this when we move to pattern lab*/
-  color: #333 !important;
+  color: #333;
 }

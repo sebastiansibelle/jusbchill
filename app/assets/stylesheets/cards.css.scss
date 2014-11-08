@@ -5,26 +5,37 @@
 .card{
   border-radius: 5px;
   padding:  10px;
+  margin-left: -10px;
   margin-bottom: 20px;
+  text-align: center;
+  margin: 0 auto;
 
   .card-image{
-    float: clear;
-
+  
     img{
-      width: 379px;
-      height: 379px;
+      width: 340px;
+      height: 340px;
     }
   }
 
-  @media (min-width: $screen-sm-min) {
-
+  @media (min-width: $screen-md-min) {
     .card-image{
       img{
-        width: 263px;
-        height: 263px;
+        width: 315px;
+        height: 315px;
       }
     }
   }
+
+  @media (min-width: $screen-lg-min) {
+    .card-image{
+      img{
+        width: 340px;
+        height: 340px;
+      }
+    }
+  }
+
 
   .card-image-large{
     float: clear;
@@ -36,15 +47,19 @@
 
 
   .card-details{
-    
+    width: 340px;
+    height: 80px;
+    margin: 0 auto;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 7px 15px;
+
     h3{
       margin-top: 0px;
     }
 
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 15px;
+
   }
 }
 

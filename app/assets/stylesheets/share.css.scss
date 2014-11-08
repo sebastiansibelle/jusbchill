@@ -1,0 +1,19 @@
+$facebook_primary: #3B5998;
+$twitter_primary: #55acee;
+$soundcloud_primary: #FF6600;
+
+.share{
+  .btn-default{
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+  }
+
+  .btn-twitter{
+    background-color: $twitter_primary;
+  }
+
+  .btn-facebook{
+    background-color: $facebook_primary;
+  }
+}
