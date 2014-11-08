@@ -43,7 +43,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   ## If ONLY "thumb" version is to be cropped
   version :jumbo do
     process crop: :avatar
-    resize_to_limit(600,600)
+    resize_to_limit(300,300)
   end
 
   version :thumb do

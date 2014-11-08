@@ -8,18 +8,13 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V1.0.0 end of September
 
-- Email guys about new accounts.
 - Responsive test -> mobile, tablet, pc
 - Browser test -> Firefox, Safari, Chrome, IE8-10
 - Fix HTML + CSS bugs
-- Improve device/logo
 - Choose basic colour scheme/palette/font stack.
-- Tag release as v1.0.0
 
-- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet,  CC:Disco, Olya 
+- Compile list of contacts for promo
 
-- Decide on design pattern for release imagery
-- Decide on design pattern for mix imagery
 
 - Do branding guideline document
 	- Brand identity and purpose
@@ -31,10 +26,12 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- Mix image guidelines
 
 
-### V2.0.0 before Aaron gets back. Mid-november
 
-- Set up staging website. 
-- Convert to postgres
+- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet,  CC:Disco, Olya 
+
+
+
+### V2.0.0 before Aaron gets back. Mid-november
 
 - Unit tests, models
 - Integration tests, tasks
@@ -55,7 +52,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - Refine the language set with Bec / Whoever
 - Design admin home page to reflect release manifesto
 - Finish and master releases
-- Capistrano deployment
 - Organise Party
 - Tag 2.0.0
 - Copy for the about page
@@ -64,6 +60,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V3.0.0+
 
+- Capistrano deployment
 - New device/logo.
 - Promotion, web and otherwise
 - International involvement
