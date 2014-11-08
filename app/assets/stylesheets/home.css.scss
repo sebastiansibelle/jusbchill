@@ -37,3 +37,12 @@ p.lead{
   padding: 20px;
   text-align: center;
 }
+
+.cards{
+  padding-bottom: 80px;
+  border-bottom: 1px solid $background_secondary;
+
+  h2{
+    padding-bottom: 40px;
+  }
+}
