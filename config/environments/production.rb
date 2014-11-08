@@ -26,7 +26,8 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
   config.assets.precompile = ['application.js', 'application.css', 'admin.css']
-
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+  
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
