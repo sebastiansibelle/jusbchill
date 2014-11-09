@@ -1,0 +1,28 @@
+.navbar{
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+  .navbar-nav{
+    float: none;
+  }
+
+  li a{
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+    margin-right: 50px;
+    margin-top: -6px;
+    
+    img{
+        height: 40px
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .navbar .navbar-nav{
+    float: right;
+  }
+}

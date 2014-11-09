@@ -1,11 +1,11 @@
-<div class="card col-sm-6 col-md-3">
+<div class="card col-sm-6 col-md-4">
   <div class="card-image">
     <%= link_to(mix_path(mix), {}) do %>
       <%= image_tag(mix.avatar.jumbo.url) %>
     <% end %>
   </div>
   <div class="card-details">
-    <h4><%= mix.mix_no %></h4>
-    <h4><%= mix.title %> - <%= link_to(mix.artist.name, artist_path(mix.artist)) %></h4>
+    <h5><%= mix.title %></h5>
+    <h5><%= link_to(mix.artist.name, artist_path(mix.artist)) %></h5>
   </div>
 </div>

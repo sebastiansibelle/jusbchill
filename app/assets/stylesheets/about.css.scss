@@ -1,0 +1,16 @@
+.contact, .about{
+  h2{
+    margin-bottom: 40px;
+  }
+
+  img{
+    margin-top: 40px;
+    width: 370px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    img{
+      width: 450px;
+    }
+  }
+}

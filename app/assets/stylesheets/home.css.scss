@@ -2,26 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$background_primary: #fff;
+$background_secondary: #e7e7e7;
 
-.navbar{
-  margin-bottom: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+body {
+  background: $background_primary;
+  text-align: center;
+}
 
-  li a{
-    font-size: 16px;
-  }
+.introduction{
+  padding: 20px 0px;
+}
 
-  .navbar-brand {
-      margin-right: 50px;
-      img{
-      height: 30px
-    }
+.about, .contact{
+  text-align: left;
+}
+
+.artist-bio, .card-details{
+  text-align: left;
+}
+
+.soundcloud{
+  padding-bottom: 40px;
+
+  h2{
+    margin-top: 40px;
   }
 }
 
-body {
-  background: #fff;
+.mixes{
+  padding: 40px 0px 80px 0px;
+
+  background: -webkit-linear-gradient(180deg, $background_secondary 10%, #FFFFFF 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(180deg, $background_secondary 10%, #FFFFFF 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(180deg, $background_secondary 10%, #FFFFFF 90%); /* IE10 */
+  background:      -o-linear-gradient(180deg, $background_secondary 10%, #FFFFFF 90%); /* Opera 11.10+ */
+  background:         linear-gradient(180deg, $background_secondary 10%, #FFFFFF 90%); /* W3C */
+        
+
+  h2{
+    padding-bottom: 20px;
+  }
 }
 
 .btn-new-artist{
@@ -32,8 +53,13 @@ footer{
   padding: 60px 0;
   text-align: center;
   margin-bottom: 30px;
+}
 
-  li{
-    font-size: 16px;
+.cards{
+  padding-bottom: 80px;
+  border-bottom: 1px solid $background_secondary;
+
+  h2{
+    padding-bottom: 40px;
   }
 }
