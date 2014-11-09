@@ -4,7 +4,7 @@
 
 <section class="card row">
   <% @mixes.each do |mix| %>
-    <div class="card col-md-3">
+    <div class="card col-md-4">
       <div class="card-image">
         <%= link_to(edit_admin_mix_path(mix), {}) do %>
           <%= image_tag(mix.avatar.jumbo.url) %>

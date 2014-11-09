@@ -1,6 +1,6 @@
 <section class="cards row">
   <% @releases.each do |release| %>
-    <div class="card col-md-3">
+    <div class="card col-md-4">
       <div class="card-image">
         <%= link_to(edit_admin_release_path(release), {}) do %>
           <%= image_tag(release.avatar.jumbo.url) %>
