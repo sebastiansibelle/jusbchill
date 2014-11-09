@@ -1,35 +1,43 @@
-<div class="card-details">
-  <div class="container">
-    <div class="row">
+<section class="card-main">
+  <div class="card-details">
+    <div class="container">
+      <div class="row">
 
-      <div class="col-md-4">
-        <div class="card-image-large">
-          <%= image_tag(@mix.avatar.jumbo.url) %>
+        <div class="col-md-4">
+          <div class="card-image-large">
+            <%= image_tag(@mix.avatar.jumbo.url) %>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-5">
-        <h2><%= @mix.title %></h2>
-        <h2><%= link_to(@mix.artist.name, artists_path(@mix.artist)) %></h2>
-        <p>Mix Number: <%= @mix.mix_no %></p>
-        <p>Release Date: 20/04/2014</p>
-        <p><%= @mix.description %></p>
-      </div>
+        <div class="col-md-5">
+          <div class-"title">
+            <h3><%= @mix.title %></h3>
+            <h4><%= link_to(@mix.artist.name, artist_path(@mix.artist)) %></h4>
+          </div>
+          <div class="meta">
+            <p>Mix Number: <%= @mix.mix_no %></p>
+            <p>Release Date: 20/04/2014</p>
+          </div>
+          <p><%= @mix.description %></p>
+        </div>
 
-      <div class="col-md-3">
-        <h2>Share</h2>
-        <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
+        <div class="col-md-3 sidebar">
+          <div class="social">
+            <h3>Share</h3>
+            <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div class="soundcloud-player">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <%= raw(@mix.soundcloud_embed) %>
+  <div class="soundcloud-player">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= raw(@mix.soundcloud_embed) %>
+        </div>
       </div>
     </div>
   </div>

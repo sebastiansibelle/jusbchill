@@ -1,25 +1,27 @@
-<div class="artist-bio">
+<div class="artist-information">
   <div class="container">
     <section class="row">
       <div class="artist-image col-md-4">
         <%= image_tag(@artist.avatar.url) %>
       </div>
       <div class="artist-details col-md-8">
-        <h2><%= @artist.name %></h2>
-        <p>
-          <% if !@artist.twitter.blank? %>
-           <button class="btn btn-default btn-twitter"><a href="<%= @artist.twitter %>">Twitter</a></button>
-          <% end %>
+        <h3><%= @artist.name %></h3>
+        <div class="artist-links social">
+          <p>
+            <% if !@artist.twitter.blank? %>
+             <a href="<%= @artist.twitter %>" class="btn btn-default btn-twitter">Twitter</a>
+            <% end %>
 
-          <% if !@artist.facebook.blank? %>
-           <button class="btn btn-default btn-facebook"><a href="<%= @artist.facebook %>">Facebook</a></button>
-          <% end %>
+            <% if !@artist.facebook.blank? %>
+             <a href="<%= @artist.facebook %>" class="btn btn-default btn-facebook">Facebook</a>
+            <% end %>
 
-          <% if !@artist.soundcloud.blank? %>
-           <button class="btn btn-default btn-soundcloud"><a href="<%= @artist.soundcloud %>">Soundcloud</a></button>
-          <% end %>
-        </p>
-        <p>
+            <% if !@artist.soundcloud.blank? %>
+             <a href="<%= @artist.soundcloud %>" class="btn btn-default btn-soundcloud">Soundcloud</a>
+            <% end %>
+          </p>
+        </div>
+        <p class="artist-biograph">
           <%= @artist.biography %>
         </p>
       </div>

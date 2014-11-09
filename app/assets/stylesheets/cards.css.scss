@@ -11,31 +11,25 @@
   margin: 0 auto;
 
   .card-image{
-  
     img{
       width: 340px;
       height: 340px;
     }
-  }
 
-  @media (min-width: $screen-md-min) {
-    .card-image{
+    @media (min-width: $screen-md-min) {
       img{
         width: 315px;
         height: 315px;
       }
     }
-  }
 
-  @media (min-width: $screen-lg-min) {
-    .card-image{
+    @media (min-width: $screen-lg-min) {
       img{
         width: 340px;
         height: 340px;
       }
     }
   }
-
 
   .card-image-large{
     float: clear;
@@ -65,13 +59,13 @@
 
 .card-main{
   margin-bottom: 20px;
+  text-align: center;
 
   .soundcloud-player{
     margin-bottom: 40px;
   }
 
   .card-image{
-    float: clear;
 
     img{
       width: 263px;
@@ -79,16 +73,35 @@
   }
 
   .card-image-large{
-    float: clear;
-
+    margin-bottom: 20px;
+    text-align: center;
+    
     img{
-      width: 350px;
+      margin: 0 auto;
+      width: 370px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      img{
+        width: 315px;
+        height: 315px;
+      }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      img{
+        width: 340px;
+        height: 340px;
+      }
     }
   }
 
 
   .card-details{
-    
+    .meta{
+      margin: 20px 0px;
+    }
+
     h3{
       margin-top: 0px;
     }
