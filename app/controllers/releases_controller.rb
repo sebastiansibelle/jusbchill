@@ -7,4 +7,8 @@ class ReleasesController < ApplicationController
   def show
     @release = Release.friendly.find(params[:id])
   end
+
+  def preview
+    @release = Release.friendly.find(params[:id]);
+  end
 end
