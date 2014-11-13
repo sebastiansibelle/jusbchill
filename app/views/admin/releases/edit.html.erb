@@ -1,7 +1,7 @@
 <h1>Edit Release</h1>
 
 <div class="well">
-  <%= link_to 'View Promo Version', @release, class: "btn btn-primary" %>
+  <%= link_to 'View Promo Version', release_path(@release) + "/" + @release.secret_hash, class: "btn btn-primary" %>
   <code>
     <%= url_for(@release) + "/" + @release.secret_hash %>
   </code>
