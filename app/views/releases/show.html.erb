@@ -17,9 +17,9 @@
           <p><%= @release.description %></p>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 sidebar">
           <% unless @release.buy_link.blank? && @release.download_link.blank? %>
-            <h2>Get a copy</h2>
+            <h3>Get a copy</h3>
             <h4>Digital</h4>
             <ul class="list-unstyled">
               <% if !@release.buy_link.blank? %>
@@ -31,8 +31,8 @@
               <% end %>
             </ul>
           <% end %>
-          <div class="share">
-            <h2>Share</h2>
+          <div class="social">
+            <h3>Share</h3>
             <%= render_shareable :buttons=> ['twitter', 'facebook'], :static_link => true %>
           </div>
         </div>
