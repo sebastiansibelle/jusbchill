@@ -1,5 +1,12 @@
 <h1>Edit Release</h1>
 
+<div class="well">
+  <%= link_to 'View Promo Version', release_path(@release) + "/" + @release.secret_hash, class: "btn btn-primary" %>
+  <code>
+    <%= url_for(@release) + "/" + @release.secret_hash %>
+  </code>
+</div>
+
 <%= render partial: 'form', locals:{ url: admin_release_path(@release)} %>
 
 <%= link_to 'Back', admin_releases_path %>

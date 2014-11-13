@@ -1,5 +1,6 @@
-class Admin::ReleasesController < Admin::AdminController
+require 'securerandom'
 
+class Admin::ReleasesController < Admin::AdminController
   # GET /releases
   # GET /releases.json
   def index
@@ -20,7 +21,8 @@ class Admin::ReleasesController < Admin::AdminController
   # POST /mixes.json
   def create
     @release = Release.new(release_params)
-    
+    @release.secret_hash = SecureRandom.hex(4);
+
     respond_to do |format|
       if @release.save
         format.html {

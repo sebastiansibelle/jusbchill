@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104014527) do
+ActiveRecord::Schema.define(version: 20141113092750) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20141104014527) do
     t.boolean  "published",        default: false
   end
 
-  add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true
+  add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true, using: :btree
 
   create_table "mixes", force: true do |t|
     t.string   "mix_no"
@@ -35,14 +38,14 @@ ActiveRecord::Schema.define(version: 20141104014527) do
     t.text     "description"
     t.string   "avatar"
     t.integer  "artist_id"
-    t.text     "soundcloud_embed", limit: 255
-    t.boolean  "published",                    default: false
+    t.text     "soundcloud_embed"
+    t.boolean  "published",        default: false
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "mixes", ["slug"], name: "index_mixes_on_slug", unique: true
+  add_index "mixes", ["slug"], name: "index_mixes_on_slug", unique: true, using: :btree
 
   create_table "releases", force: true do |t|
     t.string   "title"
@@ -57,10 +60,11 @@ ActiveRecord::Schema.define(version: 20141104014527) do
     t.boolean  "published",        default: false
     t.string   "buy_link"
     t.string   "download_link"
+    t.string   "secret_hash"
   end
 
-  add_index "releases", ["artist_id"], name: "index_releases_on_artist_id"
-  add_index "releases", ["slug"], name: "index_releases_on_slug", unique: true
+  add_index "releases", ["artist_id"], name: "index_releases_on_artist_id", using: :btree
+  add_index "releases", ["slug"], name: "index_releases_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -77,7 +81,7 @@ ActiveRecord::Schema.define(version: 20141104014527) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

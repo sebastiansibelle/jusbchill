@@ -6,15 +6,12 @@ Jus B Chill is an online-based record label. We release music, throw parties and
 
 The plan is to use the Jus B Chill web app as the distribution source for all our channels. 
 
-### V1.0.0 end of September
+### V1.x.0 before Aaron gets back. Mid-november
 
-- Responsive test -> mobile, tablet, pc
-- Browser test -> Firefox, Safari, Chrome, IE8-10
-- Fix HTML + CSS bugs
-- Choose basic colour scheme/palette/font stack.
 - Compile list of contacts for promo
-
-- Do branding guideline document
+- Fix HTML + CSS bugs (bug on mobile with images)
+- Choose basic colour scheme/palette/font stack.
+- Do branding guideline document + resources.
 	- Brand identity and purpose
 	- Choose a font set
 	- Create a logo
@@ -22,38 +19,36 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- Language set and guidelines
 	- Release image guidelines
 	- Mix image guidelines
+- Promo press functionality. http://jusbchill.com/mixes/jbcm002?promo=hash.
 
+- Release Manifesto Approval process  
+- Release schedule - basic implementation - google calendar embed in homepage
+- Multiple user roles using cancan as per manifesto approval process:
+	- super user (seb - delete privledges), 
+	- visionary user (andrew/jacob/aaron - all other privledges),
+	- regular user (artist - no privledges except posting new tracks))
 
-- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet,  CC:Disco, Olya
+- Design admin home page to reflect release manifesto
+- Finish and master releases
 
-### V2.0.0 before Aaron gets back. Mid-november
+- Organise Party
 
+- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet, Talk to Simon Griffiths, CC:Disco, Olya
+
+### V2.0.0+
+
+- Refine the language set with Bec / Whoever
+- Atomic CSS/Pattern lab/style guidelines
+- BEM
+- Direct integration with soundcloud player
 - Unit tests, models
 - Integration tests, tasks
 - TDD
-
-- Atomic CSS/Pattern lab/style guidelines
-- BEM
-
-- Master JBCM001 and reupload
-
-- Release Manifesto Approval process
-- Release schedule
-- Multiple user roles using cancan as per manifesto approval process:
-	- super user (seb - delete privledges), 
-	- admin/mod user (andrew/jacob/aaron - all other privledges),
-	- regular user (artist - no privledges except posting new tracks))
-- Direct integration with soundcloud player
-- Refine the language set with Bec / Whoever
-- Design admin home page to reflect release manifesto
-- Finish and master releases
-- Organise Party
-- Tag 2.0.0
 - Copy for the about page
   - Label purpose, mission, goals
   - Label history
 
-### V3.0.0+
+
 
 - Capistrano deployment
 - New device/logo.
@@ -75,7 +70,8 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - Usability improvements to the release process
 - Open source
 - Licensing the product
-- 
+
+
 
 ## Testing
 
