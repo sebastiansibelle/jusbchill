@@ -2,6 +2,9 @@
 
 <div class="well">
   <%= link_to 'View Promo Version', @release, class: "btn btn-primary" %>
+  <code>
+    <%= url_for(@release) + "/" + @release.secret_hash %>
+  </code>
 </div>
 
 <%= render partial: 'form', locals:{ url: admin_release_path(@release)} %>
