@@ -1,3 +1,5 @@
+<% content_for :opengraph_meta_tags, opengraph_meta_tags_for(@artist) %>
+
 <div class="artist-information">
   <div class="container">
     <section class="row">
@@ -24,6 +26,7 @@
         <p class="artist-biograph">
           <%= @artist.biography %>
         </p>
+        <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
       </div>
     </section>
   </div>
