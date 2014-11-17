@@ -24,7 +24,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- Release image guidelines
 	- Mix image guidelines
 
-- Release schedule - basic implementation - google calendar embed in homepage
 - Design admin home page to reflect release manifesto - Make it a list of unpublished releases.
 - Finish and master releases
 
@@ -34,6 +33,15 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - Add RRR, TripleJ, Syn, ??? Online radio. 
 
 ### V2.0.0+
+
+<ul>
+  <li>Notepad to write down ideas</li>
+  <li>List of things to do</li>
+  <li>Songs pending group approval</li>
+  <li>Songs needing to be mastered</li>
+  <li>Our proceedure to releasing songs</li>
+  <li>Booking opportunities</li>
+</ul>
 
 - Use facebook graph API to push new releases to facebook
 - Figure out how we can do new releases that don't have release numbers.
