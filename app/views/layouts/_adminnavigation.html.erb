@@ -10,13 +10,14 @@
           <span class="icon-bar"></span>
         </button>
 
-        <%= link_to({controller: '/home', action: "index"}, {class: 'navbar-brand'}) do %>
+        <%= link_to({controller: '/admin/dashboard', action: "index"}, {class: 'navbar-brand'}) do %>
           <%= image_tag('jusbchill-logo-white.png') %>
         <% end %>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <li><%= link_to 'View Website', root_path %></li>
           <li><%= link_to 'Artists', admin_artists_path %></li>
           <li><%= link_to 'Releases', admin_releases_path %></li>
           <li><%= link_to 'Mixes', admin_mixes_path %></li>
