@@ -40,6 +40,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   process :scale => [50, 50]
   # end
 
+  version :facebook do
+    process crop: :avatar
+    resize_to_limit(600, 600)
+  end
+
   ## If ONLY "thumb" version is to be cropped
   version :jumbo do
     process crop: :avatar

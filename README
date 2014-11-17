@@ -9,6 +9,10 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 ### V1.x.0 before Aaron gets back. Mid-november
 
 - Compile list of contacts for promo
+
+- Fix image upload so that it would cropsat a bunch of sizes. e.g. 350x350 for the website, 250x250 for facbeook, 300x300 for twitter etc.  And then displays the right one based on the context. Also store all the images on the server and have them accessible via the edit page. 
+- Fix Social media OG shares. Make them great.
+
 - Fix HTML + CSS bugs (bug on mobile with images)
 - Choose basic colour scheme/palette/font stack.
 - Do branding guideline document + resources.
@@ -19,36 +23,67 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 	- Language set and guidelines
 	- Release image guidelines
 	- Mix image guidelines
-- Promo press functionality. http://jusbchill.com/mixes/jbcm002?promo=hash.
 
-- Release Manifesto Approval process  
-- Release schedule - basic implementation - google calendar embed in homepage
-- Multiple user roles using cancan as per manifesto approval process:
-	- super user (seb - delete privledges), 
-	- visionary user (andrew/jacob/aaron - all other privledges),
-	- regular user (artist - no privledges except posting new tracks))
-
-- Design admin home page to reflect release manifesto
+- Design admin home page to reflect release manifesto - Make it a list of unpublished releases.
 - Finish and master releases
 
 - Organise Party
 
 - Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet, Talk to Simon Griffiths, CC:Disco, Olya
+- Add RRR, TripleJ, Syn, ??? Online radio. 
 
 ### V2.0.0+
+
+<ul>
+  <li>Notepad to write down ideas</li>
+  <li>List of things to do</li>
+  <li>Songs pending group approval</li>
+  <li>Songs needing to be mastered</li>
+  <li>Our proceedure to releasing songs</li>
+  <li>Booking opportunities</li>
+</ul>
+
+- Use facebook graph API to push new releases to facebook
+- Figure out how we can do new releases that don't have release numbers.
+
+- Integrate with CRM to keep track of people involved.
+- Integrate with Mailchimp/mandrill to automatically send emails to people involved.
+- Add a link wordpress blog for jacob to run.
+- Design and style the wordpress blog.
+- Integrate the wordpress posts via the api and display the blog posts on site. 
+
+- Improve the admin interface:
+	- Notepad to write down ideas
+	- List of things to do
+  - Songs pending group approval
+  - Songs needing to be mastered
+  - Our proceedure to releasing songs
+  - Booking opportunities
+
+- Multiple user roles using cancan as per manifesto approval process:
+	- super user (seb - delete privledges), 
+	- visionary user (andrew/jacob/aaron - all other privledges),
+	- regular user (artist - no privledges except posting new tracks))
+- Release Manifesto Approval process  
+
+- For mixes, link to the website form soundcloud and post the tracklist there. 
+- Upload stems functionality for remixing.
+- Upload project file functionality.
 
 - Refine the language set with Bec / Whoever
 - Atomic CSS/Pattern lab/style guidelines
 - BEM
-- Direct integration with soundcloud player
+- Direct integration with soundcloud player. Upload a file to justbchill and distro to soundcloud, bandcamp, beatport, spotify etc. 
+
 - Unit tests, models
 - Integration tests, tasks
 - TDD
+
 - Copy for the about page
   - Label purpose, mission, goals
   - Label history
 
-
+### V3.0.0+
 
 - Capistrano deployment
 - New device/logo.

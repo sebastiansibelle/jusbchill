@@ -54,6 +54,9 @@ gem 'shareable'
 # Use google analytics for analytics
 gem 'google-analytics-rails'
 
+# Open graph from models
+gem 'acts_as_opengraph'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
