@@ -1,7 +1,5 @@
-<h1>New mix</h1>
+<h1>New Mix</h1>
 
-<%= form_for(@mix, url: admin_mixes_path, html: { role: "form" } ) do |f| %>
-  <%= render partial: 'form', locals: {f: f} %>
-<% end %>
+<%= render partial: 'form', locals: {url: admin_mixes_path} %>
 
 <%= link_to 'Back', admin_mixes_path %>
