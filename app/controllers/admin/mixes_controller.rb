@@ -15,6 +15,12 @@ class Admin::MixesController < Admin::AdminController
   # GET /mixes/1/edit
   def edit
     @mix = Mix.friendly.find(params[:id])
+
+    if(@mix.secret_hash.blank?)
+      @mix.secret_hash = SecureRandom.hex(4)
+    end
+
+    @mix.save
   end
 
   # POST /mixes
@@ -44,9 +50,6 @@ class Admin::MixesController < Admin::AdminController
   # PATCH/PUT /mixes/1.json
   def update
     @mix = Mix.friendly.find(params[:id])
-    if(@mix.secret_hash.empty?)
-      @mix.secret_hash = SecureRandom.hex(4)
-    end
 
     respond_to do |format|
       if @mix.update(mix_params)

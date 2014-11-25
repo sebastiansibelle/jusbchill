@@ -15,6 +15,12 @@ class Admin::ReleasesController < Admin::AdminController
   # GET /mixes/1/edit
   def edit
     @release = Release.friendly.find(params[:id])
+
+    if(@release.secret_hash.blank?)
+      @release.secret_hash = SecureRandom.hex(4)
+    end
+
+    @release.save
   end
 
   # POST /mixes
@@ -42,9 +48,6 @@ class Admin::ReleasesController < Admin::AdminController
 
   def update
     @release = Release.friendly.find(params[:id])
-    if(@release.secret_hash.empty?)
-      @release.secret_hash = SecureRandom.hex(4)
-    end
     
     respond_to do |format|
       if @release.update(release_params)
