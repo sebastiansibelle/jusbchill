@@ -21,7 +21,7 @@ class Admin::ReleasesController < Admin::AdminController
   # POST /mixes.json
   def create
     @release = Release.new(release_params)
-    @release.secret_hash = SecureRandom.hex(4);
+    @release.secret_hash = SecureRandom.hex(4)
 
     respond_to do |format|
       if @release.save
@@ -42,7 +42,10 @@ class Admin::ReleasesController < Admin::AdminController
 
   def update
     @release = Release.friendly.find(params[:id])
-
+    if(@release.secret_hash.empty?)
+      @release.secret_hash = SecureRandom.hex(4)
+    end
+    
     respond_to do |format|
       if @release.update(release_params)
         format.html {

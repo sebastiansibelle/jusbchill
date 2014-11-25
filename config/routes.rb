@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   get 'releases/:id/:secret' => 'releases#show'
+  get 'mixes/:id/:secret' => 'mixes#show'
   resources :releases
   resources :mixes
 

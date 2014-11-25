@@ -2,6 +2,13 @@
 <html>
 <head>
   <title>"jus b chill"</title>
+  <meta property="og:title" content="jus b chill" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://jusbchill.com" />
+  <meta property="og:image" content="http://jusbchill.com/images/favicon.png" />
+  <meta property="og:site_name" content="jus b chill" />
+  <meta name="og:description" content="jus b chill is an online-based, artist-run music label">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,6 +17,7 @@
   <%= analytics_init if Rails.env.production? %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="version" content="<%= JusbchillApp::Application::VERSION %>">
+  <meta name="description" content="jus b chill is an online-based, artist-run music label">
   <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body>

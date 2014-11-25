@@ -1,11 +1,13 @@
-<h1>Editing mix</h1>
+<h1>Editing Mix</h1>
 
-<%= form_for(@mix, url: admin_mix_path, html: { role: "form" } ) do |f| %>
-  <%= render partial: 'form', locals: {f: f} %>
-<% end %>
+<div class="well">
+  <%= link_to 'View Promo Version', mix_path(@mix) + "/" + @mix.secret_hash, class: "btn btn-primary" %>
+  <code>
+    http://jusbchill.com<%= url_for(@mix) + "/" + @mix.secret_hash %>
+  </code>
+</div>
 
-<%= link_to 'Delete', admin_mix_path(@mix),
-      method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+<%= render partial: 'form', locals: {url: admin_mix_path(@mix)} %>
 
 <%= link_to 'Show', @mix %> |
 <%= link_to 'Back', mixes_path %>
