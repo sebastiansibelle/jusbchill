@@ -14,9 +14,9 @@
         <div class="col-md-5">
           <h3><%= @release.title %></h3>
           <h4><%= link_to(@release.artist.name, artist_path(@release.artist)) %></h4>
-          <p>Release: <%= @release.release_no %></p>
-          <p>Release Date: 20/04/2014</p>
-          <p><%= @release.description %></p>
+          <p><em> Release: <%= @release.release_no %></em></p>
+          <!-- <p>Release Date: 20/04/2014</p> -->
+          <div class="description"><%= markdown(@release.description) %></div>
         </div>
 
         <div class="col-md-3 sidebar">

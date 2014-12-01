@@ -23,9 +23,9 @@
             <% end %>
           </p>
         </div>
-        <p class="artist-biograph">
-          <%= @artist.biography %>
-        </p>
+        <div class="artist-biograph">
+          <%= markdown(@artist.biography) %>
+        </div>
         <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
       </div>
     </section>
