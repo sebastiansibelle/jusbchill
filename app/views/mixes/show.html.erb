@@ -20,7 +20,7 @@
             <p>Mix Number: <%= @mix.mix_no %></p>
             <p>Release Date: 20/04/2014</p>
           </div>
-          <p><%= @mix.description %></p>
+          <div><%= markdown(@mix.description) %></div>
         </div>
 
         <div class="col-md-3 sidebar">
