@@ -8,6 +8,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V1.x.0 before party
 
+- Ask Tara to do our social media for cash $$.
 - Fix image upload so that it would cropsat a bunch of sizes. e.g. 350x350 for the website, 250x250 for facebook, 300x300 for twitter etc.  And then displays the right one based on the context. Also store all the images on the server and have them accessible via the edit page. 
 - Fix Social media OG shares. Make them great.
 
