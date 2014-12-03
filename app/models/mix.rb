@@ -8,9 +8,12 @@ class Mix < ActiveRecord::Base
   validates :title, presence: true
   validates :soundcloud_embed, presence: true
   
-  acts_as_opengraph :columns => { :image => :avatar }, 
-                    :values => { :type => "music.playlist" }
+  acts_as_opengraph :values => { :type => "music.playlist"}
   
+  def opengraph_image
+    avatar.jumbo.url
+  end
+
   default_scope { order('mix_no') }
 
   # To have published and unpublished releases

@@ -13,8 +13,12 @@ class Artist < ActiveRecord::Base
   validates :facebook, url: true
   validates :twitter, url: true
 
-  acts_as_opengraph :columns => { :image => :avatar, :url => :soundcloud }, 
-                    :values => { :type => :profile }
+  acts_as_opengraph :columns => {:url => :soundcloud }, 
+                    :values => { :type => :profile}
+
+  def opengraph_image
+    avatar.jumbo.url
+  end
 
   mount_uploader :avatar, AvatarUploader
   crop_uploaded :avatar
