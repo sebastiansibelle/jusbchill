@@ -1,0 +1,50 @@
+$background_primary: #000;
+$background_secondary: #e7e7e7;
+
+.coolroom{
+  background-color: $background_primary;
+  padding: 20px;
+  text-align: center;
+  margin-top: -20px;
+
+  img{
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 400px;
+  }
+}
+
+.episode-description{
+  padding: 40px;
+
+  h1{
+    margin-bottom: 40px;
+  }
+
+  .cast{
+    padding: 40px;
+    font-size: 16px;
+  }
+}
+
+.videos{
+  padding: 40px;
+  background-color: $background_secondary;
+
+  h2{
+    margin-bottom: 40px;
+  }
+
+  .video{
+    margin-top: 20px;
+    padding: 40px;
+  }
+}
+
+.videos-alt{
+  background-color: #fff;
+}
+
+
+
