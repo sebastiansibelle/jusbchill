@@ -1,0 +1,31 @@
+<div class="artist-information">
+  <div class="container">
+    <section class="row">
+      <div class="artist-image col-md-4">
+        <%= image_tag(@artist.avatar.url) %>
+      </div>
+      <div class="artist-details col-md-8">
+        <h3><%= @artist.name %></h3>
+        <div class="artist-links social">
+          <p>
+            <% if !@artist.twitter.blank? %>
+             <a href="<%= @artist.twitter %>" class="btn btn-default btn-twitter">Twitter</a>
+            <% end %>
+
+            <% if !@artist.facebook.blank? %>
+             <a href="<%= @artist.facebook %>" class="btn btn-default btn-facebook">Facebook</a>
+            <% end %>
+
+            <% if !@artist.soundcloud.blank? %>
+             <a href="<%= @artist.soundcloud %>" class="btn btn-default btn-soundcloud">Soundcloud</a>
+            <% end %>
+          </p>
+        </div>
+        <div class="artist-biograph">
+          <%= markdown(@artist.biography) %>
+        </div>
+        <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+      </div>
+    </section>
+  </div>
+</div>
