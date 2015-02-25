@@ -86,7 +86,7 @@
             <div class="artist-biograph">
               <p><a href="http://jusbchill.com">jus b chill’s</a> very own <a href="http://jusbchill.com/artists/hymns">‘Hymns’</a> dedicates himself to forming evocative symbiotic relationships between DJ and dancer. Get down to hypnotic acid house, get caught in undeniable techno grooves and get lost in soundscapes dripping with emotion. This Cool Room Hymns will be aiming high and so should you. Co-exist with Hymns from 11pm-1am. Get ready2dance&amp;feel.</p>
             </div>
-            <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+            <%= render 'events/facebookshare' %>
           </div>
         </div>
 
@@ -115,7 +115,7 @@
             <div class="artist-biograph">
               <p>Don't stop, can't stop, won't stop. Broke Powers combines her love of basslines and distrust of sleep to create banging club journeys through house and techno. Live at the Hugs &amp; Kisses studio and on trnsmt.tv from 1-2am.</p>
             </div>
-            <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+            <%= render 'events/facebookshare' %>
           </div>
         </div>
 
@@ -151,7 +151,7 @@
                 So for our pilot, we're understandably excited to bring you Amateur Dance, live and on air in the Hugs & Kisses studio from 2-3am. Practise your moves at home to his debut EP, <a href="https://soundcloud.com/octoberrecords/sets/ad_tay_ep">Talking About Yourself</a>.</p>
             </div>
             
-            <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+            <%= render 'events/facebookshare' %>
           </div>
         </div>
 
@@ -171,8 +171,7 @@
       <div class="col-md-12">
         <h2>Thanks for watching!</h2>
         <p class="lead">Like us on Facebook to get invited to the next episode.</p>
-        <div class="fb-like-box" data-href="https://www.facebook.com/coolroomtv" data-width="600px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-
+        <div class="fb-like-box" data-href="https://www.facebook.com/coolroomtv" data-width="300px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
       </div>
     </section>
   </div>
