@@ -6,7 +6,9 @@
   <div class="container">
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
-        <%= image_tag('cool-room-rendered.png') %>
+        <div class="logo">
+          <%= image_tag('coolroom/cool-room-final.png') %>
+        </div>
       </div>
     </section>
   </div>
@@ -21,12 +23,11 @@
 
         <p>Each episode features a members only TV audience live at the Hugs &amp; Kisses studio. Our lucky audience members will get on down to titillating techno, dripping acid squelches, and the full spectrum of weird and ravey sounds.</p>
 
-
         <div class="cast">
           <p>Our pilot episode features:</p>
 
           <ul class="list-unstyled">
-            <li><a href="https://soundcloud.com/amateur-dance">~~~ Amateur Dance (Live) ~~~</a></li>
+            <li><a href="https://soundcloud.com/amateur-dance">Amateur Dance (Live)</a></li>
             <li><a href="https://soundcloud.com/hymnshymns">Hymns</a></li>
             <li>Broke Powers</li>
             <li><a href="https://soundcloud.com/jenniferloveless">Jennifer Loveless</a></li>
@@ -36,11 +37,22 @@
           </ul>
         </div>
 
-        <div class="well">
-          <h2>Cool Room Manifesto</h2>
+        <div class="well manifesto">
+          <h3>Cool Room Manifesto</h3>
           <p>When dancing is your expression, Cool Room is where you show others how you work it. </p>
           <p>Be ~chill~, feel *sexy*.</p>
           <p> Make it hot and keep it cool. </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="coolroom-promo hidden-xs">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="logo">
         </div>
       </div>
     </section>
@@ -59,19 +71,17 @@
             <h3><a href="http://www.dailymotion.com/video/k5xpkfdRvvfFCmaan8H" target="_blank">Hymns</a></h3>
             <div class="artist-links social">
               <p>
-<!--                   <a href="" class="btn btn-default btn-twitter">Twitter</a>
-                <a href="" class="btn btn-default btn-facebook">Facebook</a>
-                <a href="" class="btn btn-default btn-soundcloud">Soundcloud</a> -->
+                <a href="https://soundcloud.com/hymnshymns" class="btn btn-default btn-soundcloud">Soundcloud</a>
               </p>
             </div>
             <div class="artist-biograph">
-              <p>jus b chill’s very own ‘Hymns’ dedicates himself to forming evocative symbiotic relationships between DJ and dancer. Get down to hypnotic acid house, get caught in undeniable techno grooves and get lost in soundscapes dripping with emotion. This Cool Room Hymns will be aiming high and so should you. Co-exist with Hymns from 11pm-1am. Get ready2dance&amp;feel.</p>
+              <p><a href="http://jusbchill.com">jus b chill’s</a> very own <a href="http://jusbchill.com/artists/hymns">‘Hymns’</a> dedicates himself to forming evocative symbiotic relationships between DJ and dancer. Get down to hypnotic acid house, get caught in undeniable techno grooves and get lost in soundscapes dripping with emotion. This Cool Room Hymns will be aiming high and so should you. Co-exist with Hymns from 11pm-1am. Get ready2dance&amp;feel.</p>
             </div>
             <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
           </div>
         </div>
 
-        <div class="video">
+        <div class="video hidden-xs">
           <iframe frameborder="0" width="1000" height="564" src="//www.dailymotion.com/embed/video/k5xpkfdRvvfFCmaan8H" allowfullscreen></iframe>
         </div>
       </div>
@@ -90,22 +100,15 @@
           </div>
           <div class="artist-details col-md-8">
             <h3><a href="http://www.dailymotion.com/video/k6MwkmYlJeq64ua8VXA" target="_blank">Broke Powers</a></h3>
-            <div class="artist-links social">
-              <p>
-<!--                   <a href="" class="btn btn-default btn-twitter">Twitter</a>
-                <a href="" class="btn btn-default btn-facebook">Facebook</a>
-                <a href="" class="btn btn-default btn-soundcloud">Soundcloud</a> -->
-              </p>
-            </div>
+            
             <div class="artist-biograph">
-              <p>Don't stop, can't stop, won't stop.
-Broke Powers combines her love of basslines and distrust of sleep to create banging club journeys through house and techno. Catch her live at the Hugs &amp; Kisses studio and on trnsmt.tv from 1-2am.</p>
+              <p>Don't stop, can't stop, won't stop. Broke Powers combines her love of basslines and distrust of sleep to create banging club journeys through house and techno. Live at the Hugs &amp; Kisses studio and on trnsmt.tv from 1-2am.</p>
             </div>
             <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
           </div>
         </div>
 
-        <div class="video">
+        <div class="video hidden-xs">
           <iframe frameborder="0" width="1000" height="564" src="//www.dailymotion.com/embed/video/k6MwkmYlJeq64ua8VXA" allowfullscreen></iframe>
         </div>
       </div>
@@ -125,34 +128,24 @@ Broke Powers combines her love of basslines and distrust of sleep to create bang
             <h3><a href="http://www.dailymotion.com/video/k6A4ORMn0sIuCgaan91" target="_blank">Amateur Dance [Live Set]</a></h3>
             <div class="artist-links social">
               <p>
-<!--                   <a href="" class="btn btn-default btn-twitter">Twitter</a>
-                <a href="" class="btn btn-default btn-facebook">Facebook</a>
-                <a href="" class="btn btn-default btn-soundcloud">Soundcloud</a> -->
+                <a href="https://www.facebook.com/amateurdance" class="btn btn-default btn-facebook">Facebook</a>
+                <a href="https://soundcloud.com/amateur-dance" class="btn btn-default btn-soundcloud">Soundcloud</a>
+                <a href="http://amateurdance.bandcamp.com/" class="btn btn-default btn-primary">Bandcamp</a>
               </p>
             </div>
             <div class="artist-biograph">
               <p>Amateur dancing is what Cool Room is all about - bodies writhing, booties popping, sweat trickling.
-                So for our pilot, we're understandably excited to bring you Amateur Dance, live and on air in the Hugs & Kisses studio from 2-3am.
-              In the meantime, you can practise your moves at home to his debut EP, Talking About Yourself: https://soundcloud.com/octoberrecords/sets/ad_tay_ep</p>
+                So for our pilot, we're understandably excited to bring you Amateur Dance, live and on air in the Hugs & Kisses studio from 2-3am. Practise your moves at home to his debut EP, <a href="https://soundcloud.com/octoberrecords/sets/ad_tay_ep">Talking About Yourself</a>.</p>
             </div>
+            
             <div class="fb-like" data-href="<%= request.original_url  %>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
           </div>
         </div>
 
-        <div class="video">
+        <div class="video hidden-xs">
           <iframe frameborder="0" width="1000" height="564" src="//www.dailymotion.com/embed/video/k6A4ORMn0sIuCgaan91" allowfullscreen></iframe>
         </div>
       </div>
     </section>
   </div>
 </div>
-
-<!-- <div class="soundcloud">
-  <div class="container">
-    <section class="row">
-      <div class="col-md-12">
-        <%= render 'musicplayer' %>
-      </div>
-    </section>
-  </div>
-</div> -->

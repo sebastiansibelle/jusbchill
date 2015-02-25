@@ -12,12 +12,11 @@
   }
 
   .artist-image{
-    height: 350px;
     float: clear;
 
     img{
-      width: 363px;
-      height: 363px;
+      width: 315px;
+      height: 315px; 
     }
 
     @media (min-width: $screen-md-min) {

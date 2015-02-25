@@ -12,8 +12,7 @@
 
   .card-image{
     img{
-      width: 340px;
-      height: 340px;
+      width: 100%;
     }
 
     @media (min-width: $screen-md-min) {
