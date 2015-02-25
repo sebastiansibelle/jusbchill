@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'home#privacy'
   get 'legal' => 'home#legal'
   get 'about' => 'home#about'
+  get 'coolroom/pilot' => 'events#coolroom'
   get 'coolroom' => 'events#coolroom'
 
   # You can have the root of your site routed with "root"
