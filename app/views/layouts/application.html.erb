@@ -4,7 +4,7 @@
   <title>"jus b chill"</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true %>
   <%= csrf_meta_tags %>
   <%= yield :opengraph_meta_tags %>
   <%= content_for?(:og_tags) ? yield(:og_tags) : '' %>
