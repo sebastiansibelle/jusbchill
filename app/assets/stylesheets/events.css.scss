@@ -6,8 +6,8 @@ $background_secondary: #e7e7e7;
   text-align: center;
   margin-top: -20px;
   background-position: center center;
-  background-image: asset-data-url("coolroom/top.jpg");
   background-size: cover;
+  height: 450px;
 
   .logo img{
     margin: 0 auto;
@@ -23,14 +23,16 @@ $background_secondary: #e7e7e7;
   }
 }
 
-.coolroom-promo{
-  padding: 20px;
-  text-align: center;
-  margin-top: -20px;
+.coolroom-top{
+  background-image: asset-data-url("coolroom/top.jpg");
+}
+
+.coolroom-bottom{
   background-image: asset-data-url("coolroom/bottom.jpg");
-  height: 450px;
-  background-position: center center;
-  background-size: cover;
+}
+
+.coolroom-drinks{
+  background-image: asset-data-url("coolroom/drinks.jpg");
 }
 
 .embed-container { 
