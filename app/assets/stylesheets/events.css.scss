@@ -21,7 +21,7 @@ $background_secondary: #e7e7e7;
   }
 
   @media (min-width: $screen-sm-min) {
-    background-image: url("coolroom/top.jpg");
+    background-image: image-url("coolroom/top.jpg");
     height: 450px;
     background-size: cover;
   }
@@ -34,7 +34,7 @@ $background_secondary: #e7e7e7;
   margin-top: -20px;
 
   @media (min-width: $screen-sm-min) {
-    background-image: url("coolroom/bottom.jpg");
+    background-image: image-url("coolroom/bottom.jpg");
     height: 450px;
 
     background-size: cover;
