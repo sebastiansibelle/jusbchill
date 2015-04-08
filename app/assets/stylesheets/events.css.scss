@@ -1,6 +1,23 @@
 $background_primary: #000;
 $background_secondary: #e7e7e7;
 
+
+.events-dark{
+  background-color: $background_primary;
+}
+
+.event-listing{
+  margin-bottom: 20px;
+
+  li{
+    padding: 40px;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
 .coolroom{
   padding: 20px;
   text-align: center;
@@ -133,6 +150,4 @@ $background_secondary: #e7e7e7;
 .videos-alt{
   background-color: #fff;
 }
-
-
 
