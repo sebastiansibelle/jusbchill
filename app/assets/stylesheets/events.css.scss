@@ -10,7 +10,7 @@ $background_secondary: #e7e7e7;
   margin-bottom: 20px;
 
   li{
-    padding: 40px;
+    padding-top: 40px;
     img{
       width: 100%;
     }
@@ -40,6 +40,12 @@ $background_secondary: #e7e7e7;
   }
 }
 
+.livestream{
+  height:  800px; 
+  background-color: $background_primary;
+  padding-top: 40px;
+}
+
 .pulse {
   -webkit-animation: pulsate 3s ease-in-out;
   -webkit-animation-iteration-count: infinite; 
@@ -47,9 +53,9 @@ $background_secondary: #e7e7e7;
 }
 
 @-webkit-keyframes pulsate {
-  0% {opacity: 0.8;}
+  0% {opacity: 0.6;}
   50% {opacity: 1.0;}
-  100% {opacity: 0.8;}
+  100% {opacity: 0.6;}
 }
 
 .episode-1-cover{
@@ -103,10 +109,11 @@ $background_secondary: #e7e7e7;
 
   .manifesto{
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     @media (min-width: $screen-sm-min) {
-      padding: 80px;
+      margin-top: 40px;
+      padding: 40px;
 
       h1{
         font-size: 48px;
