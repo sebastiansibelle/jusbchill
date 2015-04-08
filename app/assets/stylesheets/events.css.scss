@@ -1,6 +1,23 @@
 $background_primary: #000;
 $background_secondary: #e7e7e7;
 
+
+.events-dark{
+  background-color: $background_primary;
+}
+
+.event-listing{
+  margin-bottom: 20px;
+
+  li{
+    padding: 40px;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
 .coolroom{
   padding: 20px;
   text-align: center;
@@ -35,12 +52,16 @@ $background_secondary: #e7e7e7;
   100% {opacity: 0.8;}
 }
 
-.coolroom-top{
-  background-image: asset-data-url("coolroom/top.jpg");
+.episode-1-cover{
+  background-image: asset-data-url("coolroom/episode1/cover.jpg");
+}
+
+.episode-2-cover{
+  background-image: asset-data-url("coolroom/episode2/cover.jpg");
 }
 
 .coolroom-bottom{
-  background-image: asset-data-url("coolroom/bottom.jpg");
+  background-image: asset-data-url("coolroom/episode1/bottom.jpg");
 }
 
 .coolroom-drinks{
@@ -129,6 +150,4 @@ $background_secondary: #e7e7e7;
 .videos-alt{
   background-color: #fff;
 }
-
-
 
