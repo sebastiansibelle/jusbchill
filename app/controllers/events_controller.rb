@@ -17,6 +17,9 @@ class EventsController < ApplicationController
     end
   end
 
-  def coolroom
+  def episode1
+  end
+
+  def episode2
   end
 end

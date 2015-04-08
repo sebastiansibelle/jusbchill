@@ -30,8 +30,10 @@ Rails.application.routes.draw do
   get 'privacy' => 'home#privacy'
   get 'legal' => 'home#legal'
   get 'about' => 'home#about'
-  get 'coolroom/pilot' => 'events#coolroom'
-  get 'coolroom' => 'events#coolroom'
+  get 'coolroom/pilot' => 'events#episode1'
+  get 'coolroom/episode1' => 'events#episode1'
+  get 'coolroom/episode2' => 'events#episode2'
+  get 'coolroom' => 'events#episode2'
 
   # You can have the root of your site routed with "root"
   root 'home#index'

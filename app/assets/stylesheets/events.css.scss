@@ -35,12 +35,16 @@ $background_secondary: #e7e7e7;
   100% {opacity: 0.8;}
 }
 
-.coolroom-top{
-  background-image: asset-data-url("coolroom/top.jpg");
+.episode-1-cover{
+  background-image: asset-data-url("coolroom/episode1/cover.jpg");
+}
+
+.episode-2-cover{
+  background-image: asset-data-url("coolroom/episode2/cover.jpg");
 }
 
 .coolroom-bottom{
-  background-image: asset-data-url("coolroom/bottom.jpg");
+  background-image: asset-data-url("coolroom/episode1/bottom.jpg");
 }
 
 .coolroom-drinks{
