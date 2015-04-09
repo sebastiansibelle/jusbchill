@@ -41,9 +41,13 @@ $background_secondary: #e7e7e7;
 }
 
 .livestream{
+  background-color: #fff;
+
+  iframe{
+    border: none;
+  }
   height:  800px; 
   background-color: $background_primary;
-  padding-top: 40px;
 }
 
 .pulse {
@@ -73,6 +77,12 @@ $background_secondary: #e7e7e7;
 .coolroom-drinks{
   background-image: asset-data-url("coolroom/drinks.jpg");
 }
+
+
+.episode-2-trailer{
+  background-image: asset-data-url("coolroom/episode2/trailer.jpg");
+}
+
 
 .embed-container { 
   position: relative;
