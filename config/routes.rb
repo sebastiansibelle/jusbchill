@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'coolroom/pilot' => 'events#episode1'
   get 'coolroom/episode1' => 'events#episode1'
   get 'coolroom/episode2' => 'events#episode2'
+  get 'coolroom/episode3' => 'events#episode3'
   get 'coolroom' => 'events#index'
 
   # You can have the root of your site routed with "root"
