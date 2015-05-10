@@ -22,4 +22,7 @@ class EventsController < ApplicationController
 
   def episode2
   end
+
+  def episode3
+  end
 end
