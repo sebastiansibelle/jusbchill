@@ -1,0 +1,168 @@
+<% content_for :og_tags do %>
+  <%= render 'events/coolroom/episode3/opengraph' %>
+<% end %>
+
+<div class="coolroom episode-3-cover"></div>
+
+<div class="episode-description">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="event-title"><%= event.title %></h1>
+
+        <div class="event-description">
+          <p class="lead"><%= event.lead %></p>
+
+          <%= event.description %>
+        </div>
+
+        <hr>
+
+        <div class="social">
+          <p>
+            <a href="<%= event.facebook %>" class="btn btn-default btn-facebook">Attend on Facebook</a>
+            <a href="<%= event.call_to_action_url %>" class="btn btn-default btn-primary"><%= event.call_to_action_text %></a>
+          </p>
+        </div>
+        <hr>
+
+        <div class="cast">
+          <p><%= event.title %> features:</p>
+
+          <ul class="list-unstyled">
+            <li><a href="https://soundcloud.com/versace-connection">Kish Lal</a></li>
+            <li><a href="http://jusbchill.com/artists/brothers">Brothers</a></li>
+            <li><a href="http://jusbchill.com/artists/hymns">Hymns</a></li>
+            <li><a href="http://jusbchill.com/artists/death2oldmoney">Death 2 old money</a></li>
+            <li><a href="http://jusbchill.com/artists/apple-pie">Apple Pie</a></li>
+          </ul>
+        </div>
+
+        <div class="well manifesto">
+          <h3>Cool Room Manifesto</h3>
+          <p>When dancing is your expression, Cool Room is where you show others how you work it. </p>
+          <p>Be ~chill~, feel *sexy*.</p>
+          <p> Make it hot and keep it cool. </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%= render "events/coolroom/stream" %>
+
+<div class="videos">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <div class="artist-information row">
+          <div class="artist-image col-md-4">
+            <%= image_tag('coolroom/episode3/infinity-blade.jpg') %>
+          </div>
+          <div class="artist-details col-md-8">
+            <h3><a href="https://soundcloud.com/infinitybladedj" target="_blank">Infinity Blade</a></h3>
+            <div class="artist-links social">
+              <p>
+                <a href="https://soundcloud.com/infinitybladedj" class="btn btn-default btn-soundcloud">Soundcloud</a>
+              </p>
+            </div>
+            <div class="artist-biograph">
+              <p>Infinity Blade is glam, in the know and always has her finger on the pulse of house and techno. Already having conquered Berghain, Fabric and Watergate (by attending them all within 30 days) she brings her inimitable style and music taste to Cool Room. Rumours are she smells like honey and Kim Kardashian.</p>
+            </div>
+            <%= render 'events/facebookshare' %>
+          </div>
+        </div>
+
+<!--        <div class="video">
+          <div class='embed-container'>
+            <iframe src="//fast.wistia.net/embed/iframe/m4xdk8cttm?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+          </div>
+        </div>
+      </div> -->
+    </section>
+  </div>
+</div>
+
+<div class="videos videos-alt">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+
+        <div class="artist-information row">
+          <div class="artist-image col-md-4">
+            <%= image_tag('coolroom/episode3/death2oldmoney.jpg') %>
+          </div>
+          <div class="artist-details col-md-8">
+            <h3><a href="https://soundcloud.com/death2oldmoney" target="_blank">Death 2 old money</a></h3>
+            <div class="artist-links social">
+              <p>
+                <a href="https://soundcloud.com/death2oldmoney" class="btn btn-default btn-soundcloud">Soundcloud</a>
+                <a href="http://jusbchill.com/artists/death-2-old-money" class="btn btn-default btn-primary">Website</a>
+              </p>
+            </div>
+            <div class="artist-biograph">
+              <p>..He may not be built like Arnie, but don't let looks fool you; jus b chill's Death 2 old money is no stranger to the running man. So grab on to those handlebars and get ready to keep pace, 'cause this isn't gonna be your run-of-the-mill set. This resident's vigorous programming will make a return to the Cool Room studio, bringing an interval routine tailored to push the dancefloor to its limits. Elevate your club experience to a higher incline ~ journey to the peak of the night.</p>
+            </div>
+            <%= render 'events/facebookshare' %>
+          </div>
+        </div>
+
+        <!-- <div class="video">
+          <div class='embed-container'>
+            <iframe src="//fast.wistia.net/embed/iframe/k1w67esmwl?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+            
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="videos">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <div class="artist-information row">
+          <div class="artist-image col-md-4">
+            <%= image_tag('coolroom/episode3/daze.jpg') %>
+          </div>
+          <div class="artist-details col-md-8">
+            <h3><a href="https://soundcloud.com/daze111" target="_blank">Daze</a></h3>
+            <div class="artist-links social">
+              <p>
+                <a href="https://www.facebook.com/dazedazedaze111" class="btn btn-default btn-facebook">Facebook</a>
+                <a href="https://soundcloud.com/daze111" class="btn btn-default btn-soundcloud">Soundcloud</a>
+              </p>
+            </div>
+            <div class="artist-biograph">
+              <p>Daze represents so much of what we like about dance music; beautiful, lush keys, the pulse and drive of Detroit techno, plus that intangible lo-fi beauty that is in such demand right now.</p>
+              <p>Part of why we’re so excited though, is that Daze is an emerging, local producer (from Ballarat to be specific), who, given the strength of his tunes and the cohesiveness of his DJ sets, has been feted as one of Australia’s most exciting new talents.</p>
+            </div>
+            
+            <%= render 'events/facebookshare' %>
+          </div>
+        </div>
+
+        <!-- <div class="video">
+          <div class='embed-container'>
+            <iframe src="//fast.wistia.net/embed/iframe/hwq3fzsll7?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </div>
+</div>
+<!-- 
+<div class="videos videos-alt">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <h2>Thanks for watching!</h2>
+        <p class="lead">Like us on Facebook to get invited to the next episode.</p>
+        <div class="fb-like-box" data-href="https://www.facebook.com/coolroomtv" data-width="300px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+      </div>
+    </section>
+  </div>
+</div>
+ -->
+<div class="coolroom episode-3-trailer"></div>

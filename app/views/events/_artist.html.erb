@@ -1,0 +1,38 @@
+<div class="videos">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <div class="artist-information row">
+          <div class="artist-image col-md-4">
+            <%= image_tag( artist.avatar.url ) %>
+          </div>
+          <div class="artist-details col-md-8">
+            <h3><%= artist.name %></h3>
+            <div class="artist-links social">
+              <% if !artist.twitter.blank? %>
+               <a href="<%= artist.twitter %>" class="btn btn-default btn-twitter">Twitter</a>
+              <% end %>
+
+              <% if !artist.facebook.blank? %>
+               <a href="<%= artist.facebook %>" class="btn btn-default btn-facebook">Facebook</a>
+              <% end %>
+
+              <% if !artist.soundcloud.blank? %>
+               <a href="<%= artist.soundcloud %>" class="btn btn-default btn-soundcloud">Soundcloud</a>
+              <% end %>
+            </div>
+            <div class="artist-biograph">
+              <%= markdown(artist.biography) %>
+            </div>
+            <%= render 'events/facebookshare' %>
+          </div>
+        </div> 
+<!--        <div class="video">
+          <div class='embed-container'>
+            <% #artist.video_embed %>
+          </div>
+        </div>
+      </div> -->
+    </section>
+  </div>
+</div>

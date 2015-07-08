@@ -1,0 +1,19 @@
+<h1>Crop That Image</h1>
+
+<%= form_for(@event, url: admin_event_path, html: { role: "form" } ) do |f| %>
+  <div class="form-group">
+    <div class="form-group">
+      <%= f.cropbox :cover %>
+    </div>
+
+    <div class="form-group">
+      <%= f.previewbox :cover %>
+    </div>
+
+    <div class="form-group">
+      <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
+        Crop
+      <% end %>
+    </div>
+  </div>
+<% end %>

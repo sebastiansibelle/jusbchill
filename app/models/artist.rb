@@ -2,6 +2,8 @@ class Artist < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+
+  has_and_belongs_to_many :events
   has_many :releases
   has_many :mixes
 
@@ -32,5 +34,8 @@ class Artist < ActiveRecord::Base
   # http://stackoverflow.com/questions/17764359/rails-4-friendly-id-slug-not-updating
   def should_generate_new_friendly_id?
     name_changed?
+  end
+
+  def url
   end
 end
