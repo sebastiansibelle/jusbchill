@@ -1,4 +1,4 @@
-<div class="videos">
+<div class="videos <% if index.odd? %>videos-alt<% end %>">
   <div class="container">
     <section class="row">
       <div class="col-md-12">
@@ -27,12 +27,16 @@
             <%= render 'events/facebookshare' %>
           </div>
         </div> 
-<!--        <div class="video">
-          <div class='embed-container'>
-            <% #artist.video_embed %>
+
+        <% #if !artist.performance.video_embed.blank? %>
+         <!-- <div class="video">
+            <div class='embed-container'>
+              <% # artist.performance.video_embed %>
+            </div>
           </div>
-        </div>
-      </div> -->
+        </div> -->
+      <% #end %>
+
     </section>
   </div>
 </div>

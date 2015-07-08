@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @event = Event.friendly.find(params[:id])
+    @event = Event.includes(:artists => :performances).friendly.find(params[:id])
 
     if @event.published == false
       if params[:secret] != @event.secret_hash

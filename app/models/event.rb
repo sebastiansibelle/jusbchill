@@ -1,7 +1,10 @@
 class Event < ActiveRecord::Base
   extend FriendlyId
 
-  has_and_belongs_to_many :artists
+  has_many :performances
+  has_many :artists, through: :performances
+  accepts_nested_attributes_for :artists, :reject_if => :all_blank, :allow_destroy => true
+
   friendly_id :slug, use: :slugged
   validates :slug, presence: true, uniqueness: true
 

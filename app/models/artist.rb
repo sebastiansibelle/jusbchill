@@ -2,8 +2,8 @@ class Artist < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-
-  has_and_belongs_to_many :events
+  has_many :performances
+  has_many :events, through: :performances
   has_many :releases
   has_many :mixes
 

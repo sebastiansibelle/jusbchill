@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708111611) do
+ActiveRecord::Schema.define(version: 20150708120757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,21 @@ ActiveRecord::Schema.define(version: 20150708111611) do
   end
 
   add_index "mixes", ["slug"], name: "index_mixes_on_slug", unique: true, using: :btree
+
+  create_table "performances", force: true do |t|
+    t.integer  "artist_id"
+    t.integer  "event_id"
+    t.string   "audio_url"
+    t.text     "audio_embed"
+    t.string   "video_url"
+    t.text     "video_embed"
+    t.boolean  "featured"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "performances", ["artist_id"], name: "index_performances_on_artist_id", using: :btree
+  add_index "performances", ["event_id"], name: "index_performances_on_event_id", using: :btree
 
   create_table "releases", force: true do |t|
     t.string   "title"
