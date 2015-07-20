@@ -27,6 +27,11 @@ class Event < ActiveRecord::Base
   crop_uploaded :trailer
 
   def url
+    if self.cool_room?
+      return "coolroom/episode/#{self.slug}"
+    else
+      return event_path(self)
+    end
   end
 end
 
