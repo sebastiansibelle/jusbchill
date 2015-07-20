@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    events = Event.all
+    @events = Event.all
   end
 
   # GET /events/1
@@ -16,7 +16,10 @@ class EventsController < ApplicationController
       end
     end
 
+    @event_upcoming = Time.zone.now < @event.start_date;
+    @event_live = Time.zone.now >= @event.start_date && Time.zone.now < @event.finish_date
     @event_already_happened = @event.finish_date < Time.zone.now;
+    @event_finished = @event_already_happened && @event.completed;
   end
 
   def episode1

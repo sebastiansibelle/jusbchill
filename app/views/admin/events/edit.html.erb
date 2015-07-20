@@ -1,7 +1,7 @@
 <h1>Editing Event</h1>
 
 <div class="well">
-  <%= link_to 'View Promo Version', event_path(@event) + "/" + @event.secret_hash, class: "btn btn-primary" %>
+  <%= link_to 'View Promo Version', event_path(@event), class: "btn btn-primary" %>
   <code>
     http://jusbchill.com<%= url_for(@event) + "/" + @event.secret_hash %>
   </code>

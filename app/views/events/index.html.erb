@@ -18,23 +18,13 @@
   <div class="container">
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
+        <h2 class="event-season">Season 1</h2>
+
         <div class="event-listing">
           <ul class="list-unstyled">
-            <li>
-              <a href="coolroom/episode3">
-                <%= image_tag('coolroom/episode3/banner.png') %>
-              </a>
-            </li>
-            <li>
-              <a href="coolroom/episode2">
-                <%= image_tag('coolroom/episode2/banner.png') %>
-              </a>
-            </li>
-            <li>
-              <a href="coolroom/pilot">
-                <%= image_tag('coolroom/episode1/banner.png') %>
-              </a>
-            </li>
+            <% @events.each do |event| %>
+              <%= render 'events/list' %>
+            <% end %>
           </ul>
         </div>
       </div>

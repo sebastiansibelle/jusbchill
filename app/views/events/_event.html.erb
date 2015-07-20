@@ -1,0 +1,24 @@
+<li>
+  <div class="col-md-5">
+    <div class="card-image">
+      <%= link_to(event_path(event), {}) do %>
+        <%= image_tag(event.opengraph_image) %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div class="card-details">
+      <%= link_to(event_path(event), {}) do %>
+        <h4>Episode <%= event.id %> - <%= event.title %></h4>
+      <% end %>
+      <h5><%= event.start_date.to_formatted_s(:nicedate) %></h5>
+      <h5><%= event.location %></h5>
+
+      <p><em>
+        Featuring <%= event.artists.pluck(:name).to_sentence %>.
+      </em>
+      </p>
+
+    </div>
+  </div>
+</li>

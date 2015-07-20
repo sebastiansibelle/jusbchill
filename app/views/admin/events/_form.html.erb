@@ -24,11 +24,6 @@
     </div>
 
     <div class="form-group">
-      <%# f.label :artist_id %>
-      <%# f.collection_select(:artist_id, Artist.all, :id, :name, {}, {class: "form-control"}) %>
-    </div>
-
-    <div class="form-group">
       <%= f.label :cover %>
 
       <div>
@@ -121,6 +116,11 @@
     <div class="form-group">
       <%= f.label :published %>
       <%= f.check_box :published, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :completed %>
+      <%= f.check_box :completed, class: "form-control" %>
     </div>
 
     <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>

@@ -6,6 +6,6 @@
   </div>
   <div class="card-details">
     <h5><%= release.release_no %></h5>
-    <h5><%= release.title %> - <%= link_to(release.artist.name, artist_path(release.artist)) %></h5>
+    <h5><%= link_to(release.title, release_path(release)) %> - <%= link_to(release.artist.name, artist_path(release.artist)) %></h5>
   </div>
 </div>

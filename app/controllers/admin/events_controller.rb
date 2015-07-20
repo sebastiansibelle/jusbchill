@@ -4,7 +4,7 @@ class Admin::EventsController < Admin::AdminController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.order(:start_date)
   end
 
   # GET /events/new
@@ -78,6 +78,6 @@ class Admin::EventsController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:event_no, :title, :description, :cover, :trailer, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h, :published)
+      params.require(:event).permit(:event_no, :title, :description, :cover, :trailer, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h, :published, :completed)
     end
 end

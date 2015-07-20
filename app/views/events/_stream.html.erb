@@ -1,10 +1,11 @@
-<% if(Time.zone.now >= Time.zone.parse("April 10th 2015 10:30:00 PM") && Time.zone.now < Time.zone.parse("April 11th 2015 4:00:00 AM")) %>
+
+<% if(@event_live) %>
 
   <div class="livestream">
     <iframe frameborder="0" width="100%" height="800" src="http://trnsmt.tv" allowfullscreen></iframe>
   </div>
 
-<% elsif(Time.zone.now < Time.zone.parse("April 10th 2015 10:30:00 PM")) %>
+<% elsif(@event_upcoming) %>
 
   <div class="well">
     <h2>Stay tuned.</h2>
@@ -12,7 +13,10 @@
     
   </div>
 
-<% elsif(Time.zone.now > Time.zone.parse("April 11th 2015 4:00:00 AM")) %>
+<% elsif(@event_finished) %>
+
+    <!-- Nothing -->
+<% elsif(@event_already_happened) %>
 
   <div class="well">
     <h2>Thanks for watching Cool Room.</h2><h2>We'll upload this episode shortly.</h2>
