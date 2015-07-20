@@ -60,6 +60,6 @@ class Admin::ArtistsController < Admin::AdminController
 
   private
     def artist_params
-      params.require(:artist).permit(:name, :biography, :avatar, :facebook, :soundcloud, :twitter, :soundcloud_embed, :avatar_crop_x, :avatar_crop_y, :avatar_crop_w, :avatar_crop_h, :published)
+      params.require(:artist).permit(:name, :biography, :avatar, :facebook, :soundcloud, :twitter, :soundcloud_embed, :avatar_crop_x, :avatar_crop_y, :avatar_crop_w, :avatar_crop_h, :published, :family)
     end
 end

@@ -27,7 +27,7 @@ class Artist < ActiveRecord::Base
 
   # To have published and unpublished artists
   # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user
-  scope :published, -> { where(published: true) }
+  scope :published, -> { where(published: true, family: true) }
   scope :un_published, -> { where(published: false) }
 
   # Forces new slugs to be generated on save if the name changes.

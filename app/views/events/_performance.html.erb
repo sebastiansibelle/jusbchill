@@ -7,7 +7,13 @@
             <%= image_tag( artist.avatar.url ) %>
           </div>
           <div class="artist-details col-md-8">
-            <h3><%= artist.name %></h3>
+            <h3>
+              <% if artist.family? %>
+                <a href="<%= artist_path(artist) %>"> <%= artist.name %></a>
+              <% else %>
+                <%= artist.name %>
+              <% end %>
+            </h3>
             <div class="artist-links social">
               <% if !artist.twitter.blank? %>
                <a href="<%= artist.twitter %>" class="btn btn-default btn-twitter">Twitter</a>
@@ -28,14 +34,14 @@
           </div>
         </div> 
 
-        <% #if !artist.performance.video_embed.blank? %>
-         <!-- <div class="video">
+        <% if !performance.video_embed.blank? %>
+         <div class="video">
             <div class='embed-container'>
-              <% # artist.performance.video_embed %>
+              <%= raw(performance.video_embed) %>
             </div>
           </div>
-        </div> -->
-      <% #end %>
+        </div>
+      <% end %>
 
     </section>
   </div>

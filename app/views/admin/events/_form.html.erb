@@ -112,6 +112,12 @@
       <%= f.text_area :thanks_text, cols: 5, rows: 3, class: "form-control" %>
     </div>
 
+<!--     <div class="form-group">
+      <%= f.label :artists %>
+      <br>
+      <%= f.collection_select(:artist_ids, Artist.all, :id, :name, {prompt: "Please select", selected: @event.artist_ids, include_blank: true}, {class: "form-control chosen-select", multiple: true}) %>
+    </div>
+ -->
     <div class="form-group">
       <%= f.label :published %>
       <%= f.check_box :published, class: "form-control" %>

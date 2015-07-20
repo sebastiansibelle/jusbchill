@@ -56,10 +56,10 @@
   </div>
 </div>
 
-<%= render "events/coolroom/stream", event: @event %>
+<%= render "events/stream", event: @event %>
 
-<% @event.artists.merge(Performance.featured).each_with_index do |artist, index| %>
-  <%= render partial: "events/artist", locals: { artist: artist, index: index} %>
+<% @event.performances.each_with_index do |performance, index| %>
+    <%= render partial: "events/performance", locals: { artist: performance.artist, performance: performance, index: index} %>
 <% end %>
 
 <% if @event_already_happened %>

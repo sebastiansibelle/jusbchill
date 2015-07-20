@@ -1,0 +1,22 @@
+{
+  "name": "jusbchill-app",
+  "version": "1.6.2",
+  "homepage": "https://github.com/sebastiansibelle/jusbchill",
+  "authors": [
+    "Sebastian Sibelle <sebastiansibelle@gmail.com>"
+  ],
+  "description": "Jus B Chill Website",
+  "main": "?",
+  "keywords": [
+    "?"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
