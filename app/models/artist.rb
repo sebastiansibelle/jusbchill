@@ -2,6 +2,8 @@ class Artist < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  has_many :performances
+  has_many :events, through: :performances
   has_many :releases
   has_many :mixes
 
@@ -25,12 +27,15 @@ class Artist < ActiveRecord::Base
 
   # To have published and unpublished artists
   # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user
-  scope :published, -> { where(published: true) }
+  scope :published, -> { where(published: true, family: true) }
   scope :un_published, -> { where(published: false) }
 
   # Forces new slugs to be generated on save if the name changes.
   # http://stackoverflow.com/questions/17764359/rails-4-friendly-id-slug-not-updating
   def should_generate_new_friendly_id?
     name_changed?
+  end
+
+  def url
   end
 end

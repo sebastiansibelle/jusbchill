@@ -1,0 +1,19 @@
+<h1>Events
+  <%= link_to 'New Event', new_admin_event_path, class: "btn btn-primary btn-new-release pull-right" %>
+</h1>
+
+<section class="card row">
+  <% @events.each do |event| %>
+    <div class="card col-md-4">
+      <div class="card-image">
+        <%= link_to(edit_admin_event_path(event), {}) do %>
+          <%= image_tag(event.cover.jumbo.url) %>
+        <% end %>
+      </div>
+      <div class="card-details">
+        <h4><%= event.slug %></h4>
+        <h4><%= event.title %></h4>
+      </div>
+    </div>
+  <% end %>
+</section>

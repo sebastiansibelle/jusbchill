@@ -1,21 +1,42 @@
 $background_primary: #000;
 $background_secondary: #e7e7e7;
-
+$border_primary: #e3e3e3;
 
 .events-dark{
   background-color: $background_primary;
 }
 
+.event-season{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 .event-listing{
-  margin-bottom: 20px;
+  margin-top: 20px;
 
   li{
     padding-top: 40px;
+
     img{
-      width: 100%;
+      width: 100%
+    }
+
+    &:hover{
+      opacity: 0.5;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
     }
   }
 
+  li.new{
+    height: 215px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid $border_primary;
+    border-radius: 3px;
+  }
 }
 
 .coolroom{
@@ -91,7 +112,6 @@ $background_secondary: #e7e7e7;
 .episode-3-trailer{
   background-image: asset-data-url("coolroom/episode3/trailer.jpg");
 }
-
 
 .embed-container { 
   position: relative;

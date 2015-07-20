@@ -12,9 +12,21 @@ Rails.application.routes.draw do
     resources :releases
     resources :artists
     resources :mixes
+    resources :events
   end
 
   resources :users
+
+  get 'coolroom/episode/:id' => 'events#show'
+  get 'coolroom' => 'events#index'
+
+  resources :events
+  get 'coolroom/pilot' => 'events#episode1'
+  get 'coolroom/episode1' => 'events#episode1'
+  get 'coolroom/episode2' => 'events#episode2'
+  get 'coolroom/episode3' => 'events#episode3'
+  
+  
 
   resources :artists do
     resources :releases
@@ -22,6 +34,7 @@ Rails.application.routes.draw do
 
   get 'releases/:id/:secret' => 'releases#show'
   get 'mixes/:id/:secret' => 'mixes#show'
+
   resources :releases
   resources :mixes
 
@@ -30,12 +43,6 @@ Rails.application.routes.draw do
   get 'privacy' => 'home#privacy'
   get 'legal' => 'home#legal'
   get 'about' => 'home#about'
-  get 'coolroom/pilot' => 'events#episode1'
-  get 'coolroom/episode1' => 'events#episode1'
-  get 'coolroom/episode2' => 'events#episode2'
-  get 'coolroom/episode3' => 'events#episode3'
-  get 'coolroom' => 'events#index'
-
   # You can have the root of your site routed with "root"
   root 'home#index'
 

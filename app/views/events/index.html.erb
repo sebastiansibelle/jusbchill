@@ -14,35 +14,40 @@
   </div>
 </div>
 
-
 <div class="events-light">
   <div class="container">
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
+        <h2 class="event-season">Season 1</h2>
+
         <div class="event-listing">
           <ul class="list-unstyled">
-            <li>
-              <a href="coolroom/episode3">
-                <%= image_tag('coolroom/episode3/banner.png') %>
-              </a>
-            </li>
-            <li>
-              <a href="coolroom/episode2">
-                <%= image_tag('coolroom/episode2/banner.png') %>
-              </a>
-            </li>
-            <li>
-              <a href="coolroom/pilot">
-                <%= image_tag('coolroom/episode1/banner.png') %>
-              </a>
-            </li>
+            <% if @events.length > 0 %>
+              <%= render 'events/list' %>
+            <% else %>  
+              <li>
+                <a href="coolroom/episode3">
+                  <%= image_tag('coolroom/episode3/banner.png') %>
+                </a>
+              </li>
+              <li>
+                <a href="coolroom/episode2">
+                  <%= image_tag('coolroom/episode2/banner.png') %>
+                </a>
+              </li>
+              <li>
+                <a href="coolroom/pilot">
+                  <%= image_tag('coolroom/episode1/banner.png') %>
+                </a>
+              </li>
+
+            <% end%>
           </ul>
         </div>
       </div>
     </section>
   </div>
 </div>
-
 
 <div class="episode-description">
   <div class="container">

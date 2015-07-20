@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125112305) do
+ActiveRecord::Schema.define(version: 20150720115205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,9 +28,38 @@ ActiveRecord::Schema.define(version: 20141125112305) do
     t.string   "twitter"
     t.text     "soundcloud_embed"
     t.boolean  "published",        default: false
+    t.boolean  "family"
   end
 
   add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true, using: :btree
+
+  create_table "events", force: true do |t|
+    t.string   "slug"
+    t.string   "title"
+    t.text     "lead"
+    t.text     "description"
+    t.string   "facebook_page"
+    t.string   "facebook_event"
+    t.string   "call_to_action_url"
+    t.string   "call_to_action_text"
+    t.text     "manifesto"
+    t.text     "livestream"
+    t.datetime "start_date"
+    t.datetime "finish_date"
+    t.string   "location"
+    t.string   "cover"
+    t.string   "trailer"
+    t.boolean  "published",           default: false
+    t.boolean  "cool_room",           default: false
+    t.string   "thanks_header"
+    t.text     "thanks_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "secret_hash"
+    t.boolean  "completed",           default: false
+  end
+
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
 
   create_table "mixes", force: true do |t|
     t.string   "mix_no"
@@ -47,6 +76,21 @@ ActiveRecord::Schema.define(version: 20141125112305) do
   end
 
   add_index "mixes", ["slug"], name: "index_mixes_on_slug", unique: true, using: :btree
+
+  create_table "performances", force: true do |t|
+    t.integer  "artist_id"
+    t.integer  "event_id"
+    t.string   "audio_url"
+    t.text     "audio_embed"
+    t.string   "video_url"
+    t.text     "video_embed"
+    t.boolean  "featured"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "performances", ["artist_id"], name: "index_performances_on_artist_id", using: :btree
+  add_index "performances", ["event_id"], name: "index_performances_on_event_id", using: :btree
 
   create_table "releases", force: true do |t|
     t.string   "title"

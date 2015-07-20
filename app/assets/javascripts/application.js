@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.jcrop
+//= require chosen
+//= require toys
 //= require_tree .

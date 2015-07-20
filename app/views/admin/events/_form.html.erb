@@ -1,0 +1,132 @@
+<%= form_for(@event, url: url, html: { role: "form" } ) do |f| %>
+  <div class="form-group">
+    <% if @event.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@event.errors.count, "error") %> prohibited
+          this event from being saved:</h2>
+        <ul>
+        <% @event.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :slug %>
+      <%= f.text_field :slug, class: "form-control" %>
+       <p class="help-block">Based off the title</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cover %>
+
+      <div>
+        <%= image_tag(@event.cover.url) %>
+      </div>
+      
+       <%= f.file_field :cover %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :trailer %>
+
+      <div>
+        <%= image_tag(@event.trailer.url) %>
+      </div>
+      
+       <%= f.file_field :trailer %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :facebook_event %>
+      <%= f.text_field :facebook_event, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :facebook_page %>
+      <%= f.text_field :facebook_page, class: "form-control" %>
+    </div>
+   
+     <div class="form-group">
+      <%= f.label :call_to_action_url %>
+      <%= f.text_field :call_to_action_url, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :call_to_action_text %>
+      <%= f.text_field :call_to_action_text, class: "form-control" %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :start_date %>
+      <%= f.text_field :start_date, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :finish_date %>
+      <%= f.text_field :finish_date, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+
+   <div class="form-group">
+      <%= f.label :lead %>
+      <%= f.text_area :lead, cols: 5, rows: 3, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, cols: 5, rows: 10, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :livestream %>
+      <%= f.text_area :livestream, cols: 5, rows: 3, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :thanks_header %>
+      <%= f.text_field :thanks_header, class: "form-control" %>
+    </div>
+
+   <div class="form-group">
+      <%= f.label :thanks_text %>
+      <%= f.text_area :thanks_text, cols: 5, rows: 3, class: "form-control" %>
+    </div>
+
+<!--     <div class="form-group">
+      <%= f.label :artists %>
+      <br>
+      <%= f.collection_select(:artist_ids, Artist.all, :id, :name, {prompt: "Please select", selected: @event.artist_ids, include_blank: true}, {class: "form-control chosen-select", multiple: true}) %>
+    </div>
+ -->
+    <div class="form-group">
+      <%= f.label :published %>
+      <%= f.check_box :published, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :completed %>
+      <%= f.check_box :completed, class: "form-control" %>
+    </div>
+
+    <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
+      Save
+    <% end %>
+    <%= link_to 'Delete', url,
+      method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+  </div>
+<% end %>

@@ -2,4 +2,10 @@
   <%= link_to 'New Artist', new_admin_artist_path, class: "btn btn-primary btn-new-artist pull-right" %>
 </h1>
 
-<%= render 'list' %>
+<h2>Family</h2>
+
+<%= render 'list', artists: @family %>
+
+<h2>Friends</h2>
+
+<%= render 'list', artists: @friends %>

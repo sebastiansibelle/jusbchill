@@ -1,0 +1,13 @@
+<h1>Editing Event</h1>
+
+<div class="well">
+  <%= link_to 'View Promo Version', event_path(@event), class: "btn btn-primary" %>
+  <code>
+    http://jusbchill.com<%= url_for(@event) + "/" + @event.secret_hash %>
+  </code>
+</div>
+
+<%= render partial: 'form', locals: {url: admin_event_path(@event)} %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,69 @@
+<% content_for :og_tags do %>
+  <%= render 'events/opengraph', event: @event %>
+<% end %>
+
+<div class="coolroom" style="background-image: url(<%= @event.cover.url %>);"></div>
+
+<div class="episode-description">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="event-title">Episode <%= @event.id %> - <%= @event.title %></h1>
+
+        <div class="event-description">
+          <p class="lead"><%= @event.lead %></p>
+
+          <%= markdown(@event.description) %>
+        </div>
+
+        <hr>
+
+        <div class="social">
+          <p>
+            <a href="<%= @event.facebook_event %>" class="btn btn-default btn-facebook">
+              <% if @event_already_happened %>
+                View Facebook Event
+              <% else %>
+                Attend on Facebook
+              <% end %>
+            </a>
+
+            <% if !@event.call_to_action_url.blank? %>
+            <a href="<%= @event.call_to_action_url %>" class="btn btn-default btn-primary"><%= @event.call_to_action_text %></a>
+            <% end %>
+          </p>
+        </div>
+        <hr>
+
+        <div class="cast">
+          <p><%= @event.title %> features:</p>
+
+          <ul class="list-unstyled">
+            <% @event.artists.includes(:performances).each do |artist| %>
+              <li><%= link_to artist.name, artist_path(artist) %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="well manifesto">
+          <h3>Cool Room Manifesto</h3>
+          <p>When dancing is your expression, Cool Room is where you show others how you work it. </p>
+          <p>Be ~chill~, feel *sexy*.</p>
+          <p> Make it hot and keep it cool. </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%= render "events/stream", event: @event %>
+
+<% @event.performances.each_with_index do |performance, index| %>
+    <%= render partial: "events/performance", locals: { artist: performance.artist, performance: performance, index: index} %>
+<% end %>
+
+<% if @event_already_happened %>
+<%= render 'events/thanks', event: @event %>
+<% end %>
+
+<div class="coolroom" style="background-image: url(<%= @event.trailer.url %>);"></div>

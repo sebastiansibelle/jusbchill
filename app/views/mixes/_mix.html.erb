@@ -5,7 +5,7 @@
     <% end %>
   </div>
   <div class="card-details">
-    <h5><%= mix.title %></h5>
+    <h5><%= link_to(mix.title, mix_path(mix)) %></h5>
     <h5><%= link_to(mix.artist.name, artist_path(mix.artist)) %></h5>
   </div>
 </div>
