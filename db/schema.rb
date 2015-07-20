@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720115205) do
+ActiveRecord::Schema.define(version: 20150720133358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150720115205) do
     t.string   "twitter"
     t.text     "soundcloud_embed"
     t.boolean  "published",        default: false
-    t.boolean  "family"
+    t.boolean  "family",           default: false
   end
 
   add_index "artists", ["slug"], name: "index_artists_on_slug", unique: true, using: :btree
