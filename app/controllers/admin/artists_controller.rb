@@ -4,7 +4,10 @@ class Admin::ArtistsController < Admin::AdminController
   end
 
   def index
-    @artists = Artist.all
+    @friends = Artist.where(family: false);
+
+    @family = Artist.where(family: true);
+
   end
 
   def edit
