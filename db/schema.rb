@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721115922) do
+ActiveRecord::Schema.define(version: 20150721125849) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,8 +87,9 @@ ActiveRecord::Schema.define(version: 20150721115922) do
     t.string   "video_url"
     t.text     "video_embed"
     t.boolean  "featured"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "running_order"
   end
 
   add_index "performances", ["artist_id"], name: "index_performances_on_artist_id", using: :btree

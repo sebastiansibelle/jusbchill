@@ -7,20 +7,21 @@
 
 <% elsif(@event_upcoming) %>
 
-  <div class="well">
     <h2>Stay tuned.</h2>
     <h2>This episode screens in <%= distance_of_time_in_words(Time.zone.now, Time.zone.parse("April 10th 2015 11:00:00 PM")) %>.</h2>
     
-  </div>
+    <br>
+    <br>
 
 <% elsif(@event_finished) %>
 
-  <h3>Watch this episode below!</h3>
-
+    <h2>Watch this episode below!</h2>
+    <br>
+    <br>
+    
 <% elsif(@event_already_happened) %>
 
-  <div class="well">
     <h2>Thanks for watching Cool Room.</h2><h2>We'll upload this episode shortly.</h2>
-  </div>
-
+    <br>
+    <br>
 <% end %>
