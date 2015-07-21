@@ -2,7 +2,12 @@ class Event < ActiveRecord::Base
   extend FriendlyId
 
   has_many :performances
-  has_many :artists, through: :performances
+  has_many :artists, through: :performances do
+    def featured
+     where("performances.featured = ?", true)
+    end
+  end
+
   accepts_nested_attributes_for :artists, :reject_if => :all_blank, :allow_destroy => true
 
   friendly_id :slug, use: :slugged
@@ -18,11 +23,14 @@ class Event < ActiveRecord::Base
   default_scope { order('slug desc') }
 
   def opengraph_image
-    cover.facebook.url
+    facebook_image.facebook.url
   end
   
   mount_uploader :cover, BannerUploader
   crop_uploaded :cover
+
+  mount_uploader :facebook_image, BannerUploader
+  crop_uploaded :facebook_image
 
   mount_uploader :trailer, BannerUploader
   crop_uploaded :trailer
