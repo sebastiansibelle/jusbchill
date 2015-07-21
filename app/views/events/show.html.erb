@@ -58,7 +58,7 @@
 
 <%= render "events/stream", event: @event %>
 
-<% @event.performances.each_with_index do |performance, index| %>
+<% @event.performances.featured.each_with_index do |performance, index| %>
     <%= render partial: "events/performance", locals: { artist: performance.artist, performance: performance, index: index} %>
 <% end %>
 

@@ -4,4 +4,6 @@ class Performance < ActiveRecord::Base
 
   accepts_nested_attributes_for :artist, allow_destroy: true
   scope :featured, -> {where(featured: true)}
+
+  default_scope { order('running_order asc') }
 end

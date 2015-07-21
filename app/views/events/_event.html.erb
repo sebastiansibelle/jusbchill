@@ -15,7 +15,7 @@
       <h5><%= event.location %></h5>
 
       <p><em>
-        Featuring <%= event.artists.pluck(:name).to_sentence %>.
+        Featuring <%= event.artists.featured.pluck(:name).to_sentence %>.
       </em>
       </p>
 

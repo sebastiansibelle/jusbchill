@@ -47,6 +47,18 @@
       <p class="help-block">Upload an image please. This is required.</p>
     </div>
 
+     <div class="form-group">
+      <%= f.label :facebook_image %>
+
+      <div>
+        <%= image_tag(@event.facebook_image.url) %>
+      </div>
+      
+       <%= f.file_field :facebook_image %>
+
+      <p class="help-block">Upload an image please. This is required.</p>
+    </div>
+
     <div class="form-group">
       <%= f.label :facebook_event %>
       <%= f.text_field :facebook_event, class: "form-control" %>

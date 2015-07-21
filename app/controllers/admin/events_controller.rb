@@ -80,6 +80,6 @@ class Admin::EventsController < Admin::AdminController
     def event_params
       params
       .require(:event)
-      .permit(:event_no, :slug, :title, :lead, :description, :facebook_page, :facebook_event, :call_to_action_url, :call_to_action_text, :manifesto, :livestream, :start_date, :finish_date, :location, :cover, :trailer, :published, :cool_room, :thanks_header, :thanks_text, :completed, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h)
+      .permit(:event_no, :slug, :title, :lead, :description, :facebook_page, :facebook_event, :call_to_action_url, :call_to_action_text, :manifesto, :livestream, :start_date, :finish_date, :location, :cover, :trailer, :facebook_image, :published, :cool_room, :thanks_header, :thanks_text, :completed, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h)
     end
 end
