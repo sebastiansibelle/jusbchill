@@ -26,6 +26,10 @@
               <% if !artist.soundcloud.blank? %>
                <a href="<%= artist.soundcloud %>" class="btn btn-default btn-soundcloud">Soundcloud</a>
               <% end %>
+
+              <% if !artist.bandcamp.blank? %>
+                <a href="<%= artist.bandcamp %>" class="btn btn-default btn-info">Bandcamp</a>
+              <% end %>
             </div>
             <div class="artist-biograph">
               <%= markdown(artist.biography) %>

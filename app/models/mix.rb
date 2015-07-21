@@ -14,7 +14,7 @@ class Mix < ActiveRecord::Base
     avatar.jumbo.url
   end
 
-  default_scope { order('mix_no') }
+  default_scope { order('mix_no desc') }
 
   # To have published and unpublished releases
   # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user

@@ -78,6 +78,8 @@ class Admin::EventsController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:event_no, :title, :description, :cover, :trailer, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h, :published, :completed)
+      params
+      .require(:event)
+      .permit(:event_no, :slug, :title, :lead, :description, :facebook_page, :facebook_event, :call_to_action_url, :call_to_action_text, :manifesto, :livestream, :start_date, :finish_date, :location, :cover, :trailer, :published, :cool_room, :thanks_header, :thanks_text, :completed, :artist_id, :soundcloud_embed, :cover_crop_x, :cover_crop_y, :cover_crop_w, :cover_crop_h, :trailer_crop_x, :trailer_crop_y, :trailer_crop_w, :trailer_crop_h)
     end
 end

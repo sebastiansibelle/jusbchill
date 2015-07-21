@@ -12,9 +12,10 @@ class Event < ActiveRecord::Base
 
   # To have published and unpublished releases
   # http://stackoverflow.com/questions/16788273/rails-displaying-published-post-by-all-and-unpublished-post-of-current-user
-  scope :published, -> { where(published: true)  }
+  scope :published, -> { where(published: true).order('slug desc') }
   scope :un_published, -> { where(published: false) }
-  default_scope { order('slug') }
+  
+  default_scope { order('slug desc') }
 
   def opengraph_image
     cover.facebook.url
@@ -30,7 +31,7 @@ class Event < ActiveRecord::Base
     if self.cool_room?
       return "coolroom/episode/#{self.slug}"
     else
-      return event_path(self)
+      return "events/#{self.slug}"
     end
   end
 end

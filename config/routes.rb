@@ -17,16 +17,15 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :events
+
   get 'coolroom/episode/:id' => 'events#show'
   get 'coolroom' => 'events#index'
 
-  resources :events
   get 'coolroom/pilot' => 'events#episode1'
   get 'coolroom/episode1' => 'events#episode1'
   get 'coolroom/episode2' => 'events#episode2'
   get 'coolroom/episode3' => 'events#episode3'
-  
-  
 
   resources :artists do
     resources :releases
