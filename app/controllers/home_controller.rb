@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @releases = Release.published.limit(8)
-    @mixes = Mix.published.limit(8)
+    @releases = Release.published.limit(6)
+    @mixes = Mix.published.limit(6)
     @events = Event.published.limit(2)
   end
 
