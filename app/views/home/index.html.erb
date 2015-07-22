@@ -22,18 +22,19 @@
   </div>
 </div>
 
-<% unless @releases.blank? %>
-<div class="introduction">
+<% unless @events.blank? %>
+<div class="events">
   <div class="container">
     <section class="row">
-      <div class="col-md-12">
-        <h2>Releases</h2>
-        <%= render 'releases/list' %>
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Recent Events</h2>
+        <%= render 'events/list' %>
       </div>
     </section>
   </div>
 </div>
 <% end %>
+
 
 <% unless @mixes.blank? %>
 <div class="mixes">
@@ -42,6 +43,19 @@
       <div class="col-md-12">
         <h2>Latest Mixes</h2>
         <%= render 'mixes/list' %>
+      </div>
+    </section>
+  </div>
+</div>
+<% end %>
+
+<% unless @releases.blank? %>
+<div class="introduction">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <h2>Our Releases</h2>
+        <%= render 'releases/list' %>
       </div>
     </section>
   </div>

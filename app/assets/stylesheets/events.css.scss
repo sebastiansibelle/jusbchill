@@ -1,6 +1,6 @@
 $background_primary: #000;
 $background_secondary: #e7e7e7;
-$border_primary: #e3e3e3;
+$border_primary: #e1e1e1;
 
 .events-dark{
   background-color: $background_primary;
@@ -13,30 +13,28 @@ $border_primary: #e3e3e3;
 
 .event-listing{
   margin-top: 20px;
+}
 
-  li{
-    padding-top: 40px;
-
-    img{
-      width: 100%
-    }
-
-    &:hover{
-      opacity: 0.5;
-      transition: opacity .25s ease-in-out;
-      -moz-transition: opacity .25s ease-in-out;
-      -webkit-transition: opacity .25s ease-in-out;
-    }
+.event-card{
+  padding-top: 40px;
+  min-height: 230px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $border_primary;
+  border-radius: 3px;
+  
+  img{
+    width: 100%
   }
 
-  li.new{
-    min-height: 230px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid $border_primary;
-    border-radius: 3px;
+  &:hover{
+    opacity: 0.5;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
   }
+
 }
 
 .coolroom{
