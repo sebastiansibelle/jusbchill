@@ -9,7 +9,7 @@
   <div class="col-md-7">
     <div class="card-details">
       <%= link_to( event.url, {}) do %>
-        <h4>Episode <%= event.id %> - <%= event.title %></h4>
+        <h4><%= event.title %></h4>
       <% end %>
       <h5><%= event.start_date.to_formatted_s(:nicedate) %></h5>
       <h5><%= event.location %></h5>
