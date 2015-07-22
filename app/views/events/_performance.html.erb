@@ -30,6 +30,15 @@
               <% if !artist.bandcamp.blank? %>
                 <a href="<%= artist.bandcamp %>" class="btn btn-default btn-info">Bandcamp</a>
               <% end %>
+
+
+              <% if !artist.mixcloud.blank? %>
+                <a href="<%= artist.mixcloud %>" class="btn btn-default btn-info">Mixcloud</a>
+              <% end %>
+
+              <% if !artist.website.blank? %>
+                <a href="<%= artist.website %>" class="btn btn-default btn-info">Website</a>
+              <% end %>
             </div>
             <div class="artist-biograph">
               <%= markdown(artist.biography) %>
