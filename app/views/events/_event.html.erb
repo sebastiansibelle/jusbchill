@@ -1,16 +1,13 @@
+<%= link_to(event.url, {}) do %>
 <div class="event-card">
   <div class="col-md-5">
     <div class="card-image">
-      <%= link_to(event.url, {}) do %>
-        <%= image_tag(event.opengraph_image) %>
-      <% end %>
+      <%= image_tag(event.opengraph_image) %>
     </div>
   </div>
   <div class="col-md-7">
     <div class="card-details">
-      <%= link_to( event.url, {}) do %>
-        <h4><%= event.title %></h4>
-      <% end %>
+      <h4><%= event.title %></h4>
       <h5><%= event.start_date.to_formatted_s(:nicedate) %></h5>
       <h5><%= event.location %></h5>
 
@@ -22,3 +19,4 @@
     </div>
   </div>
 </div>
+<% end %>
