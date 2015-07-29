@@ -1,0 +1,16 @@
+<div class="videos <% if index.odd? %>videos-alt<% end %>">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <% if !performance.video_embed.blank? %>
+         <div class="video">
+            <div class='embed-container'>
+              <%= raw(performance.video_embed) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </section>
+  </div>
+</div>

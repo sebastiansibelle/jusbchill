@@ -1,0 +1,13 @@
+<div class="col-md-10 col-md-offset-1">
+  <div class="performance">
+    <h4><a href="<%= event_path(performance.event) %>"><%= performance.event.title %></a></h4>
+
+    <% if !performance.video_embed.blank? %>
+      <div class="video">
+        <div class='embed-container'>
+          <%= raw(performance.video_embed) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
