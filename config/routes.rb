@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :events
+  resources :performances
 
   get 'coolroom/episode/:id' => 'events#show'
   get 'coolroom' => 'events#index'
