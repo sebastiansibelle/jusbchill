@@ -4,15 +4,17 @@
 
 <div class="coolroom fullscreen-bg events-video">
   <div class="container">
+    <%= video_tag("background.mp4", loop: true, autoplay: true, muted: true, poster: image_url("coolroom/cover.png"), class: "fullscreen-bg__video") %>
+    
     <div class="event-logo logo pulse">
       <%= image_tag('coolroom/cool-room-final.png') %>
     </div>
 
+    <div class="event-actions">
       <a href="https://www.eventbrite.com.au/e/cool-room-s02e01-season-2-premiere-tickets-19674210092" class="btn btn-success btn-lg">Buy tickets</a>
       <a href="http://facebook.com/coolroomtv" class="btn btn-primary  btn-lg">Attend on Facebook</a>
-
-      <%= video_tag("background.mp4", loop: true, autoplay: true, muted: true, poster: image_url("coolroom/cover.png"), class: "fullscreen-bg__video") %>
     </div>
+  </div>
 </div>
 
 <div class="coolroom episode-description">

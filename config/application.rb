@@ -22,6 +22,7 @@ module JusbchillApp
     
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
 
     require Rails.root.join("lib/custom_public_exceptions")
     config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
