@@ -10,12 +10,6 @@ $border_primary: #e1e1e1;
   margin-top: 20px;
 }
 
-.events-video{
-  height: 600px;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
-
 .event-season{
   margin-top: 50px;
   margin-bottom: 30px;
@@ -23,6 +17,15 @@ $border_primary: #e1e1e1;
 
 .event-listing{
   margin-top: 20px;
+
+  a:hover{
+    text-decoration: none;
+  }
+}
+
+.iframe-container{
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .fullscreen-bg {
@@ -32,7 +35,6 @@ $border_primary: #e1e1e1;
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: -100;
 }
 
 .fullscreen-bg__video {
@@ -45,7 +47,7 @@ $border_primary: #e1e1e1;
 
 .event-card{
   padding-top: 40px;
-  height: 500px;
+  height: 460px;
   overflow: hidden;
   margin-bottom: 20px;
   padding-top: 0px;
@@ -54,7 +56,8 @@ $border_primary: #e1e1e1;
   border-radius: 3px;
   
   img{
-    width: 100%
+    width: 100%;
+    height: 250px;
   }
 
   &:hover{
@@ -66,7 +69,7 @@ $border_primary: #e1e1e1;
 }
 
 .event-card-details{
-  padding: 20px;
+  padding: 15px;
 }
 
 .coolroom{
@@ -75,7 +78,6 @@ $border_primary: #e1e1e1;
   margin-top: -20px;
   background-position: center center;
   background-size: cover;
-  height: 450px;
 
   .logo img{
     margin: 0 auto;
@@ -90,6 +92,26 @@ $border_primary: #e1e1e1;
     }
   }
 }
+
+.events-video{
+  display: none;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+
+ @media (min-width: $screen-xs-min) {
+    .events-video{
+      height: 450px;
+      display: block;
+    }
+  }
+
+ @media (min-width: $screen-sm-min) {
+    .events-video{
+      height: 600px;
+    }
+  }
 
 .livestream{
   background-color: #fff;

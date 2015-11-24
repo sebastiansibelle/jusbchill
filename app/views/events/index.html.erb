@@ -2,19 +2,16 @@
   <%= render 'events/coolroom/opengraph' %>
 <% end %>
 
-<div class="fullscreen-bg events-video">
+<div class="coolroom fullscreen-bg events-video">
   <div class="container">
     <div class="event-logo logo pulse">
       <%= image_tag('coolroom/cool-room-final.png') %>
-    </div>`
+    </div>
 
-      <a href="http://facebook.com/coolroomtv" class="btn btn-success btn-lg">Buy tickets</a>
+      <a href="https://www.eventbrite.com.au/e/cool-room-s02e01-season-2-premiere-tickets-19674210092" class="btn btn-success btn-lg">Buy tickets</a>
       <a href="http://facebook.com/coolroomtv" class="btn btn-primary  btn-lg">Attend on Facebook</a>
 
-      <%= video_tag("background.mp4", loop: true, autoplay: true, muted: true, poster: "images/coolroom/cool-room-final.jpg", class: "fullscreen-bg__video") %>
-
-
-
+      <%= video_tag("background.mp4", loop: true, autoplay: true, muted: true, poster: image_url("coolroom/cover.png"), class: "fullscreen-bg__video") %>
     </div>
 </div>
 
@@ -22,12 +19,11 @@
   <div class="container">
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h2>Season 2 - December 18th</h2>
+        <h2>Season 2</h2>
 
-        <iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?color=5FB4FC&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false&amp;url=https%3A//api.soundcloud.com/playlists/168255051%3Fsecret_token%3Ds-PlVFN"></iframe>
-
-        <br>
-        <br>
+        <div class="iframe-container">
+          <iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?color=5FB4FC&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false&amp;url=https%3A//api.soundcloud.com/playlists/168255051%3Fsecret_token%3Ds-PlVFN"></iframe>
+        </div>
 
         <p class="lead">Jus B Chill proudly presents: Cool Room, the chill and sexy dance show, a monthly dance party and online TV show celebrating Melbourne techno.</a>
 
