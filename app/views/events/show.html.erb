@@ -2,7 +2,7 @@
   <%= render 'events/opengraph', event: @event %>
 <% end %>
 
-<div class="coolroom" style="background-image: url(<%= @event.cover.url %>);"></div>
+<div class="coolroom coolroom-banner" style="background-image: url(<%= @event.cover.url %>);"></div>
 
 <div class="episode-description">
   <div class="container">
@@ -66,4 +66,4 @@
 <%= render 'events/thanks', event: @event %>
 <% end %>
 
-<div class="coolroom" style="background-image: url(<%= @event.trailer.url %>);"></div>
+<div class="coolroom coolroom-banner" style="background-image: url(<%= @event.trailer.url %>);"></div>
