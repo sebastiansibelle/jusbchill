@@ -1,22 +1,17 @@
+<div class="col-md-4">
 <%= link_to(event.url, {}) do %>
-<div class="event-card">
-  <div class="col-md-5">
-    <div class="card-image">
-      <%= image_tag(event.opengraph_image) %>
-    </div>
+  <div class="event-card">
+      <div class="card-image">
+        <%= image_tag(event.opengraph_image) %>
+      </div>
+      <div class="card-details event-card-details">
+        <h4><%= event.title %></h4>
+        <h5><%= event.start_date.in_time_zone.to_formatted_s(:nicedate) %></h5>
+        <h5><%= event.location %></h5>
+        <p>
+          <em>Featuring <%= event.artists.featured.pluck(:name).to_sentence %>.</em>
+        </p>
+      </div>
   </div>
-  <div class="col-md-7">
-    <div class="card-details">
-      <h4><%= event.title %></h4>
-      <h5><%= event.start_date.in_time_zone.to_formatted_s(:nicedate) %></h5>
-      <h5><%= event.location %></h5>
-
-      <p><em>
-        Featuring <%= event.artists.featured.pluck(:name).to_sentence %>.
-      </em>
-      </p>
-
-    </div>
-  </div>
-</div>
 <% end %>
+</div>

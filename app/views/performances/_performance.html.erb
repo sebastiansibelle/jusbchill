@@ -1,6 +1,6 @@
 <div class="col-md-10 col-md-offset-1">
   <div class="performance">
-    <h4><a href="<%= event_path(performance.event) %>"><%= performance.event.title %></a></h4>
+    <h4><a href="<%= performance.event.url %>"><%= performance.event.title %></a></h4>
 
     <% if !performance.video_embed.blank? %>
       <div class="video">

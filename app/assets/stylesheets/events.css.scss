@@ -6,6 +6,16 @@ $border_primary: #e1e1e1;
   background-color: $background_primary;
 }
 
+.event-logo{
+  margin-top: 20px;
+}
+
+.events-video{
+  height: 600px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
 .event-season{
   margin-top: 50px;
   margin-bottom: 30px;
@@ -15,11 +25,30 @@ $border_primary: #e1e1e1;
   margin-top: 20px;
 }
 
+.fullscreen-bg {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -100;
+}
+
 .event-card{
   padding-top: 40px;
-  min-height: 230px;
+  height: 500px;
+  overflow: hidden;
   margin-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 10px;
   border: 1px solid $border_primary;
   border-radius: 3px;
@@ -34,7 +63,10 @@ $border_primary: #e1e1e1;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
   }
+}
 
+.event-card-details{
+  padding: 20px;
 }
 
 .coolroom{
@@ -70,15 +102,15 @@ $border_primary: #e1e1e1;
 }
 
 .pulse {
-  -webkit-animation: pulsate 3s ease-in-out;
+  -webkit-animation: pulsate 5s ease-in-out;
   -webkit-animation-iteration-count: infinite; 
   opacity: 1.0;
 }
 
 @-webkit-keyframes pulsate {
-  0% {opacity: 0.6;}
+  0% {opacity: 0.2;}
   50% {opacity: 1.0;}
-  100% {opacity: 0.6;}
+  100% {opacity: 0.5;}
 }
 
 .episode-1-cover{
