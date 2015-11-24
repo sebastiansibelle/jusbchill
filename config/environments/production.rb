@@ -27,6 +27,7 @@ Rails.application.configure do
   config.assets.css_compressor = :sass
   config.assets.precompile = ['application.js', 'application.css', 'admin.css']
   config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+  config.assets.paths << "#{Rails.root}/app/assets/videos"
   
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
