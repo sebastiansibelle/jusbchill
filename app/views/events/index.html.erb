@@ -37,7 +37,13 @@
             <a href="https://www.facebook.com/coolroomtv" class="btn btn-default btn-facebook btn-lg">Facebook</a>
           </p>
         </div>
-
+      </div>
+      <div class="col-md-12">
+       <div class="event-listing">
+          <%= render partial: 'events/list', locals: {events: @season_two_events} %>
+        </div>
+      </div>  
+      <div class="col-md-8 col-md-offset-2">
         <div class="well manifesto">
           <h3>Cool Room Manifesto</h3>
           <p>When dancing is your expression, Cool Room is where you show others how you work it. </p>
@@ -55,7 +61,7 @@
       <div class="col-md-12">
         <h2 class="event-season">Season 1</h2>
         <div class="event-listing">
-          <%= render 'events/list' %>
+          <%= render partial: 'events/list', locals: {events: @season_one_events} %>
         </div>
       </div>
     </section>
