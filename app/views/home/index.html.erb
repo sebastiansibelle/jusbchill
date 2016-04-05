@@ -28,7 +28,7 @@
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
         <h2>Events</h2>
-        <%= render 'events/list' %>
+        <%= render partial: 'events/list', locals: {events: @events.upcoming} %>
       </div>
     </section>
   </div>
