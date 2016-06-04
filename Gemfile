@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+
+# Use Puma as the webserver.
+gem 'puma'
 
 # Use postgres as the database for Active
 gem 'pg'
@@ -60,14 +63,11 @@ gem 'acts_as_opengraph'
 # Use redcarpet for markdown rendering
 gem 'redcarpet', '~> 3.0.0'
 
+# For asset compilation on heroku
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

@@ -8,24 +8,28 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### Immediate TODO.
 
-- Reduce the size of the image previews in the editor.
-- Compact the form design and reduce the width of the container.
-- Clean up the vertical rhythms
-- Add a Create Cool Room event button which pre-fills the form with Cool Room info.- Do a split form design on desktop like wordpress, with published/coolroom info on the right
-- Add markdown parsing to the description.
-- Add the ability to add artists to the event.
-- Add HTML5 validation.
-- Add prefilling of the form for old post data.
-- Add Cool Room checkbox to edit details.
-- Fix the preview function.
-- Fix the Cool Room url function.
-- Change the url structure to /events/{event_id} + /coolroom/episode/{id} + /coolroom/season/2/episode/1
-- Introduce Season pages with a bit of info about that season.
-- Write logic for the featuring by line that adds featured artists plus non featured artists in alphabetical order up to a fixed length of x chars.
+- PERFORMANCE: Move app to Heroku
+- PERFORMANCE: Optimise the load speed to something acceptable.
+- PERFORMANCE: Set up Cloudflare
+- ADMIN: Reduce the size of the image previews in the editor.
+- ADMIN: Compact the form design and reduce the width of the container.
+- ADMIN: Add the ability to add artists to the event.
+- ADMIN: Add Cool Room checkbox to edit details.
+- ADMIN: Add a Create Cool Room event button which pre-fills the form with Cool Room info.
+- ADMIN: Fix the preview function.
+- UX/DESIGN: Write logic for the featuring by line that adds featured artists plus non featured artists in alphabetical order up to a fixed length of x chars.
+- UX/DESIGN: Clean up the vertical rhythms
+- ADMIN: Do a split form design on desktop like wordpress, with published/coolroom info on the right
+- ADMIN: Add markdown parsing to the description.
+- ADMIN: Add HTML5 validation.
+- ADMIN: Add prefilling of the form for old post data.
+- UX/DESIGN: Fix the Cool Room url function.
+- UX/DESIGN: Change the url structure to /events/{event_id} + /coolroom/episode/{id} + /coolroom/season/2/episode/1
+- CONTENT: Introduce Season pages with a bit of info about that season.
 - Replace the release with "Sounds of JBC/Cool Room"
-- Add a press page including articles about JBC/CR
-- Add more mixes to the website.
-- Language guide to clubbing.
+- CONTENT: Add a press page including articles about JBC/CR
+- CONTENT: Add more mixes to the website.
+- CONTENT: Language guide to clubbing.
 
 ### V1.x.0 before party
 
@@ -103,7 +107,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V3.0.0+
 
-- Capistrano deployment
 - New device/logo.
 - Promotion, web and otherwise
 - International involvement
