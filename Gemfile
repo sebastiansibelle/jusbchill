@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
-# Use postgres as the database for Active 
+# Use postgres as the database for Active
 gem 'pg'
 gem 'taps'
 
@@ -71,4 +71,3 @@ gem 'redcarpet', '~> 3.0.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
