@@ -8,6 +8,9 @@ gem 'rails', '4.1.4'
 # Use Puma as the webserver.
 gem 'puma'
 
+# Rack timeout to kill long requests that might block execution.
+gem "rack-timeout"
+
 # Use postgres as the database for Active
 gem 'pg'
 gem 'taps'
