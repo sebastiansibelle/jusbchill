@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+ruby "2.1.3"
 
-# Use postgres as the database for Active 
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.1.16'
+
+# Use Puma as the webserver.
+gem 'puma'
+
+# Rack timeout to kill long requests that might block execution.
+gem "rack-timeout"
+
+# Use postgres as the database for Active
 gem 'pg'
 gem 'taps'
 
@@ -60,15 +66,11 @@ gem 'acts_as_opengraph'
 # Use redcarpet for markdown rendering
 gem 'redcarpet', '~> 3.0.0'
 
+# For asset compilation on heroku
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

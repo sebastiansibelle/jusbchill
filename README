@@ -4,19 +4,41 @@ Jus B Chill is an online-based record label. We release music, throw parties and
 
 ## Plans
 
-The plan is to use the Jus B Chill web app as the distribution source for all our channels. 
+The plan is to use the Jus B Chill web app as the distribution source for all our channels.
+
+### Immediate TODO.
+
+- PERFORMANCE: Move app to Heroku
+- PERFORMANCE: Optimise the load speed to something acceptable.
+- PERFORMANCE: Set up Cloudflare
+- ADMIN: Reduce the size of the image previews in the editor.
+- ADMIN: Compact the form design and reduce the width of the container.
+- ADMIN: Add the ability to add artists to the event.
+- ADMIN: Add Cool Room checkbox to edit details.
+- ADMIN: Add a Create Cool Room event button which pre-fills the form with Cool Room info.
+- ADMIN: Fix the preview function.
+- UX/DESIGN: Write logic for the featuring by line that adds featured artists plus non featured artists in alphabetical order up to a fixed length of x chars.
+- UX/DESIGN: Clean up the vertical rhythms
+- ADMIN: Do a split form design on desktop like wordpress, with published/coolroom info on the right
+- ADMIN: Add markdown parsing to the description.
+- ADMIN: Add HTML5 validation.
+- ADMIN: Add prefilling of the form for old post data.
+- UX/DESIGN: Fix the Cool Room url function.
+- UX/DESIGN: Change the url structure to /events/{event_id} + /coolroom/episode/{id} + /coolroom/season/2/episode/1
+- CONTENT: Introduce Season pages with a bit of info about that season.
+- Replace the release with "Sounds of JBC/Cool Room"
+- CONTENT: Add a press page including articles about JBC/CR
+- CONTENT: Add more mixes to the website.
+- CONTENT: Language guide to clubbing.
 
 ### V1.x.0 before party
 
 - Ask Tara to do our social media for cash $$.
-- Fix image upload so that it would cropsat a bunch of sizes. e.g. 350x350 for the website, 250x250 for facebook, 300x300 for twitter etc.  And then displays the right one based on the context. Also store all the images on the server and have them accessible via the edit page. 
+- Fix image upload so that it would cropsat a bunch of sizes. e.g. 350x350 for the website, 250x250 for facebook, 300x300 for twitter etc.  And then displays the right one based on the context. Also store all the images on the server and have them accessible via the edit page.
 - Fix Social media OG shares. Make them great.
 - Fix broken image upload for large images. We're sorry, but something went wrong.
-- But the releases and mixes on the site in reverse chronological order. 
-- Add a field to the mixes table for tracklists.
-
-
-
+- Put the releases and mixes on the site in reverse chronological order.
+- Add a field to the mixes table for tracklists. -> Use tracklist website
 - Fix HTML + CSS bugs (bug on mobile with images)
 - Choose basic colour scheme/palette/font stack.
 - Do branding guideline document + resources.
@@ -30,12 +52,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 - Design admin home page to reflect release manifesto - Make it a list of unpublished releases.
 - Finish and master releases
-
-
 - Compile list of contacts for promo
-- Talk to Hug n Kisses (Ask Sally about Hugo), Dave from Rooftop, Mokubo + Elly Benson, Contact Pleasure Planet, Talk to Simon Griffiths, CC:Disco, Olya
-- Add RRR, TripleJ, Syn, ??? Online radio. 
-- Talk to Jacob about doing a radio show at RRR
 
 ### V2.0.0+
 
@@ -55,7 +72,7 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 - Integrate with Mailchimp/mandrill to automatically send emails to people involved.
 - Add a link wordpress blog for jacob to run.
 - Design and style the wordpress blog.
-- Integrate the wordpress posts via the api and display the blog posts on site. 
+- Integrate the wordpress posts via the api and display the blog posts on site.
 
 - Improve the admin interface:
 	- Notepad to write down ideas
@@ -66,19 +83,19 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
   - Booking opportunities
 
 - Multiple user roles using cancan as per manifesto approval process:
-	- super user (seb - delete privledges), 
+	- super user (seb - delete privledges),
 	- visionary user (andrew/jacob/aaron - all other privledges),
 	- regular user (artist - no privledges except posting new tracks))
-- Release Manifesto Approval process  
+- Release Manifesto Approval process
 
-- For mixes, link to the website form soundcloud and post the tracklist there. 
+- For mixes, link to the website form soundcloud and post the tracklist there.
 - Upload stems functionality for remixing.
 - Upload project file functionality.
 
 - Refine the language set with Bec / Whoever
 - Atomic CSS/Pattern lab/style guidelines
 - BEM
-- Direct integration with soundcloud player. Upload a file to justbchill and distro to soundcloud, bandcamp, beatport, spotify etc. 
+- Direct integration with soundcloud player. Upload a file to justbchill and distro to soundcloud, bandcamp, beatport, spotify etc.
 
 - Unit tests, models
 - Integration tests, tasks
@@ -90,7 +107,6 @@ The plan is to use the Jus B Chill web app as the distribution source for all ou
 
 ### V3.0.0+
 
-- Capistrano deployment
 - New device/logo.
 - Promotion, web and otherwise
 - International involvement
@@ -139,7 +155,7 @@ None yet.
 	- Mix 001
 	- Mix 002
 - About
-- Privacy Policy 
+- Privacy Policy
 - Contact
 - Home
 
