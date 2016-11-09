@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby "2.1.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.15'
+gem 'rails', '4.1.16'
 
 # Use Puma as the webserver.
 gem 'puma'
