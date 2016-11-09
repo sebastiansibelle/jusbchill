@@ -52,7 +52,7 @@ gem 'rmagick' ## Specify appropriate version, if needed
 gem 'carrierwave'
 
 # Use Fog aws for uploading to AWS
-gem "fog-aws"
+gem "fog", "~> 1.3.1"
 
 # Use CarrierWave Crop gem for fancy cropping
 gem 'carrierwave-crop'
