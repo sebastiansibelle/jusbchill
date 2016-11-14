@@ -2,17 +2,18 @@ source 'https://rubygems.org'
 
 ruby "2.1.3"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.2'
+# Require rails
+gem 'rails', '4.2.4'
 
 # Use Puma as the webserver.
 gem 'puma'
 
-# Rack timeout to kill long requests that might block execution.
+# Rack timeout to kill long requests that might block execution for multithreaded puma server
 gem "rack-timeout"
 
 # Use postgres as the database for Active
 gem 'pg'
+
 gem 'taps'
 
 # Use SCSS for stylesheets
@@ -75,7 +76,7 @@ gem 'rails_12factor', group: :production
 # Rails 4.2 Web Console
 gem 'web-console', '~> 2.0', group: :development
 
-# Responders gem
+# Responders gem for Rails 4.2+
 gem 'responders', '~> 2.0'
 
 # Manage env files
