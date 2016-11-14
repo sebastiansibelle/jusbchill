@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
     host:                  's3-ap-southeast-2.amazonaws.com',             # optional, defaults to nil
     # endpoint:              'https://s3.example.com:8080' # optional, defaults to nil
   }
-  config.fog_directory  = 'jusbchill-production'                          # required
+  config.fog_directory  = ENV['AWS_BUCKET']                          # required
   config.fog_public     = true                                        # optional, defaults to true
   config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
 end

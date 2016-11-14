@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby "2.1.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.16'
+gem 'rails', '4.2.0'
 
 # Use Puma as the webserver.
 gem 'puma'
@@ -52,7 +52,7 @@ gem 'rmagick' ## Specify appropriate version, if needed
 gem 'carrierwave'
 
 # Use Fog aws for uploading to AWS
-gem "fog", "~> 1.3.1"
+gem "fog", "~> 1.38.0"
 
 # Use CarrierWave Crop gem for fancy cropping
 gem 'carrierwave-crop'
@@ -71,6 +71,15 @@ gem 'redcarpet', '~> 3.0.0'
 
 # For asset compilation on heroku
 gem 'rails_12factor', group: :production
+
+# Rails 4.2 Web Console
+gem 'web-console', '~> 2.0', group: :development
+
+# Responders gem
+gem 'responders', '~> 2.0'
+
+# Manage env files
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

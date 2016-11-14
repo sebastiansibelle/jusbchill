@@ -19,12 +19,15 @@ module JusbchillApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
+
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     config.assets.paths << "#{Rails.root}/app/assets/videos"
 
     require Rails.root.join("lib/custom_public_exceptions")
     config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
+
+
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end
