@@ -24,7 +24,7 @@ class Event < ActiveRecord::Base
   scope :upcoming, -> { where(published: true).where("start_date > ?", Date.today - 1).order('start_date desc') }
   scope :un_published, -> { where(published: false) }
 
-  default_scope { order('slug desc') }
+  default_scope { order('start_date desc') }
 
   def opengraph_image
     facebook_image.facebook.url
