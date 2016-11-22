@@ -23,13 +23,4 @@ class EventsController < ApplicationController
     @event_already_happened = @event.finish_date < Time.zone.now;
     @event_finished = @event_already_happened && @event.completed;
   end
-
-  def episode1
-  end
-
-  def episode2
-  end
-
-  def episode3
-  end
 end
