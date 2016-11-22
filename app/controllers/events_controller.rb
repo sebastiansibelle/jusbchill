@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   def index
     @season_one_events = Event.season_one
     @season_two_events = Event.season_two
+    @season_three_events = Event.season_three
   end
 
   # GET /events/1

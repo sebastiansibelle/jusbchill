@@ -20,15 +20,16 @@ class Event < ActiveRecord::Base
   scope :published, -> { where(published: true).order('slug desc') }
   scope :season_one, -> { where("id <= ?", 6).where(published: true).order('slug desc') }
   scope :season_two, -> { where("id > ?", 6).where(published: true).order('slug desc') }
+  scope :season_three, -> { where("id > ?", 12).where(published: true).order('slug desc') }
   scope :upcoming, -> { where(published: true).where("start_date > ?", Date.today - 1).order('slug desc') }
   scope :un_published, -> { where(published: false) }
-  
+
   default_scope { order('slug desc') }
 
   def opengraph_image
     facebook_image.facebook.url
   end
-  
+
   mount_uploader :cover, BannerUploader
   crop_uploaded :cover
 
@@ -46,4 +47,3 @@ class Event < ActiveRecord::Base
     end
   end
 end
-

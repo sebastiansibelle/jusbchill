@@ -9,12 +9,6 @@
     <div class="event-logo logo pulse">
       <%= image_tag('coolroom/cool-room-final.png') %>
     </div>
-
-    <div class="event-actions">
-      <a href="https://www.eventbrite.com.au/e/cool-room-s02e01-season-2-premiere-tickets-19674210092" class="btn btn-success btn-lg">Buy tickets</a>
-      <a href="http://facebook.com/coolroomtv" class="btn btn-primary  btn-lg">Attend on Facebook</a>
-    </div>
-
   </div>
 </div>
 
@@ -22,13 +16,7 @@
   <div class="container">
     <section class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h2>Season 2</h2>
-
-        <div class="iframe-container">
-          <iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?color=5FB4FC&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_artwork=false&amp;show_reposts=false&amp;url=https%3A//api.soundcloud.com/playlists/168255051%3Fsecret_token%3Ds-PlVFN"></iframe>
-        </div>
-
-        <p class="lead">Jus B Chill proudly presents: Cool Room, the chill and sexy dance show, a monthly dance party and online TV show celebrating Melbourne techno.</a>
+        <p class="lead">Jus B Chill proudly presents: Cool Room, the chill and sexy dance show, a monthly dance party and online TV show celebrating Melbourne house and techno.</a>
 
         <p>Each episode features a TV audience live in the Cool Room studio. Our lucky audience members will get on down to titillating techno, dripping acid squelches, and the full spectrum of weird and ravey sounds.</p>
 
@@ -39,16 +27,22 @@
         </div>
       </div>
       <div class="col-md-12">
+        <h2>Season 3</h2>
        <div class="event-listing">
-          <%= render partial: 'events/list', locals: {events: @season_two_events} %>
+          <%= render partial: 'events/list', locals: {events: @season_three_events} %>
         </div>
-      </div>  
-      <div class="col-md-8 col-md-offset-2">
-        <div class="well manifesto">
-          <h3>Cool Room Manifesto</h3>
-          <p>When dancing is your expression, Cool Room is where you show others how you work it. </p>
-          <p>Be ~chill~, feel *sexy*.</p>
-          <p> Make it hot and keep it cool. </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="events">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <h2 class="event-season">Season 2</h2>
+        <div class="event-listing">
+           <%= render partial: 'events/list', locals: {events: @season_two_events} %>
         </div>
       </div>
     </section>

@@ -29,7 +29,7 @@
       <div>
         <%= image_tag(@event.cover.url) %>
       </div>
-      
+
        <%= f.file_field :cover %>
 
       <p class="help-block">Upload an image please. This is required.</p>
@@ -41,7 +41,7 @@
       <div>
         <%= image_tag(@event.trailer.url) %>
       </div>
-      
+
        <%= f.file_field :trailer %>
 
       <p class="help-block">Upload an image please. This is required.</p>
@@ -53,7 +53,7 @@
       <div>
         <%= image_tag(@event.facebook_image.url) %>
       </div>
-      
+
        <%= f.file_field :facebook_image %>
 
       <p class="help-block">Upload an image please. This is required.</p>
@@ -68,7 +68,7 @@
       <%= f.label :facebook_page %>
       <%= f.text_field :facebook_page, class: "form-control" %>
     </div>
-   
+
      <div class="form-group">
       <%= f.label :call_to_action_url %>
       <%= f.text_field :call_to_action_url, class: "form-control" %>
@@ -133,6 +133,11 @@
     <div class="form-group">
       <%= f.label :completed %>
       <%= f.check_box :completed, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cool_room %>
+      <%= f.check_box :cool_room, class: "form-control" %>
     </div>
 
     <%= button_tag(type: 'submit', class: "btn btn-lg btn-primary") do %>
