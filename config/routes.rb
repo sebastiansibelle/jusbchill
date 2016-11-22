@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  
+
   match "/404" => "errors#four_oh_four", via: [ :get, :post, :patch, :delete ]
 
   devise_for :users, :path => "", :path_names => {:sign_in => "login", :sign_out => "logout"}
@@ -22,12 +22,7 @@ Rails.application.routes.draw do
 
   get 'coolroom/episode/:id' => 'events#show'
   get 'coolroom' => 'events#index'
-
-  get 'coolroom/pilot' => 'events#episode1'
-  get 'coolroom/episode1' => 'events#episode1'
-  get 'coolroom/episode2' => 'events#episode2'
-  get 'coolroom/episode3' => 'events#episode3'
-
+  
   resources :artists do
     resources :releases
   end
